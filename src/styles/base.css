@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #e82d22;
+  --color-primary-dark: #c02119;
+  --color-secondary: #15244c;
+  --color-secondary-light: #1e3260;
+  --color-neutral: #f2f2f2;
+  --color-neutral-dark: #e6e6e6;
+
+  --color-background: #ffffff;
+  --color-foreground: #15244c;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-error: #ef4444;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply leading-tight font-bold tracking-tight text-secondary;
+  }
+
+  h1 {
+    @apply text-4xl font-black md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl font-bold md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl font-bold md:text-3xl lg:text-4xl;
+  }
+
+  h4 {
+    @apply text-xl font-semibold md:text-2xl lg:text-3xl;
+  }
+
+  h5 {
+    @apply text-lg font-semibold md:text-xl lg:text-2xl;
+  }
+
+  h6 {
+    @apply text-base font-medium md:text-lg lg:text-xl;
+  }
+
+  p {
+    @apply text-base leading-relaxed text-foreground;
+  }
+
+  button {
+    @apply cursor-pointer transition-all duration-200;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply transition-all duration-200;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm leading-none font-medium transition-all duration-200 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white shadow-lg hover:bg-primary-dark hover:shadow-xl focus:ring-primary;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white shadow-lg hover:bg-secondary-light hover:shadow-xl focus:ring-secondary;
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 text-base;
+  }
+
+  .form-input {
+    @apply w-full rounded-lg border border-border bg-white px-4 py-3 text-foreground placeholder-muted focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none;
+  }
+
+  .form-textarea {
+    @apply min-h-24 w-full resize-y rounded-lg border border-border bg-white px-4 py-3 text-foreground placeholder-muted focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none;
+  }
+
+  .form-label {
+    @apply mb-2 block text-sm font-medium text-foreground;
+  }
+
+  .card {
+    @apply rounded-xl border border-border bg-white shadow-sm;
+  }
+
+  .card-body {
+    @apply px-6 py-4;
+  }
+
+  .container-md {
+    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-xl {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .nav-link {
+    @apply font-medium text-foreground transition-colors duration-200 hover:text-primary;
+  }
+
+  .nav-link-active {
+    @apply font-semibold text-primary;
+  }
+
+  .section {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .section-sm {
+    @apply py-8 md:py-12 lg:py-16;
+  }
+
+  /* Hero background styles */
+  .hero-bg {
+    background-image: url("/construction.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Marquee animations */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee2 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 35s linear infinite;
+  }
+
+  .animate-marquee2 {
+    animation: marquee2 35s linear infinite;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee,
+    .animate-marquee2 {
+      animation-play-state: paused;
+    }
+
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

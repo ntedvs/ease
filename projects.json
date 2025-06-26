@@ -1,0 +1,607 @@
+{
+  "projects": [
+    {
+      "name": "Ene Asnakech ayele",
+      "area": 1843.00,
+      "signingDate": "3/1/24",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2024
+    },
+    {
+      "name": "YTY",
+      "area": 39016.00,
+      "signingDate": "31/7/24",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2024
+    },
+    {
+      "name": "Aman Lebu",
+      "area": 7300.00,
+      "signingDate": "27/11/23",
+      "category": "Hotel",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2023
+    },
+    {
+      "name": "Amde",
+      "area": 19500.00,
+      "signingDate": "24/4/24",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2024
+    },
+    {
+      "name": "Anbessa Project",
+      "area": 83200.00,
+      "signingDate": "27/6/19",
+      "category": "Government",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2019
+    },
+    {
+      "name": "Tarekegn/Tsion Asmelash",
+      "area": 7140.00,
+      "signingDate": "15/3/24",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2024
+    },
+    {
+      "name": "UNISON",
+      "area": 18345.00,
+      "signingDate": "29/1/23",
+      "category": "Hotel",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2023
+    },
+    {
+      "name": "Foreign Affairs Building",
+      "area": 48850.13,
+      "signingDate": "21/2/19",
+      "category": "Government",
+      "hasImage": true,
+      "imageUrl": "/projects/foreign-affairs.png",
+      "year": 2019
+    },
+    {
+      "name": "Ayalew Mixed Use",
+      "area": 6700.00,
+      "signingDate": "14/7/23",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2023
+    },
+    {
+      "name": "Semu Residence",
+      "area": 1900.00,
+      "signingDate": "4/11/19",
+      "category": "Personal Residence",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2019
+    },
+    {
+      "name": "Bole Hospital",
+      "area": 106225.00,
+      "signingDate": "16/4/19",
+      "category": "Hospital",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2019
+    },
+    {
+      "name": "Bethlehem",
+      "area": 12308.15,
+      "signingDate": "1/2/21",
+      "category": "Hotel",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2021
+    },
+    {
+      "name": "Arsi University Bekoji",
+      "area": 15403.80,
+      "signingDate": "13/12/18",
+      "category": "Government",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2018
+    },
+    {
+      "name": "Cluster-Sur",
+      "area": 62058.00,
+      "signingDate": "5/4/24",
+      "category": "Commercial",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2024
+    },
+    {
+      "name": "DATD",
+      "area": 22632.60,
+      "signingDate": "24/7/24",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2024
+    },
+    {
+      "name": "Diamond Review",
+      "area": 8422.00,
+      "signingDate": "1/6/24",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2024
+    },
+    {
+      "name": "Elias Summit Apt",
+      "area": 9405.00,
+      "signingDate": "12/2/18",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2018
+    },
+    {
+      "name": "Ene Nahom",
+      "area": 7449.00,
+      "signingDate": "16/12/22",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2022
+    },
+    {
+      "name": "Arsi University Assela",
+      "area": 35869.16,
+      "signingDate": "13/12/18",
+      "category": "Government",
+      "hasImage": true,
+      "imageUrl": "/projects/arsi.png",
+      "year": 2018
+    },
+    {
+      "name": "Ene Awad",
+      "area": 3800.00,
+      "signingDate": "24/2/24",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2024
+    },
+    {
+      "name": "Burayu Warehouse",
+      "area": 3906.00,
+      "signingDate": "17/4/19",
+      "category": "Warehouse",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2019
+    },
+    {
+      "name": "Ezana Apartment",
+      "area": 3000.00,
+      "signingDate": "24/4/24",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2024
+    },
+    {
+      "name": "Ene Teha",
+      "area": 3719.00,
+      "signingDate": "27/3/24",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2024
+    },
+    {
+      "name": "Ermias Workshop",
+      "area": 358.40,
+      "signingDate": "20/3/19",
+      "category": "Warehouse",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2019
+    },
+    {
+      "name": "Seid Yassin/Alamterahman",
+      "area": 3678.80,
+      "signingDate": "9/8/24",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2024
+    },
+    {
+      "name": "TK Apartment",
+      "area": 13000.00,
+      "signingDate": "23/1/23",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2023
+    },
+    {
+      "name": "Mulugeta/Mekdes",
+      "area": 4875.00,
+      "signingDate": "29/1/22",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2022
+    },
+    {
+      "name": "Abuare Shoring",
+      "area": 0,
+      "signingDate": "5/4/19",
+      "category": "Shoring",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2019
+    },
+    {
+      "name": "Fedengua Phase 1",
+      "area": 33520.00,
+      "signingDate": "28/2/20",
+      "category": "Mixed Use",
+      "hasImage": true,
+      "imageUrl": "/projects/fedengua.png",
+      "year": 2020
+    },
+    {
+      "name": "Ahmed Residence",
+      "area": 500.61,
+      "signingDate": "13/9/18",
+      "category": "Personal Residence",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2018
+    },
+    {
+      "name": "Asnakech Teklu",
+      "area": 1395.00,
+      "signingDate": "23/3/21",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2021
+    },
+    {
+      "name": "Habtamu Int Hotel",
+      "area": 960.00,
+      "signingDate": "27/6/19",
+      "category": "Hotel",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2019
+    },
+    {
+      "name": "Chady Mezzanine",
+      "area": 273.18,
+      "signingDate": "2/4/19",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2019
+    },
+    {
+      "name": "Jenboro RE",
+      "area": 122265.00,
+      "signingDate": "30/1/24",
+      "category": "Mixed Use",
+      "hasImage": true,
+      "imageUrl": "/projects/jenboro.png",
+      "year": 2024
+    },
+    {
+      "name": "Jimma Uni Lounge",
+      "area": 3200.00,
+      "signingDate": "8/4/19",
+      "category": "School",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2019
+    },
+    {
+      "name": "Elilta RE Bldg",
+      "area": 1217.67,
+      "signingDate": "25/3/19",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2019
+    },
+    {
+      "name": "EPRDF HQ",
+      "area": 820.00,
+      "signingDate": "15/8/19",
+      "category": "Government",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2019
+    },
+    {
+      "name": "Menor",
+      "area": 17602.00,
+      "signingDate": "18/3/22",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2022
+    },
+    {
+      "name": "Monarch",
+      "area": 8750.00,
+      "signingDate": "24/3/22",
+      "category": "Hotel",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2022
+    },
+    {
+      "name": "Eskinder Bldg",
+      "area": 6796.00,
+      "signingDate": "28/2/20",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2020
+    },
+    {
+      "name": "ETR Shoring",
+      "area": 0,
+      "signingDate": "9/11/18",
+      "category": "Shoring",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2018
+    },
+    {
+      "name": "FAO SOG Slab",
+      "area": 100.00,
+      "signingDate": "23/7/21",
+      "category": "Warehouse",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2021
+    },
+    {
+      "name": "Golden Star",
+      "area": 21450.00,
+      "signingDate": "6/3/23",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2023
+    },
+    {
+      "name": "Ozone Apt",
+      "area": 13307.58,
+      "signingDate": "27/11/24",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2024
+    },
+    {
+      "name": "Hayahulet project",
+      "area": 1305.00,
+      "signingDate": "4/10/17",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2017
+    },
+    {
+      "name": "Kality Bus Depot",
+      "area": 5279.48,
+      "signingDate": "6/4/17",
+      "category": "Government",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2017
+    },
+    {
+      "name": "Kasanchis E. M.",
+      "area": 18451.86,
+      "signingDate": "8/8/17",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2017
+    },
+    {
+      "name": "Oromia International Bank",
+      "area": 340.00,
+      "signingDate": "25/2/24",
+      "category": "Bank",
+      "hasImage": true,
+      "imageUrl": "/projects/oromia.png",
+      "year": 2024
+    },
+    {
+      "name": "Oumar Abdulahi Residence",
+      "area": 696.07,
+      "signingDate": "12/4/18",
+      "category": "Personal Residence",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2018
+    },
+    {
+      "name": "Ovid RE Aware TS",
+      "area": 1182.85,
+      "signingDate": "25/1/22",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2022
+    },
+    {
+      "name": "Pan Africa Block C",
+      "area": 3160.00,
+      "signingDate": "1/8/19",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2019
+    },
+    {
+      "name": "Pan Africa Block D",
+      "area": 23350.00,
+      "signingDate": "10/11/17",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2017
+    },
+    {
+      "name": "Solomon Teferra",
+      "area": 7140.00,
+      "signingDate": "23/4/23",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2023
+    },
+    {
+      "name": "Pullman Hotel",
+      "area": 410.00,
+      "signingDate": "1/8/16",
+      "category": "Hotel",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2016
+    },
+    {
+      "name": "Sara Yimer",
+      "area": 18885.00,
+      "signingDate": "26/1/22",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2022
+    },
+    {
+      "name": "Semir Apartment Building",
+      "area": 5441.92,
+      "signingDate": "23/2/18",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2018
+    },
+    {
+      "name": "Shegole Bus Depot",
+      "area": 5029.96,
+      "signingDate": "15/12/16",
+      "category": "Government",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2016
+    },
+    {
+      "name": "Tsinat RE",
+      "area": 21500.00,
+      "signingDate": "23/4/24",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2024
+    },
+    {
+      "name": "Tamrain Office&Showroom",
+      "area": 2837.86,
+      "signingDate": "8/3/18",
+      "category": "Commercial",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2018
+    },
+    {
+      "name": "Temesgen Chaka Residence",
+      "area": 632.53,
+      "signingDate": "15/12/17",
+      "category": "Personal Residence",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2017
+    },
+    {
+      "name": "U Street Apartment",
+      "area": 15280.00,
+      "signingDate": "21/7/17",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2017
+    },
+    {
+      "name": "Wro Emebet",
+      "area": 3906.00,
+      "signingDate": "9/8/23",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2023
+    },
+    {
+      "name": "Wonberta Bldg",
+      "area": 5703.29,
+      "signingDate": "28/1/19",
+      "category": "Mixed Use",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2019
+    },
+    {
+      "name": "Yared Apt",
+      "area": 4685.00,
+      "signingDate": "8/8/19",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2019
+    },
+    {
+      "name": "Yeka Parking",
+      "area": 32877.71,
+      "signingDate": "10/11/18",
+      "category": "Government",
+      "hasImage": true,
+      "imageUrl": "/projects/yeka.png",
+      "year": 2018
+    },
+    {
+      "name": "Zahara Apt",
+      "area": 4320.00,
+      "signingDate": "21/2/23",
+      "category": "Apartment",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2023
+    },
+    {
+      "name": "ZZ Hospital",
+      "area": 23660.00,
+      "signingDate": "5/2/18",
+      "category": "Hospital",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2018
+    }
+  ]
+}
