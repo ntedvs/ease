@@ -2,10 +2,13 @@ import AnimatedNumber from "@/components/AnimatedNumber"
 import {
   Award,
   Building,
+  Building2,
   Calendar,
   Download,
   Eye,
   Flag,
+  Globe,
+  Layers,
   Leaf,
   Lightbulb,
   MapPin,
@@ -106,11 +109,8 @@ export default function About() {
                 <Image
                   src="/construction.jpg"
                   alt="EASE construction site showcasing professional team implementing advanced post-tensioning technology and precision engineering methodologies in Ethiopia"
-                  width={400}
-                  height={400}
-                  // fill
+                  fill
                   className="object-cover"
-                  // sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>
@@ -118,8 +118,186 @@ export default function About() {
         </div>
       </section>
 
-      {/* Who We Are Section */}
+      {/* Strategic Partnership with RSF Section */}
       <section className="section bg-neutral">
+        <div className="container-xl">
+          <div className="mb-16 text-center">
+            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
+              Strategic Partnership with RSF
+            </h2>
+            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
+              Our partnership with Rudloff StrongForce International brings
+              unparalleled technical credibility and global expertise to every
+              EASE project, ensuring world-class standards and innovative
+              solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            {/* Left Side - Partnership Content */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold text-secondary">
+                  Technical Credibility Through Partnership
+                </h3>
+                <p className="text-lg leading-relaxed text-foreground">
+                  This strategic alliance provides EASE with direct access to
+                  RSF&apos;s extensive research and development capabilities,
+                  proven methodologies, and innovative solutions that have been
+                  successfully implemented across diverse global markets and
+                  challenging construction environments.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold text-secondary">
+                  Materials & Equipment Supply Partnership
+                </h3>
+                <p className="text-lg leading-relaxed text-foreground">
+                  RSF serves as our primary supplier of specialized materials
+                  and cutting-edge equipment, ensuring that every EASE project
+                  benefits from the highest quality post-tensioning systems and
+                  innovative construction technologies available in the global
+                  market.
+                </p>
+
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                  {/* Global Experience */}
+                  <div className="text-center">
+                    <div className="mb-3 flex justify-center">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                        <Globe size={24} className="text-primary" />
+                      </div>
+                    </div>
+                    <div className="text-2xl font-black text-primary">7</div>
+                    <div className="text-sm font-medium text-secondary">
+                      Continents
+                    </div>
+                    <div className="text-xs text-muted">Global Experience</div>
+                  </div>
+
+                  {/* Years of Expertise */}
+                  <div className="text-center">
+                    <div className="mb-3 flex justify-center">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                        <Award size={24} className="text-primary" />
+                      </div>
+                    </div>
+                    <div className="text-2xl font-black text-primary">60+</div>
+                    <div className="text-sm font-medium text-secondary">
+                      Years
+                    </div>
+                    <div className="text-xs text-muted">
+                      Specialized Expertise
+                    </div>
+                  </div>
+
+                  {/* Major Projects */}
+                  <div className="text-center">
+                    <div className="mb-3 flex justify-center">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                        <Building2 size={24} className="text-primary" />
+                      </div>
+                    </div>
+                    <div className="text-2xl font-black text-primary">500+</div>
+                    <div className="text-sm font-medium text-secondary">
+                      Projects
+                    </div>
+                    <div className="text-xs text-muted">Worldwide</div>
+                  </div>
+
+                  {/* Concrete Slabs */}
+                  <div className="text-center">
+                    <div className="mb-3 flex justify-center">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                        <Layers size={24} className="text-primary" />
+                      </div>
+                    </div>
+                    <div className="text-2xl font-black text-primary">38M</div>
+                    <div className="text-sm font-medium text-secondary">
+                      Slabs of Concrete
+                    </div>
+                    <div className="text-xs text-muted">Constructed</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Atlantis Project Showcase */}
+            <div className="space-y-6">
+              <div className="card overflow-hidden">
+                <div className="relative aspect-video w-full">
+                  <Image
+                    src="/rudloff/atlantis.jpg"
+                    alt="Atlantis Hotel on the Palm - RSF's flagship project showcasing world-class post-tensioning expertise and innovative construction solutions"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="card-body space-y-4">
+                  <h3 className="text-xl font-bold text-secondary">
+                    Atlantis Hotel on the Palm
+                  </h3>
+                  <p className="leading-relaxed text-muted">
+                    One of RSF&apos;s most prestigious projects, the iconic
+                    Atlantis Hotel demonstrates the technical excellence and
+                    innovative capabilities that our partnership brings to every
+                    EASE construction project.
+                  </p>
+                  <div className="flex items-center space-x-4 text-sm">
+                    <div className="flex items-center space-x-2">
+                      <MapPin size={16} className="text-primary" />
+                      <span className="text-muted">Dubai, UAE</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Building size={16} className="text-primary" />
+                      <span className="text-muted">Luxury Resort</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-xl bg-primary/5 p-6">
+                <h4 className="mb-3 text-lg font-bold text-secondary">
+                  What This Partnership Means for Ethiopia
+                </h4>
+                <ul className="space-y-2 text-sm text-muted">
+                  <li className="flex items-start space-x-2">
+                    <div className="mt-1 h-1.5 w-1.5 rounded-full bg-primary"></div>
+                    <span>
+                      Access to cutting-edge post-tensioning technology
+                    </span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <div className="mt-1 h-1.5 w-1.5 rounded-full bg-primary"></div>
+                    <span>
+                      International quality standards and methodologies
+                    </span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <div className="mt-1 h-1.5 w-1.5 rounded-full bg-primary"></div>
+                    <span>
+                      Proven solutions tested on world&apos;s most challenging
+                      projects
+                    </span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <div className="mt-1 h-1.5 w-1.5 rounded-full bg-primary"></div>
+                    <span>
+                      Enhanced technical credibility for local construction
+                      industry
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Are Section */}
+      <section className="section bg-white">
         <div className="container-xl">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
@@ -191,7 +369,7 @@ export default function About() {
       </section>
 
       {/* Our Promise Section */}
-      <section className="section bg-white">
+      <section className="section bg-neutral">
         <div className="container-xl">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
@@ -276,7 +454,7 @@ export default function About() {
               <div className="card group transition-all duration-300 hover:shadow-lg">
                 <div className="card-body space-y-4 text-center">
                   <AnimatedNumber
-                    value={5}
+                    value={5.5}
                     prefix="$"
                     suffix="M"
                     className="text-4xl font-black text-primary"

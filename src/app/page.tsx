@@ -9,6 +9,7 @@ import {
   Building2,
   Calculator,
   DollarSign,
+  Lightbulb,
   MapPin,
   Maximize2,
   PenTool,
@@ -29,16 +30,24 @@ export const metadata: Metadata = {
 export default function Home() {
   const carouselImages = [
     {
-      src: "/atlantis.jpg",
+      src: "/rudloff/atlantis.jpg",
       alt: "Atlantis Project - EASE post-tensioning construction featuring modern high-rise building with advanced structural engineering solutions",
     },
     {
-      src: "/motor.jpg",
+      src: "/rudloff/scotland.jpg",
       alt: "Motor Project - Industrial construction showcasing EASE's expertise in heavy-duty structural engineering and post-tensioning technology",
     },
     {
-      src: "/paramount.jpg",
+      src: "/rudloff/shiny.jpg",
       alt: "Paramount Project - Commercial building development demonstrating EASE's innovative construction methodologies and precision engineering",
+    },
+    {
+      src: "/rudloff/twist.jpg",
+      alt: "",
+    },
+    {
+      src: "/rudloff/windmill.jpg",
+      alt: "",
     },
   ]
 
@@ -340,7 +349,10 @@ export default function Home() {
 
           {/* Learn More About Post-Tensioning Button */}
           <div className="mt-12 text-center">
-            <Link href="/post-tensioning" className="btn btn-primary btn-lg btn-pulse">
+            <Link
+              href="/post-tensioning"
+              className="btn btn-primary btn-lg btn-pulse"
+            >
               Learn More About Post-Tensioning
             </Link>
           </div>
@@ -355,9 +367,10 @@ export default function Home() {
               Our Comprehensive Services
             </h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              From specialized post-tensioning solutions to complete project management,
-              EASE delivers end-to-end engineering services with decades of proven 
-              expertise and innovation across all construction disciplines.
+              From specialized post-tensioning solutions to complete project
+              management, EASE delivers end-to-end engineering services with
+              decades of proven expertise and innovation across all construction
+              disciplines.
             </p>
           </div>
 
@@ -393,7 +406,8 @@ export default function Home() {
                 </h3>
                 <p className="text-sm leading-relaxed text-muted">
                   Comprehensive structural design and engineering consultation
-                  services provided complimentary with our construction projects.
+                  services provided complimentary with our construction
+                  projects.
                 </p>
               </div>
             </div>
@@ -410,8 +424,9 @@ export default function Home() {
                   Repair & Strengthening
                 </h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  Specialized rehabilitation services to extend building lifespan
-                  and enhance structural capacity using proven methodologies.
+                  Specialized rehabilitation services to extend building
+                  lifespan and enhance structural capacity using proven
+                  methodologies.
                 </p>
               </div>
             </div>
@@ -453,44 +468,74 @@ export default function Home() {
                 <Shield size={40} className="text-white" />
               </div>
             </div>
-            
+
             <h2 className="mb-6 text-4xl font-black text-white md:text-5xl">
-              Ethiopia&apos;s Only <span className="text-white/90">Insurance-Backed</span> Construction Company
+              Ethiopia&apos;s Only{" "}
+              <span className="text-white/90">Insurance-Backed</span>{" "}
+              Construction Company
             </h2>
-            
+
             <p className="mb-12 text-xl leading-relaxed text-white/90">
-              EASE is the only construction company in Ethiopia with comprehensive insurance coverage, 
-              providing our clients with unmatched security and peace of mind for their projects.
+              EASE is the only construction company in Ethiopia with
+              comprehensive insurance coverage, providing our clients with
+              unmatched security and peace of mind for their projects.
             </p>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div className="rounded-xl bg-white/10 p-8 backdrop-blur-sm">
-                <AnimatedNumber 
-                  value={10} 
-                  prefix="$" 
-                  suffix="M" 
+                <AnimatedNumber
+                  value={10}
+                  prefix="$"
+                  suffix="M"
                   className="mb-4 text-4xl font-black text-white"
                 />
-                <h3 className="mb-2 text-xl font-bold text-white">Product Liability Coverage</h3>
-                <p className="text-white/80">Comprehensive protection for all construction materials and workmanship</p>
+                <h3 className="mb-2 text-xl font-bold text-white">
+                  Product Liability Coverage
+                </h3>
+                <p className="mb-4 text-white/80">
+                  Comprehensive protection for all construction materials and
+                  workmanship
+                </p>
+                <Link
+                  href="/insurance/product.pdf"
+                  target="_blank"
+                  className="btn btn-secondary text-sm"
+                >
+                  View Coverage Details
+                </Link>
               </div>
-              
+
               <div className="rounded-xl bg-white/10 p-8 backdrop-blur-sm">
-                <AnimatedNumber 
-                  value={5} 
-                  prefix="$" 
-                  suffix="M" 
+                <AnimatedNumber
+                  value={5.5}
+                  prefix="$"
+                  suffix="M"
                   className="mb-4 text-4xl font-black text-white"
                 />
-                <h3 className="mb-2 text-xl font-bold text-white">Professional Liability Coverage</h3>
-                <p className="text-white/80">Complete coverage for engineering design and professional services</p>
+                <h3 className="mb-2 text-xl font-bold text-white">
+                  Professional Liability Coverage
+                </h3>
+                <p className="mb-4 text-white/80">
+                  Complete coverage for engineering design and professional
+                  services
+                </p>
+                <Link
+                  href="/insurance/professional.pdf"
+                  target="_blank"
+                  className="btn btn-secondary text-sm"
+                >
+                  View Coverage Details
+                </Link>
               </div>
             </div>
 
             <div className="mt-12 rounded-xl bg-white/5 p-6 backdrop-blur-sm">
               <p className="text-lg font-medium text-white">
-                💡 <strong>Why This Matters:</strong> Our insurance backing means your project is protected against unforeseen circumstances, 
-                giving you confidence in our commitment to quality and accountability.
+                <Lightbulb size={20} className="inline text-white mr-2" />{" "}
+                <strong>Why This Matters:</strong> Our insurance backing
+                means your project is protected against unforeseen
+                circumstances, giving you confidence in our commitment to
+                quality and accountability.
               </p>
             </div>
           </div>
@@ -516,11 +561,11 @@ export default function Home() {
             <div className="space-y-8">
               <div className="flex justify-center lg:justify-start">
                 <Image
-                  src="/rudloff.png"
+                  src="/partnership.png"
                   alt="Rudloff StrongForce International - EASE's strategic partner specializing in post-tensioning systems and prestressed concrete solutions"
-                  width={200}
-                  height={80}
-                  className="h-16 w-auto md:h-20"
+                  width={500}
+                  height={200}
+                  className="rounded-md shadow-lg"
                 />
               </div>
 

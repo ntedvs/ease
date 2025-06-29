@@ -8,6 +8,8 @@ interface AnimatedNumberProps {
   prefix?: string
   className?: string
   duration?: number
+  decimalPlaces?: number
+  preserveTrailingZeros?: boolean
 }
 
 export default function AnimatedNumber({
@@ -16,6 +18,8 @@ export default function AnimatedNumber({
   prefix = "",
   className = "",
   duration = 2500,
+  decimalPlaces = 1,
+  preserveTrailingZeros = false,
 }: AnimatedNumberProps) {
   const [isVisible, setIsVisible] = useState(false)
   const [animatedValues, setAnimatedValues] = useState<number[]>([])
@@ -59,7 +63,12 @@ export default function AnimatedNumber({
 
           setAnimatedValues((prev) => {
             const newValues = [...prev]
-            newValues[index] = Math.floor(current)
+            // Use proper decimal precision instead of Math.floor
+            newValues[index] =
+              decimalPlaces > 0
+                ? Math.round(current * Math.pow(10, decimalPlaces)) /
+                  Math.pow(10, decimalPlaces)
+                : Math.floor(current)
             return newValues
           })
 
@@ -69,10 +78,17 @@ export default function AnimatedNumber({
         }, duration / steps)
       })
     }
-  }, [isVisible, targetValues, animatedValues.length, duration])
+  }, [isVisible, targetValues, animatedValues.length, duration, decimalPlaces])
 
   const formatValue = (value: number): string => {
-    return value.toLocaleString()
+    if (decimalPlaces === 0) {
+      return value.toLocaleString()
+    }
+
+    return value.toLocaleString(undefined, {
+      minimumFractionDigits: preserveTrailingZeros ? decimalPlaces : 0,
+      maximumFractionDigits: decimalPlaces,
+    })
   }
 
   return (

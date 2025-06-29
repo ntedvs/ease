@@ -240,7 +240,7 @@ export default function PostTensioning() {
 
               <div className="rounded-xl bg-primary/10 p-6">
                 <AnimatedNumber
-                  value={5}
+                  value={5.5}
                   prefix="$"
                   suffix=" Million"
                   className="mb-3 text-3xl font-black text-primary"
