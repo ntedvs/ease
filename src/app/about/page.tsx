@@ -1,3 +1,4 @@
+import AnimatedNumber from "@/components/AnimatedNumber"
 import {
   Award,
   Building,
@@ -8,6 +9,7 @@ import {
   Leaf,
   Lightbulb,
   MapPin,
+  Shield,
   Target,
   Users,
 } from "lucide-react"
@@ -18,7 +20,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about EASE - East Africa Specialized Engineering. Discover our story, values, and commitment to building landmarks of tomorrow through innovative construction solutions.",
+    "Learn about EASE - East Africa Specialized Engineering. Ethiopia's only insurance-backed construction company with $15M coverage. Discover our trusted expertise in innovative construction solutions.",
 }
 
 export default function About() {
@@ -104,9 +106,11 @@ export default function About() {
                 <Image
                   src="/construction.jpg"
                   alt="EASE construction site showcasing professional team implementing advanced post-tensioning technology and precision engineering methodologies in Ethiopia"
-                  fill
+                  width={400}
+                  height={400}
+                  // fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  // sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>
@@ -222,6 +226,103 @@ export default function About() {
                   transparent communication, reliable timelines, and
                   collaborative solutions tailored to unique project needs.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust & Reliability Section */}
+      <section className="section bg-white">
+        <div className="container-xl">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="mb-8 flex justify-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                <Shield size={32} className="text-primary" />
+              </div>
+            </div>
+
+            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
+              Trust & Reliability
+            </h2>
+
+            <p className="mb-12 text-xl leading-relaxed text-muted">
+              EASE stands as Ethiopia&apos;s only insurance-backed construction
+              company, demonstrating our unwavering commitment to quality,
+              accountability, and client protection through comprehensive
+              coverage.
+            </p>
+
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-4 text-center">
+                  <AnimatedNumber
+                    value={10}
+                    prefix="$"
+                    suffix="M"
+                    className="text-4xl font-black text-primary"
+                  />
+                  <h3 className="text-xl font-bold text-secondary">
+                    Product Liability Coverage
+                  </h3>
+                  <p className="leading-relaxed text-muted">
+                    Comprehensive protection covering all construction
+                    materials, workmanship, and structural integrity for
+                    complete peace of mind.
+                  </p>
+                </div>
+              </div>
+
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-4 text-center">
+                  <AnimatedNumber
+                    value={5}
+                    prefix="$"
+                    suffix="M"
+                    className="text-4xl font-black text-primary"
+                  />
+                  <h3 className="text-xl font-bold text-secondary">
+                    Professional Liability Coverage
+                  </h3>
+                  <p className="leading-relaxed text-muted">
+                    Full coverage for engineering design, technical services,
+                    and professional expertise ensuring project success and
+                    client confidence.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-12 rounded-xl bg-primary/5 p-8">
+              <h4 className="mb-4 text-xl font-bold text-secondary">
+                What This Means for You
+              </h4>
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+                <div className="space-y-2">
+                  <div className="text-lg font-bold text-primary">
+                    Risk Protection
+                  </div>
+                  <p className="text-sm text-muted">
+                    Your investment is safeguarded against unforeseen
+                    circumstances
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-lg font-bold text-primary">
+                    Quality Assurance
+                  </div>
+                  <p className="text-sm text-muted">
+                    Insurance backing validates our commitment to excellence
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-lg font-bold text-primary">
+                    Peace of Mind
+                  </div>
+                  <p className="text-sm text-muted">
+                    Complete confidence in project delivery and outcomes
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ease-int.com"),
   title: { default: "EASE - Landmarks of Tomorrow", template: "%s - EASE" },
   description:
-    "EASE - East Africa Specialized Engineering. Leading construction company in Ethiopia specializing in post-tensioning solutions, structural engineering, and innovative building technologies across East Africa.",
+    "EASE - East Africa Specialized Engineering. Ethiopia's only insurance-backed construction company specializing in post-tensioning solutions, structural engineering, and innovative building technologies across East Africa.",
   keywords: [
     "construction",
     "engineering",
@@ -32,6 +32,12 @@ export const metadata: Metadata = {
     "building",
     "infrastructure",
     "Addis Ababa",
+    "insurance-backed construction",
+    "insured construction company",
+    "liability coverage",
+    "bonded contractor",
+    "reliable construction",
+    "trusted engineering",
   ],
   authors: [{ name: "EASE - East Africa Specialized Engineering" }],
   creator: "EASE - East Africa Specialized Engineering",
@@ -43,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "EASE - East Africa Specialized Engineering",
     title: "EASE - Landmarks of Tomorrow",
     description:
-      "Leading construction company in Ethiopia specializing in post-tensioning solutions, structural engineering, and innovative building technologies across East Africa.",
+      "Ethiopia's only insurance-backed construction company specializing in post-tensioning solutions, structural engineering, and innovative building technologies across East Africa.",
     images: [
       {
         url: "/construction.jpg",
@@ -57,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "EASE - Landmarks of Tomorrow",
     description:
-      "Leading construction company in Ethiopia specializing in post-tensioning solutions, structural engineering, and innovative building technologies.",
+      "Ethiopia's only insurance-backed construction company specializing in post-tensioning solutions, structural engineering, and innovative building technologies.",
     images: ["/construction.jpg"],
     creator: "@easeengineering",
   },
@@ -150,6 +156,12 @@ function Footer() {
                 About
               </Link>
               <Link
+                href="/projects"
+                className="text-neutral transition-colors duration-200 hover:text-primary"
+              >
+                Projects
+              </Link>
+              <Link
                 href="/services"
                 className="text-neutral transition-colors duration-200 hover:text-primary"
               >
@@ -192,7 +204,7 @@ function Footer() {
                   className="mt-0.5 flex-shrink-0 text-primary"
                 />
                 <address className="text-neutral not-italic">
-                  123 Shiro Street
+                  Bole Sub-City, Woreda 06, Jacros-Salitemehret RD
                   <br />
                   Addis Ababa, Ethiopia
                 </address>
@@ -232,7 +244,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     name: "EASE - East Africa Specialized Engineering",
     alternateName: "EASE",
     description:
-      "Leading construction company in Ethiopia specializing in post-tensioning solutions, structural engineering, and innovative building technologies.",
+      "Ethiopia's only insurance-backed construction company specializing in post-tensioning solutions, structural engineering, and innovative building technologies with comprehensive liability coverage.",
     url: "https://ease-int.com",
     logo: "https://ease-int.com/logo.png",
     image: "https://ease-int.com/construction.jpg",
@@ -243,7 +255,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "123 Shiro Street",
+      streetAddress: "Bole Sub-City, Woreda 06, Jacros-Salitemehret RD",
       addressLocality: "Addis Ababa",
       addressCountry: "Ethiopia",
     },
@@ -260,6 +272,24 @@ export default function Layout({ children }: { children: ReactNode }) {
     serviceArea: {
       "@type": "Country",
       name: "Ethiopia",
+    },
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Product Liability Insurance Coverage",
+        description: "$10 Million product liability insurance coverage",
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Professional Liability Insurance Coverage",
+        description: "$5 Million professional liability insurance coverage",
+      },
+    ],
+    award: {
+      "@type": "Thing",
+      name: "Ethiopia's Only Insurance-Backed Construction Company",
+      description:
+        "Recognized as the only construction company in Ethiopia with comprehensive insurance backing",
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",

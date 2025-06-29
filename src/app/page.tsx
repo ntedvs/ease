@@ -1,8 +1,10 @@
+import AnimatedNumber from "@/components/AnimatedNumber"
 import AnimatedStats from "@/components/AnimatedStats"
 import CompanyMarquee from "@/components/CompanyMarquee"
 import ImageCarousel from "@/components/ImageCarousel"
 import TestimonialCarousel from "@/components/TestimonialCarousel"
 import {
+  Anchor,
   Building,
   Building2,
   Calculator,
@@ -10,6 +12,8 @@ import {
   MapPin,
   Maximize2,
   PenTool,
+  Settings,
+  Shield,
   TreePine,
   Zap,
 } from "lucide-react"
@@ -19,7 +23,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   description:
-    "EASE - East Africa Specialized Engineering. Building landmarks of tomorrow through innovative post-tensioning construction solutions and advanced structural engineering across Ethiopia and East Africa.",
+    "EASE - East Africa Specialized Engineering. Ethiopia's only insurance-backed construction company building landmarks of tomorrow through innovative post-tensioning solutions and advanced structural engineering.",
 }
 
 export default function Home() {
@@ -39,8 +43,8 @@ export default function Home() {
   ]
 
   const statsData = [
-    { value: "800,000+", label: "Square Meters Provided" },
-    { value: "80+", label: "Projects\nCompleted" },
+    { value: "800,000+", label: "Square Meters of Slabs" },
+    { value: "80+", label: "Projects" },
     { value: "3+", label: "Countries of\nOperation" },
     { value: "10+", label: "Years of Industry\nLeadership" },
   ]
@@ -52,13 +56,13 @@ export default function Home() {
       name: "Ethiopian Airlines",
     },
     {
-      src: "/logos/2.png", 
+      src: "/logos/2.png",
       alt: "Commercial Bank of Ethiopia - Financial services partner",
       name: "Commercial Bank of Ethiopia",
     },
     {
       src: "/logos/3.png",
-      alt: "Awash Bank - Banking sector partner", 
+      alt: "Awash Bank - Banking sector partner",
       name: "Awash Bank",
     },
     {
@@ -69,7 +73,7 @@ export default function Home() {
     {
       src: "/logos/5.png",
       alt: "Ethio Telecom - Telecommunications infrastructure partner",
-      name: "Ethio Telecom", 
+      name: "Ethio Telecom",
     },
     {
       src: "/logos/6.png",
@@ -147,16 +151,17 @@ export default function Home() {
                 of Tomorrow
               </h1>
 
-              <p className="max-w-lg text-xl leading-relaxed text-white/90 md:text-2xl">
-                Building icons that inspire future generations through
-                innovative post-tensioning construction solutions and advanced
-                structural engineering.
+              <p className="max-w-lg text-xl leading-relaxed text-white/90">
+                Post-tensioning, Pre-cast Solutions, Repair and Strengthening,
+                Structural Bearings, Heavy Lifting, Design, Vertical
+                Post-tensioning, Geotechnical Solutions, Consultancy, Surface
+                Jointless Flooring
               </p>
 
               <div className="pt-4">
                 <Link
                   href="/contact"
-                  className="btn btn-primary btn-lg inline-flex items-center space-x-2"
+                  className="btn btn-primary btn-lg btn-pulse inline-flex items-center space-x-2"
                 >
                   <span>Contact Us</span>
                 </Link>
@@ -247,7 +252,7 @@ export default function Home() {
             <Link
               href="/EASE Profile.pdf"
               target="_blank"
-              className="btn btn-primary btn-lg"
+              className="btn btn-primary btn-lg btn-pulse"
             >
               View Our Profile
             </Link>
@@ -335,9 +340,159 @@ export default function Home() {
 
           {/* Learn More About Post-Tensioning Button */}
           <div className="mt-12 text-center">
-            <Link href="/post-tensioning" className="btn btn-primary btn-lg">
+            <Link href="/post-tensioning" className="btn btn-primary btn-lg btn-pulse">
               Learn More About Post-Tensioning
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Comprehensive Services Section */}
+      <section className="section bg-white">
+        <div className="container-xl">
+          <div className="mb-16 text-center">
+            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
+              Our Comprehensive Services
+            </h2>
+            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
+              From specialized post-tensioning solutions to complete project management,
+              EASE delivers end-to-end engineering services with decades of proven 
+              expertise and innovation across all construction disciplines.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {/* Card 1: Post-tensioning */}
+            <div className="card group transition-all duration-300 hover:shadow-lg">
+              <div className="card-body space-y-6 text-center">
+                <div className="flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                    <Anchor size={32} className="text-primary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-secondary">
+                  Post-tensioning
+                </h3>
+                <p className="text-sm leading-relaxed text-muted">
+                  Advanced concrete strengthening technology providing superior
+                  structural performance and significant cost savings.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2: Design Services */}
+            <div className="card group transition-all duration-300 hover:shadow-lg">
+              <div className="card-body space-y-6 text-center">
+                <div className="flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                    <PenTool size={32} className="text-primary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-secondary">
+                  Design Services
+                </h3>
+                <p className="text-sm leading-relaxed text-muted">
+                  Comprehensive structural design and engineering consultation
+                  services provided complimentary with our construction projects.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3: Repair & Strengthening */}
+            <div className="card group transition-all duration-300 hover:shadow-lg">
+              <div className="card-body space-y-6 text-center">
+                <div className="flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                    <Shield size={32} className="text-primary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-secondary">
+                  Repair & Strengthening
+                </h3>
+                <p className="text-sm leading-relaxed text-muted">
+                  Specialized rehabilitation services to extend building lifespan
+                  and enhance structural capacity using proven methodologies.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 4: Project Management */}
+            <div className="card group transition-all duration-300 hover:shadow-lg">
+              <div className="card-body space-y-6 text-center">
+                <div className="flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                    <Settings size={32} className="text-primary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-secondary">
+                  Project Management
+                </h3>
+                <p className="text-sm leading-relaxed text-muted">
+                  Professional end-to-end project coordination ensuring on-time,
+                  on-budget delivery with superior quality standards.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Learn More About Our Services Button */}
+          <div className="mt-12 text-center">
+            <Link href="/services" className="btn btn-primary btn-lg btn-pulse">
+              Learn More About Our Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Insurance Backed Section */}
+      <section className="section bg-primary">
+        <div className="container-xl">
+          <div className="mx-auto max-w-4xl text-center text-white">
+            <div className="mb-8 flex justify-center">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/20">
+                <Shield size={40} className="text-white" />
+              </div>
+            </div>
+            
+            <h2 className="mb-6 text-4xl font-black text-white md:text-5xl">
+              Ethiopia&apos;s Only <span className="text-white/90">Insurance-Backed</span> Construction Company
+            </h2>
+            
+            <p className="mb-12 text-xl leading-relaxed text-white/90">
+              EASE is the only construction company in Ethiopia with comprehensive insurance coverage, 
+              providing our clients with unmatched security and peace of mind for their projects.
+            </p>
+
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="rounded-xl bg-white/10 p-8 backdrop-blur-sm">
+                <AnimatedNumber 
+                  value={10} 
+                  prefix="$" 
+                  suffix="M" 
+                  className="mb-4 text-4xl font-black text-white"
+                />
+                <h3 className="mb-2 text-xl font-bold text-white">Product Liability Coverage</h3>
+                <p className="text-white/80">Comprehensive protection for all construction materials and workmanship</p>
+              </div>
+              
+              <div className="rounded-xl bg-white/10 p-8 backdrop-blur-sm">
+                <AnimatedNumber 
+                  value={5} 
+                  prefix="$" 
+                  suffix="M" 
+                  className="mb-4 text-4xl font-black text-white"
+                />
+                <h3 className="mb-2 text-xl font-bold text-white">Professional Liability Coverage</h3>
+                <p className="text-white/80">Complete coverage for engineering design and professional services</p>
+              </div>
+            </div>
+
+            <div className="mt-12 rounded-xl bg-white/5 p-6 backdrop-blur-sm">
+              <p className="text-lg font-medium text-white">
+                💡 <strong>Why This Matters:</strong> Our insurance backing means your project is protected against unforeseen circumstances, 
+                giving you confidence in our commitment to quality and accountability.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -579,7 +734,7 @@ export default function Home() {
 
           {/* View All Projects Button */}
           <div className="text-center">
-            <Link href="/projects" className="btn btn-primary btn-lg">
+            <Link href="/projects" className="btn btn-primary btn-lg btn-pulse">
               View All Projects
             </Link>
           </div>

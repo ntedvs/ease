@@ -164,10 +164,25 @@
     animation: marquee2 35s linear infinite;
   }
 
+  /* Subtle button pulse animation */
+  @keyframes pulse-subtle {
+    0%, 100% { 
+      transform: scale(1); 
+    }
+    50% { 
+      transform: scale(1.1); 
+    }
+  }
+
+  .btn-pulse {
+    animation: pulse-subtle 5s ease-in-out infinite;
+  }
+
   /* Reduced motion support */
   @media (prefers-reduced-motion: reduce) {
     .animate-marquee,
-    .animate-marquee2 {
+    .animate-marquee2,
+    .btn-pulse {
       animation-play-state: paused;
     }
 

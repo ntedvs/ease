@@ -1,6 +1,8 @@
-import { Clock, Mail, MapPin, Phone } from "lucide-react"
+import { Clock, Mail, MapPin, Phone, Users } from "lucide-react"
 import { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
+import CareersForm from "@/components/CareersForm"
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -167,7 +169,7 @@ export default function ContactPage() {
                       Office Location
                     </h3>
                     <address className="text-muted not-italic">
-                      123 Shiro Street, Addis Ababa, Ethiopia
+                      Bole Sub-City, Woreda 06, Jacros-Salitemehret RD, Addis Ababa, Ethiopia
                     </address>
                   </div>
                 </div>
@@ -208,15 +210,51 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="card overflow-hidden">
-            <div className="relative h-96 w-full">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.600964252302!2d38.80668560000001!3d9.008815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85afe3158581%3A0x3c1218220f02583f!2sEASE%20Engineering%20P.L.C.!5e0!3m2!1sen!2sus!4v1750884795566!5m2!1sen!2sus"
-                loading="lazy"
-                className="size-full"
-              />
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {/* Google Maps */}
+            <div className="card overflow-hidden">
+              <div className="relative h-108 w-full">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.600964252302!2d38.80668560000001!3d9.008815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85afe3158581%3A0x3c1218220f02583f!2sEASE%20Engineering%20P.L.C.!5e0!3m2!1sen!2sus!4v1750884795566!5m2!1sen!2sus"
+                  loading="lazy"
+                  className="size-full"
+                />
+              </div>
+            </div>
+
+            {/* Office Image */}
+            <div className="card overflow-hidden">
+              <div className="relative h-108 w-full">
+                <Image
+                  src="/easeoffice.png"
+                  alt="EASE Engineering P.L.C. Office Building in Addis Ababa"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Careers Section */}
+      <section className="section bg-white">
+        <div className="container-xl">
+          <div className="mb-12 text-center">
+            <div className="flex items-center justify-center mb-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                <Users size={32} className="text-primary" />
+              </div>
+            </div>
+            <h2 className="mb-6 text-3xl font-bold text-secondary">
+              Join Our Team
+            </h2>
+            <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted">
+              Are you passionate about construction and engineering? We&apos;re always looking for talented individuals to join our growing team. Send us your resume and tell us why you&apos;d be a great fit for EASE.
+            </p>
+          </div>
+
+          <CareersForm />
         </div>
       </section>
     </>
