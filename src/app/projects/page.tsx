@@ -2,6 +2,7 @@
 
 import projectsData from "@/../projects.json"
 import {
+  RailSymbol as Bridge,
   Briefcase,
   Building,
   Building2,
@@ -42,6 +43,7 @@ const categoryDisplayNames: Record<string, string> = {
   Shoring: "Shoring",
   Bank: "Bank",
   School: "School",
+  Bridge: "Bridge",
   "Mixed Use": "Mixed Use",
   "Personal Residence": "Personal Residence",
 }
@@ -73,6 +75,8 @@ const getCategoryIcon = (category: string) => {
       return <CreditCard size={16} className="text-primary" />
     case "School":
       return <GraduationCap size={16} className="text-primary" />
+    case "Bridge":
+      return <Bridge size={16} className="text-primary" />
     default:
       return <Building size={16} className="text-primary" />
   }

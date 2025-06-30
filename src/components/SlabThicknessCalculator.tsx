@@ -4,24 +4,33 @@ import { Calculator, TrendingDown } from "lucide-react"
 import { useState } from "react"
 
 export default function SlabThicknessCalculator() {
-  const [slabThickness, setSlabThickness] = useState(25)
+  const [slabThickness, setSlabThickness] = useState(26)
 
-  const getPostTensioningMultiplier = (thickness: number): number => {
-    if (thickness >= 18 && thickness <= 20) return 0.9
-    if (thickness > 20 && thickness <= 25) return 0.84
-    if (thickness > 25 && thickness <= 30) return 0.93
-    if (thickness > 30 && thickness <= 40) return 0.8
-    if (thickness > 40 && thickness <= 45) return 0.84
-    return 1.0
+  const getOptimizedThickness = (thickness: number): number => {
+    const thicknessMap: Record<number, number> = {
+      20: 17,
+      21: 18,
+      22: 18,
+      23: 18,
+      24: 19,
+      25: 20,
+      26: 20,
+      27: 21,
+      28: 22,
+      29: 23,
+      30: 24,
+      31: 24,
+      32: 25,
+    }
+    return thicknessMap[thickness] || thickness
   }
 
-  const multiplier = getPostTensioningMultiplier(slabThickness)
-  const optimizedThickness = slabThickness * multiplier
+  const optimizedThickness = getOptimizedThickness(slabThickness)
   const savings = slabThickness - optimizedThickness
   const savingsPercentage = ((savings / slabThickness) * 100).toFixed(1)
 
   return (
-    <section className="section bg-white">
+    <section className="section bg-neutral">
       <div className="container-xl">
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
@@ -55,7 +64,7 @@ export default function SlabThicknessCalculator() {
                         htmlFor="slab-thickness"
                         className="text-lg font-medium text-secondary"
                       >
-                        Current Slab Thickness
+                        Standard Slab Thickness
                       </label>
                       <span className="rounded-lg bg-neutral px-3 py-1 text-lg font-bold text-secondary">
                         {slabThickness} cm
@@ -66,8 +75,8 @@ export default function SlabThicknessCalculator() {
                       <input
                         id="slab-thickness"
                         type="range"
-                        min="10"
-                        max="45"
+                        min="20"
+                        max="32"
                         value={slabThickness}
                         onChange={(e) =>
                           setSlabThickness(Number(e.target.value))
@@ -75,15 +84,15 @@ export default function SlabThicknessCalculator() {
                         className="slider h-3 w-full cursor-pointer appearance-none rounded-lg bg-neutral-dark focus:ring-2 focus:ring-primary focus:outline-none"
                         style={{
                           background: `linear-gradient(to right, #e82d22 0%, #e82d22 ${
-                            ((slabThickness - 10) / 35) * 100
+                            ((slabThickness - 20) / 12) * 100
                           }%, #e6e6e6 ${
-                            ((slabThickness - 10) / 35) * 100
+                            ((slabThickness - 20) / 12) * 100
                           }%, #e6e6e6 100%)`,
                         }}
                       />
                       <div className="flex justify-between text-sm text-muted">
-                        <span>10 cm</span>
-                        <span>45 cm</span>
+                        <span>20 cm</span>
+                        <span>32 cm</span>
                       </div>
                     </div>
                   </div>
@@ -124,7 +133,7 @@ export default function SlabThicknessCalculator() {
                       </div>
                     </div>
 
-                    {multiplier < 1.0 && (
+                    {savings > 0 && (
                       <div className="rounded-lg border border-primary/20 bg-primary/5 p-4">
                         <div className="text-sm font-medium text-primary">
                           💡 Optimization Available

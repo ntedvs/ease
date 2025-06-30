@@ -100,9 +100,6 @@ export default function PostTensioning() {
         </div>
       </section>
 
-      {/* Post-Tensioning Process Section */}
-      <ProcessStepsDropdown />
-
       {/* Combined Advantages Section */}
       <section className="section bg-white">
         <div className="container-xl">
@@ -168,8 +165,11 @@ export default function PostTensioning() {
         </div>
       </section>
 
+      {/* Post-Tensioning Process Section */}
+      <ProcessStepsDropdown />
+
       {/* Technical Resources Section */}
-      <section className="section bg-neutral">
+      <section className="section bg-white">
         <div className="container-xl">
           <div className="mb-12 text-center">
             <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
@@ -183,7 +183,7 @@ export default function PostTensioning() {
 
           <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6">
             <Link
-              href="/booklet.pdf"
+              href="/RSF Booklet.pdf"
               target="_blank"
               className="btn btn-primary btn-lg inline-flex w-full items-center space-x-2 sm:w-auto"
             >
@@ -200,6 +200,9 @@ export default function PostTensioning() {
           </div>
         </div>
       </section>
+
+      {/* Slab Thickness Calculator Section */}
+      <SlabThicknessCalculator />
 
       {/* Professional Assurance Section */}
       <section className="section bg-secondary">
@@ -266,9 +269,6 @@ export default function PostTensioning() {
           </div>
         </div>
       </section>
-
-      {/* Slab Thickness Calculator Section */}
-      <SlabThicknessCalculator />
 
       {/* FAQ Section */}
       <FAQSection />

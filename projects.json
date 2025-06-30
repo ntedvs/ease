@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "Ene Asnakech ayele",
-      "area": 1843.00,
+      "area": 1843.0,
       "signingDate": "3/1/24",
       "category": "Apartment",
       "hasImage": false,
@@ -11,7 +11,7 @@
     },
     {
       "name": "YTY",
-      "area": 39016.00,
+      "area": 39016.0,
       "signingDate": "31/7/24",
       "category": "Mixed Use",
       "hasImage": false,
@@ -20,7 +20,7 @@
     },
     {
       "name": "Aman Lebu",
-      "area": 7300.00,
+      "area": 7300.0,
       "signingDate": "27/11/23",
       "category": "Hotel",
       "hasImage": false,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Amde",
-      "area": 19500.00,
+      "area": 19500.0,
       "signingDate": "24/4/24",
       "category": "Apartment",
       "hasImage": false,
@@ -38,7 +38,7 @@
     },
     {
       "name": "Anbessa Project",
-      "area": 83200.00,
+      "area": 83200.0,
       "signingDate": "27/6/19",
       "category": "Government",
       "hasImage": false,
@@ -47,7 +47,7 @@
     },
     {
       "name": "Tarekegn/Tsion Asmelash",
-      "area": 7140.00,
+      "area": 7140.0,
       "signingDate": "15/3/24",
       "category": "Mixed Use",
       "hasImage": false,
@@ -56,7 +56,7 @@
     },
     {
       "name": "UNISON",
-      "area": 18345.00,
+      "area": 18345.0,
       "signingDate": "29/1/23",
       "category": "Hotel",
       "hasImage": false,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Ayalew Mixed Use",
-      "area": 6700.00,
+      "area": 6700.0,
       "signingDate": "14/7/23",
       "category": "Mixed Use",
       "hasImage": false,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Semu Residence",
-      "area": 1900.00,
+      "area": 1900.0,
       "signingDate": "4/11/19",
       "category": "Personal Residence",
       "hasImage": false,
@@ -92,7 +92,7 @@
     },
     {
       "name": "Bole Hospital",
-      "area": 106225.00,
+      "area": 106225.0,
       "signingDate": "16/4/19",
       "category": "Hospital",
       "hasImage": false,
@@ -110,7 +110,7 @@
     },
     {
       "name": "Arsi University Bekoji",
-      "area": 15403.80,
+      "area": 15403.8,
       "signingDate": "13/12/18",
       "category": "Government",
       "hasImage": false,
@@ -119,7 +119,7 @@
     },
     {
       "name": "Cluster-Sur",
-      "area": 62058.00,
+      "area": 62058.0,
       "signingDate": "5/4/24",
       "category": "Commercial",
       "hasImage": false,
@@ -128,7 +128,7 @@
     },
     {
       "name": "DATD",
-      "area": 22632.60,
+      "area": 22632.6,
       "signingDate": "24/7/24",
       "category": "Apartment",
       "hasImage": false,
@@ -137,7 +137,7 @@
     },
     {
       "name": "Diamond Review",
-      "area": 8422.00,
+      "area": 8422.0,
       "signingDate": "1/6/24",
       "category": "Apartment",
       "hasImage": false,
@@ -146,7 +146,7 @@
     },
     {
       "name": "Elias Summit Apt",
-      "area": 9405.00,
+      "area": 9405.0,
       "signingDate": "12/2/18",
       "category": "Apartment",
       "hasImage": false,
@@ -155,7 +155,7 @@
     },
     {
       "name": "Ene Nahom",
-      "area": 7449.00,
+      "area": 7449.0,
       "signingDate": "16/12/22",
       "category": "Apartment",
       "hasImage": false,
@@ -173,7 +173,7 @@
     },
     {
       "name": "Ene Awad",
-      "area": 3800.00,
+      "area": 3800.0,
       "signingDate": "24/2/24",
       "category": "Mixed Use",
       "hasImage": false,
@@ -182,7 +182,7 @@
     },
     {
       "name": "Burayu Warehouse",
-      "area": 3906.00,
+      "area": 3906.0,
       "signingDate": "17/4/19",
       "category": "Warehouse",
       "hasImage": false,
@@ -191,7 +191,7 @@
     },
     {
       "name": "Ezana Apartment",
-      "area": 3000.00,
+      "area": 3000.0,
       "signingDate": "24/4/24",
       "category": "Apartment",
       "hasImage": false,
@@ -200,7 +200,7 @@
     },
     {
       "name": "Ene Teha",
-      "area": 3719.00,
+      "area": 3719.0,
       "signingDate": "27/3/24",
       "category": "Mixed Use",
       "hasImage": false,
@@ -209,7 +209,7 @@
     },
     {
       "name": "Ermias Workshop",
-      "area": 358.40,
+      "area": 358.4,
       "signingDate": "20/3/19",
       "category": "Warehouse",
       "hasImage": false,
@@ -218,7 +218,7 @@
     },
     {
       "name": "Seid Yassin/Alamterahman",
-      "area": 3678.80,
+      "area": 3678.8,
       "signingDate": "9/8/24",
       "category": "Mixed Use",
       "hasImage": false,
@@ -227,7 +227,7 @@
     },
     {
       "name": "TK Apartment",
-      "area": 13000.00,
+      "area": 13000.0,
       "signingDate": "23/1/23",
       "category": "Apartment",
       "hasImage": false,
@@ -236,7 +236,7 @@
     },
     {
       "name": "Mulugeta/Mekdes",
-      "area": 4875.00,
+      "area": 4875.0,
       "signingDate": "29/1/22",
       "category": "Mixed Use",
       "hasImage": false,
@@ -254,7 +254,7 @@
     },
     {
       "name": "Fedengua Phase 1",
-      "area": 33520.00,
+      "area": 33520.0,
       "signingDate": "28/2/20",
       "category": "Mixed Use",
       "hasImage": true,
@@ -272,7 +272,7 @@
     },
     {
       "name": "Asnakech Teklu",
-      "area": 1395.00,
+      "area": 1395.0,
       "signingDate": "23/3/21",
       "category": "Apartment",
       "hasImage": false,
@@ -281,7 +281,7 @@
     },
     {
       "name": "Habtamu Int Hotel",
-      "area": 960.00,
+      "area": 960.0,
       "signingDate": "27/6/19",
       "category": "Hotel",
       "hasImage": false,
@@ -299,7 +299,7 @@
     },
     {
       "name": "Jenboro RE",
-      "area": 122265.00,
+      "area": 122265.0,
       "signingDate": "30/1/24",
       "category": "Mixed Use",
       "hasImage": true,
@@ -308,7 +308,7 @@
     },
     {
       "name": "Jimma Uni Lounge",
-      "area": 3200.00,
+      "area": 3200.0,
       "signingDate": "8/4/19",
       "category": "School",
       "hasImage": false,
@@ -320,13 +320,13 @@
       "area": 1217.67,
       "signingDate": "25/3/19",
       "category": "Apartment",
-      "hasImage": false,
-      "imageUrl": null,
+      "hasImage": true,
+      "imageUrl": "/projects/elilta.png",
       "year": 2019
     },
     {
       "name": "EPRDF HQ",
-      "area": 820.00,
+      "area": 820.0,
       "signingDate": "15/8/19",
       "category": "Government",
       "hasImage": false,
@@ -335,7 +335,7 @@
     },
     {
       "name": "Menor",
-      "area": 17602.00,
+      "area": 17602.0,
       "signingDate": "18/3/22",
       "category": "Mixed Use",
       "hasImage": false,
@@ -344,7 +344,7 @@
     },
     {
       "name": "Monarch",
-      "area": 8750.00,
+      "area": 8750.0,
       "signingDate": "24/3/22",
       "category": "Hotel",
       "hasImage": false,
@@ -353,7 +353,7 @@
     },
     {
       "name": "Eskinder Bldg",
-      "area": 6796.00,
+      "area": 6796.0,
       "signingDate": "28/2/20",
       "category": "Apartment",
       "hasImage": false,
@@ -371,7 +371,7 @@
     },
     {
       "name": "FAO SOG Slab",
-      "area": 100.00,
+      "area": 100.0,
       "signingDate": "23/7/21",
       "category": "Warehouse",
       "hasImage": false,
@@ -380,7 +380,7 @@
     },
     {
       "name": "Golden Star",
-      "area": 21450.00,
+      "area": 21450.0,
       "signingDate": "6/3/23",
       "category": "Mixed Use",
       "hasImage": false,
@@ -398,7 +398,7 @@
     },
     {
       "name": "Hayahulet project",
-      "area": 1305.00,
+      "area": 1305.0,
       "signingDate": "4/10/17",
       "category": "Mixed Use",
       "hasImage": false,
@@ -425,7 +425,7 @@
     },
     {
       "name": "Oromia International Bank",
-      "area": 340.00,
+      "area": 340.0,
       "signingDate": "25/2/24",
       "category": "Bank",
       "hasImage": true,
@@ -452,7 +452,7 @@
     },
     {
       "name": "Pan Africa Block C",
-      "area": 3160.00,
+      "area": 3160.0,
       "signingDate": "1/8/19",
       "category": "Mixed Use",
       "hasImage": false,
@@ -461,7 +461,7 @@
     },
     {
       "name": "Pan Africa Block D",
-      "area": 23350.00,
+      "area": 23350.0,
       "signingDate": "10/11/17",
       "category": "Mixed Use",
       "hasImage": false,
@@ -470,7 +470,7 @@
     },
     {
       "name": "Solomon Teferra",
-      "area": 7140.00,
+      "area": 7140.0,
       "signingDate": "23/4/23",
       "category": "Mixed Use",
       "hasImage": false,
@@ -479,7 +479,7 @@
     },
     {
       "name": "Pullman Hotel",
-      "area": 410.00,
+      "area": 410.0,
       "signingDate": "1/8/16",
       "category": "Hotel",
       "hasImage": false,
@@ -488,7 +488,7 @@
     },
     {
       "name": "Sara Yimer",
-      "area": 18885.00,
+      "area": 18885.0,
       "signingDate": "26/1/22",
       "category": "Mixed Use",
       "hasImage": false,
@@ -515,7 +515,7 @@
     },
     {
       "name": "Tsinat RE",
-      "area": 21500.00,
+      "area": 21500.0,
       "signingDate": "23/4/24",
       "category": "Mixed Use",
       "hasImage": false,
@@ -542,7 +542,7 @@
     },
     {
       "name": "U Street Apartment",
-      "area": 15280.00,
+      "area": 15280.0,
       "signingDate": "21/7/17",
       "category": "Apartment",
       "hasImage": false,
@@ -551,7 +551,7 @@
     },
     {
       "name": "Wro Emebet",
-      "area": 3906.00,
+      "area": 3906.0,
       "signingDate": "9/8/23",
       "category": "Apartment",
       "hasImage": false,
@@ -569,7 +569,7 @@
     },
     {
       "name": "Yared Apt",
-      "area": 4685.00,
+      "area": 4685.0,
       "signingDate": "8/8/19",
       "category": "Apartment",
       "hasImage": false,
@@ -587,7 +587,7 @@
     },
     {
       "name": "Zahara Apt",
-      "area": 4320.00,
+      "area": 4320.0,
       "signingDate": "21/2/23",
       "category": "Apartment",
       "hasImage": false,
@@ -596,12 +596,48 @@
     },
     {
       "name": "ZZ Hospital",
-      "area": 23660.00,
+      "area": 23660.0,
       "signingDate": "5/2/18",
       "category": "Hospital",
       "hasImage": false,
       "imageUrl": null,
       "year": 2018
+    },
+    {
+      "name": "Cultural Market Center",
+      "area": 38000.0,
+      "signingDate": "1/1/22",
+      "category": "Government",
+      "hasImage": true,
+      "imageUrl": "/projects/cultural.png",
+      "year": 2022
+    },
+    {
+      "name": "Bulbula Bridge",
+      "area": 27.0,
+      "signingDate": "1/1/23",
+      "category": "Bridge",
+      "hasImage": true,
+      "imageUrl": "/projects/bulbula.png",
+      "year": 2023
+    },
+    {
+      "name": "Omo River Bridge",
+      "area": 65.0,
+      "signingDate": "1/1/21",
+      "category": "Bridge",
+      "hasImage": true,
+      "imageUrl": "/projects/omo.png",
+      "year": 2021
+    },
+    {
+      "name": "Prosperity Party HQ",
+      "area": 840.0,
+      "signingDate": "1/1/16",
+      "category": "Government",
+      "hasImage": true,
+      "imageUrl": "/projects/ppq.png",
+      "year": 2016
     }
   ]
 }

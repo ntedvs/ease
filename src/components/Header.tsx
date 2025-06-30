@@ -3,10 +3,12 @@
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useState } from "react"
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -39,19 +41,22 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center space-x-8 md:flex">
-            <Link href="/" className="nav-link nav-link-active">
+            <Link href="/" className={pathname === "/" ? "nav-link nav-link-active" : "nav-link"}>
               Home
             </Link>
-            <Link href="/about" className="nav-link">
+            <Link href="/about" className={pathname === "/about" ? "nav-link nav-link-active" : "nav-link"}>
               About
             </Link>
-            <Link href="/projects" className="nav-link">
+            <Link href="/projects" className={pathname === "/projects" ? "nav-link nav-link-active" : "nav-link"}>
               Projects
             </Link>
-            <Link href="/services" className="nav-link">
+            <Link href="/services" className={pathname === "/services" ? "nav-link nav-link-active" : "nav-link"}>
               Services
             </Link>
-            <Link href="/contact" className="nav-link">
+            <Link href="/news" className={pathname === "/news" ? "nav-link nav-link-active" : "nav-link"}>
+              News
+            </Link>
+            <Link href="/contact" className={pathname === "/contact" ? "nav-link nav-link-active" : "nav-link"}>
               Contact
             </Link>
           </nav>
@@ -75,35 +80,42 @@ export default function Header() {
           <nav className="flex flex-col space-y-4 py-4">
             <Link
               href="/"
-              className="nav-link nav-link-active px-4 py-2"
+              className={pathname === "/" ? "nav-link nav-link-active px-4 py-2" : "nav-link px-4 py-2"}
               onClick={closeMobileMenu}
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="nav-link px-4 py-2"
+              className={pathname === "/about" ? "nav-link nav-link-active px-4 py-2" : "nav-link px-4 py-2"}
               onClick={closeMobileMenu}
             >
               About
             </Link>
             <Link
               href="/projects"
-              className="nav-link px-4 py-2"
+              className={pathname === "/projects" ? "nav-link nav-link-active px-4 py-2" : "nav-link px-4 py-2"}
               onClick={closeMobileMenu}
             >
               Projects
             </Link>
             <Link
               href="/services"
-              className="nav-link px-4 py-2"
+              className={pathname === "/services" ? "nav-link nav-link-active px-4 py-2" : "nav-link px-4 py-2"}
               onClick={closeMobileMenu}
             >
               Services
             </Link>
             <Link
+              href="/news"
+              className={pathname === "/news" ? "nav-link nav-link-active px-4 py-2" : "nav-link px-4 py-2"}
+              onClick={closeMobileMenu}
+            >
+              News
+            </Link>
+            <Link
               href="/contact"
-              className="nav-link px-4 py-2"
+              className={pathname === "/contact" ? "nav-link nav-link-active px-4 py-2" : "nav-link px-4 py-2"}
               onClick={closeMobileMenu}
             >
               Contact

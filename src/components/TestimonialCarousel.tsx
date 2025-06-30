@@ -1,7 +1,7 @@
 "use client"
 
-import { useState, useEffect, useRef, useCallback } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useCallback, useEffect, useRef, useState } from "react"
 
 interface Testimonial {
   quote: string
@@ -101,8 +101,10 @@ export default function TestimonialCarousel({
   // Auto-play management
   useEffect(() => {
     // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches
+
     if (!prefersReducedMotion && isAutoPlaying) {
       startAutoPlay()
     }
@@ -162,18 +164,19 @@ export default function TestimonialCarousel({
             <div className="text-lg font-bold text-secondary">
               {currentTestimonial.name}
             </div>
-            <div className="text-sm text-muted">{currentTestimonial.title}</div>
+            {/* <div className="text-sm text-muted">{currentTestimonial.title}</div>
             <div className="text-base font-semibold text-primary">
               {currentTestimonial.company}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
       {/* Auto-play status indicator (for screen readers) */}
       <div className="sr-only" aria-live="polite" aria-atomic="true">
-        Testimonial carousel is {isAutoPlaying ? "auto-playing" : "paused"}. 
-        Currently showing testimonial {currentIndex + 1} of {testimonials.length}.
+        Testimonial carousel is {isAutoPlaying ? "auto-playing" : "paused"}.
+        Currently showing testimonial {currentIndex + 1} of{" "}
+        {testimonials.length}.
       </div>
 
       {/* Dots Indicator */}

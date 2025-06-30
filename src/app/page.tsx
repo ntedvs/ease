@@ -114,29 +114,36 @@ export default function Home() {
   const testimonials = [
     {
       quote:
-        "EASE delivered our building project with exceptional precision and professionalism. Their expertise in post-tensioning enabled us to achieve our architectural vision while maintaining the highest structural standards.",
+        "Throughout the scope of the PT works at the project, the EASE showcased remarkable ingenuity and forward-thinking in proposing and implementing an innovative post-tension slab solution to connect twin towers situated 70 meters above the ground level.",
       name: "Dr. Alemayehu Tekle",
       title: "Director of Infrastructure Development",
       company: "Ministry of Urban Development",
     },
     {
       quote:
-        "Working with EASE on our residential project was a remarkable experience. They provided innovative solutions that not only met our requirements but exceeded our expectations in terms of quality and timely delivery.",
+        "They exemplified exceptional customer service by providing after sales support three years post-project completion.",
       name: "Sarah Mekonnen",
       title: "Property Developer",
       company: "Addis Properties Ltd.",
     },
     {
       quote:
-        "The parking facility constructed by EASE has transformed our urban mobility infrastructure. Their technical expertise and attention to detail resulted in a efficient solution that serves our community excellently.",
-      name: "Eng. Dawit Haile",
+        "Throughout the duration of their involvement, EASE consistently demonstrated a remarkable level of professionalism, diligence, and quality in their work.",
+      name: "Birhanu Tiruneh",
       title: "City Planning Manager",
       company: "Addis Ababa City Administration",
     },
     {
       quote:
-        "EASE has consistently demonstrated their commitment to excellence in our infrastructure projects. Their innovative approach to construction and reliable project management make them our preferred construction partner.",
-      name: "Ato Bereket Wolde",
+        "EASE has consistently delivered excellence and innovation, making them an invaluable partner for any construction project.",
+      name: "Mr. Shaka Gurmesa",
+      title: "Marketing Spea",
+      company: "Golden Star",
+    },
+    {
+      quote:
+        "Their proactive approach, coupled with their willingness to take on additional responsibilities, played a pivotal role in overcoming challenges and achieving our project goals.",
+      name: "Biruk Tesfaye",
       title: "Project Coordinator",
       company: "Ethiopian Railways Corporation",
     },
@@ -531,11 +538,11 @@ export default function Home() {
 
             <div className="mt-12 rounded-xl bg-white/5 p-6 backdrop-blur-sm">
               <p className="text-lg font-medium text-white">
-                <Lightbulb size={20} className="inline text-white mr-2" />{" "}
-                <strong>Why This Matters:</strong> Our insurance backing
-                means your project is protected against unforeseen
-                circumstances, giving you confidence in our commitment to
-                quality and accountability.
+                <Lightbulb size={20} className="mr-2 inline text-white" />{" "}
+                <strong>Why This Matters:</strong> Our insurance backing means
+                your project is protected against unforeseen circumstances,
+                giving you confidence in our commitment to quality and
+                accountability.
               </p>
             </div>
           </div>
@@ -711,8 +718,8 @@ export default function Home() {
             <div className="card group overflow-hidden transition-all duration-300 hover:shadow-lg">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
-                  src="/yeka.png"
-                  alt="Yeka Parking Project - Multi-level parking facility showcasing EASE's advanced post-tensioning technology and efficient structural design for urban mobility solutions"
+                  src="/projects/elilta.png"
+                  alt="Elilta RE Building - Modern multi-level apartement featuring 35 meter spans, with advanced infrastructure design and efficient space optimization for urban solutions."
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -720,12 +727,12 @@ export default function Home() {
               </div>
               <div className="card-body space-y-4">
                 <h3 className="text-xl font-bold text-secondary">
-                  Yeka Parking
+                  Elilta RE Building
                 </h3>
                 <p className="leading-relaxed text-muted">
-                  Modern multi-level parking facility featuring advanced
-                  infrastructure design and efficient space optimization for
-                  urban mobility solutions.
+                  Modern multi-level apartement featuring 35 meter spans, with
+                  advanced infrastructure design and efficient space
+                  optimization for urban solutions.
                 </p>
               </div>
             </div>
@@ -734,8 +741,8 @@ export default function Home() {
             <div className="card group overflow-hidden transition-all duration-300 hover:shadow-lg">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
-                  src="/affairs.png"
-                  alt="Foreign Affairs Building Project - Sophisticated government building demonstrating EASE's precision engineering and architectural excellence for critical institutional infrastructure"
+                  src="/projects/ppq.png"
+                  alt="Prosperity Party HQ - Sophisticated government building construction showcasing architectural excellence and precision engineering for critical institutional infrastructure."
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -743,7 +750,7 @@ export default function Home() {
               </div>
               <div className="card-body space-y-4">
                 <h3 className="text-xl font-bold text-secondary">
-                  Foreign Affairs Building
+                  Prosperity Party HQ
                 </h3>
                 <p className="leading-relaxed text-muted">
                   Sophisticated government building construction showcasing
@@ -757,8 +764,8 @@ export default function Home() {
             <div className="card group overflow-hidden transition-all duration-300 hover:shadow-lg">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
-                  src="/residence.png"
-                  alt="Private Residence Project - Luxury residential construction featuring custom design elements, premium finishes, and EASE's expertise in high-end residential engineering"
+                  src="/projects/omo.png"
+                  alt="Omo River Bridge - Lifting and repairing a collapsed bridge, and proceeding to enhance the bridge's capacity via external post-tensioning. In collaboration with VSL."
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -766,12 +773,12 @@ export default function Home() {
               </div>
               <div className="card-body space-y-4">
                 <h3 className="text-xl font-bold text-secondary">
-                  Private Residence
+                  Omo River Bridge
                 </h3>
                 <p className="leading-relaxed text-muted">
-                  Luxury residential construction featuring custom design
-                  elements and premium finishes tailored to client
-                  specifications and lifestyle needs.
+                  Lifting and repairing a collapsed bridge, and proceeding to
+                  enhance the bridge&apos;s capacity via external
+                  post-tensioning. In collaboration with VSL.
                 </p>
               </div>
             </div>

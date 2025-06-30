@@ -168,6 +168,12 @@ function Footer() {
                 Services
               </Link>
               <Link
+                href="/news"
+                className="text-neutral transition-colors duration-200 hover:text-primary"
+              >
+                News
+              </Link>
+              <Link
                 href="/contact"
                 className="text-neutral transition-colors duration-200 hover:text-primary"
               >
