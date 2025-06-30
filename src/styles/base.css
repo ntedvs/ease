@@ -131,7 +131,7 @@
 
   /* Hero background styles */
   .hero-bg {
-    background-image: url("/construction.jpg");
+    background-image: url("/construction.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
