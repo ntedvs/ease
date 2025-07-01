@@ -1,8 +1,8 @@
+import CareersForm from "@/components/CareersForm"
 import { Clock, Mail, MapPin, Phone, Users } from "lucide-react"
 import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import CareersForm from "@/components/CareersForm"
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -168,9 +168,9 @@ export default function ContactPage() {
                     <h3 className="text-lg font-semibold text-secondary">
                       Office Location
                     </h3>
-                    <address className="text-muted not-italic">
-                      Bole Sub-City, Woreda 06, Jacros-Salitemehret RD, Addis Ababa, Ethiopia
-                    </address>
+                    <p className="text-muted">Bole Sub-City, Woreda 06</p>
+                    <p className="text-muted">Jacros-Salitemehret RD</p>
+                    <p className="text-muted">Addis Ababa, Ethiopia</p>
                   </div>
                 </div>
 
@@ -241,7 +241,7 @@ export default function ContactPage() {
       <section className="section bg-white">
         <div className="container-xl">
           <div className="mb-12 text-center">
-            <div className="flex items-center justify-center mb-4">
+            <div className="mb-4 flex items-center justify-center">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                 <Users size={32} className="text-primary" />
               </div>
@@ -250,7 +250,10 @@ export default function ContactPage() {
               Join Our Team
             </h2>
             <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted">
-              Are you passionate about construction and engineering? We&apos;re always looking for talented individuals to join our growing team. Send us your resume and tell us why you&apos;d be a great fit for EASE.
+              Are you passionate about construction and engineering? We&apos;re
+              always looking for talented individuals to join our growing team.
+              Send us your resume and tell us why you&apos;d be a great fit for
+              EASE.
             </p>
           </div>
 

@@ -504,7 +504,7 @@ export default function Home() {
                   workmanship
                 </p>
                 <Link
-                  href="/insurance/product.pdf"
+                  href="/insurance/Product Liability.pdf"
                   target="_blank"
                   className="btn btn-secondary text-sm"
                 >
@@ -527,7 +527,7 @@ export default function Home() {
                   services
                 </p>
                 <Link
-                  href="/insurance/professional.pdf"
+                  href="/insurance/Professional Liability.pdf"
                   target="_blank"
                   className="btn btn-secondary text-sm"
                 >

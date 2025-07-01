@@ -210,7 +210,9 @@ function Footer() {
                   className="mt-0.5 flex-shrink-0 text-primary"
                 />
                 <address className="text-neutral not-italic">
-                  Bole Sub-City, Woreda 06, Jacros-Salitemehret RD
+                  Bole Sub-City, Woreda 06
+                  <br />
+                  Jacros-Salitemehret RD
                   <br />
                   Addis Ababa, Ethiopia
                 </address>

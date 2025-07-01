@@ -638,6 +638,230 @@
       "hasImage": true,
       "imageUrl": "/projects/ppq.png",
       "year": 2016
+    },
+    {
+      "name": "Mille Cargo Scanning",
+      "category": "Commercial",
+      "hasImage": true,
+      "imageUrl": "/projects/mille.png",
+      "year": 2007
+    },
+    {
+      "name": "Office Building and Assembly Hall",
+      "category": "Commercial",
+      "hasImage": true,
+      "imageUrl": "/projects/officeandassembly.png",
+      "year": 1997
+    },
+    {
+      "name": "Changing Room, Store, Gymanisum, & Improvement of Infrastructure",
+      "category": "Mixed Use",
+      "hasImage": true,
+      "imageUrl": "/projects/changingroom.png",
+      "year": 1999
+    },
+    {
+      "name": "Kality Textile & Apparel Industry Lot II",
+      "category": "Commercial",
+      "hasImage": true,
+      "imageUrl": "/projects/kality.png",
+      "year": 2007
+    },
+    {
+      "name": "North Western Regional Office & Residence",
+      "category": "Mixed Use",
+      "hasImage": true,
+      "imageUrl": "/projects/northwestern.png",
+      "year": 2000
+    },
+    {
+      "name": "EMMAD MEMORIAL COMPLEX BUILDING",
+      "category": "Apartment",
+      "hasImage": true,
+      "imageUrl": "/projects/emmad.png",
+      "year": 1998
+    },
+    {
+      "name": "Office Building Block 3 GreenHouse",
+      "category": "Mixed Use",
+      "hasImage": true,
+      "imageUrl": "/projects/grenhouse.png",
+      "year": 1996
+    },
+    {
+      "name": "Nazareth Oxidation Pond and Sewerage System",
+      "category": "Industrial",
+      "hasImage": true,
+      "imageUrl": "/projects/nazareth.png",
+      "year": 2009
+    },
+    {
+      "name": "Adama University Infrastructure Project",
+      "category": "Industrial",
+      "hasImage": true,
+      "imageUrl": "/projects/adama.png",
+      "year": 2013
+    },
+    {
+      "name": "MIcky leLAND site HOUSING PROJECT",
+      "category": "Apartment",
+      "hasImage": true,
+      "imageUrl": "/projects/micky.png",
+      "year": 2007
+    },
+    {
+      "name": "KK Acrylic Dyeing Plant and Blanket Factory",
+      "category": "Industrial",
+      "hasImage": true,
+      "imageUrl": "/projects/kkacrylic.png",
+      "year": 2001
+    },
+    {
+      "name": "Ambo Hospital Extension",
+      "category": "Hospital",
+      "hasImage": true,
+      "imageUrl": "/projects/ambohospital.png",
+      "year": 1998
+    },
+    {
+      "name": "Wondo Genet Forestry",
+      "category": "Educational",
+      "hasImage": true,
+      "imageUrl": "/projects/wondo.png",
+      "year": 2005
+    },
+    {
+      "name": "Meskel flower-bole MICHAEL bridge",
+      "category": "Bridge",
+      "hasImage": true,
+      "imageUrl": "/projects/meskelflower.png",
+      "year": 2009
+    },
+    {
+      "name": "TsitsIca Tekeze Bailey Bridge",
+      "category": "Bridge",
+      "hasImage": true,
+      "imageUrl": "/projects/tekeze.png",
+      "year": 2007
+    },
+    {
+      "name": "Wabi-Shebele River Bridge",
+      "category": "Bridge",
+      "hasImage": true,
+      "imageUrl": "/projects/wabi.png",
+      "year": 2005
+    },
+    {
+      "name": "Bilate River Bridge",
+      "category": "Bridge",
+      "hasImage": true,
+      "imageUrl": "/projects/bilate.png",
+      "year": 2000
+    },
+    {
+      "name": "Guest House Building & Site Work",
+      "category": "Personal Residence",
+      "hasImage": true,
+      "imageUrl": "/projects/guesthouse.png",
+      "year": 1998
+    },
+    {
+      "name": "Road Maintenance Branch Office",
+      "category": "Office",
+      "hasImage": true,
+      "imageUrl": "/projects/branchoffice.png",
+      "year": 2004
+    },
+    {
+      "name": "DPPC Stores, Associated Facilities & Internal Asphalt Road",
+      "category": "Commercial",
+      "hasImage": true,
+      "imageUrl": "/projects/dppc.png",
+      "year": 2001
+    },
+    {
+      "name": "Djibouti Terminal Compound Parking Lot",
+      "category": "Commercial",
+      "hasImage": true,
+      "imageUrl": "/projects/djibouti.png",
+      "year": 2013
+    },
+    {
+      "name": "Construction of RC Barrier Walls for Djibouti Free Zone",
+      "category": "Industrial",
+      "hasImage": true,
+      "imageUrl": "/projects/rcbarrier.png",
+      "year": 2007
+    },
+    {
+      "name": "Rubb Hall Projects at Different Locations",
+      "category": "Commercial",
+      "hasImage": true,
+      "imageUrl": "/projects/rubbhall.png",
+      "year": 1999
+    },
+    {
+      "name": "Office Building Modification, Conference Hall, Workshop & Parking",
+      "category": "Office",
+      "hasImage": true,
+      "imageUrl": "/projects/awash.png",
+      "year": 1992
+    },
+    {
+      "name": "Rebuild of Awash Service Station & Rehabilitation of Minilik SqUARE",
+      "category": "Office",
+      "hasImage": true,
+      "imageUrl": "/projects/awash.png",
+      "year": 1995
+    },
+    {
+      "name": "Office Renovation & Modification",
+      "category": "Office",
+      "hasImage": true,
+      "imageUrl": "/projects/awash.png",
+      "year": 1995
+    },
+    {
+      "name": "Residue Briqueting Pilot",
+      "category": "Office",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 1995
+    },
+    {
+      "name": "Werabelle River Bridge",
+      "category": "Bridge",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2013
+    },
+    {
+      "name": "East & South African Mineral Resource Devt. Center office & Lab.",
+      "category": "Office",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 1991
+    },
+    {
+      "name": "Oral Liquid Pharmaceutical Manufacturing Plant",
+      "category": "Industrial",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 2002
+    },
+    {
+      "name": "Office Building, Auditorium & Asphalt Road",
+      "category": "Office",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 1999
+    },
+    {
+      "name": "Water Well Drilling Equipment Workshop",
+      "category": "Industrial",
+      "hasImage": false,
+      "imageUrl": null,
+      "year": 1998
     }
   ]
 }

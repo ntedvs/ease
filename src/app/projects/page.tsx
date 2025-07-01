@@ -8,6 +8,7 @@ import {
   Building2,
   Construction,
   CreditCard,
+  Factory,
   Filter,
   GraduationCap,
   Home,
@@ -24,8 +25,8 @@ import { useEffect, useState } from "react"
 // Project type interface
 interface Project {
   name: string
-  area: number
-  signingDate: string
+  area?: number
+  signingDate?: string
   category: string
   hasImage: boolean
   imageUrl?: string | null
@@ -36,14 +37,18 @@ interface Project {
 const categoryDisplayNames: Record<string, string> = {
   Government: "Government",
   Apartment: "Apartment",
+  Apartement: "Apartment",
   Hotel: "Hotel",
   Hospital: "Hospital",
   Warehouse: "Warehouse",
   Commercial: "Commercial",
   Shoring: "Shoring",
   Bank: "Bank",
-  School: "School",
+  School: "Educational",
+  Educational: "Educational",
   Bridge: "Bridge",
+  Industrial: "Industrial",
+  Office: "Office",
   "Mixed Use": "Mixed Use",
   "Personal Residence": "Personal Residence",
 }
@@ -73,10 +78,14 @@ const getCategoryIcon = (category: string) => {
       return <Construction size={16} className="text-primary" />
     case "Bank":
       return <CreditCard size={16} className="text-primary" />
-    case "School":
+    case "Educational":
       return <GraduationCap size={16} className="text-primary" />
     case "Bridge":
       return <Bridge size={16} className="text-primary" />
+    case "Industrial":
+      return <Factory size={16} className="text-primary" />
+    case "Office":
+      return <Building2 size={16} className="text-primary" />
     default:
       return <Building size={16} className="text-primary" />
   }
@@ -295,10 +304,12 @@ export default function Projects() {
                         </span>
                       </div>
                       <div className="space-y-2 text-sm text-muted">
-                        <div className="flex items-center space-x-2">
-                          <MapPin size={16} className="text-primary" />
-                          <span>{project.area.toLocaleString()} m²</span>
-                        </div>
+                        {project.area && (
+                          <div className="flex items-center space-x-2">
+                            <MapPin size={16} className="text-primary" />
+                            <span>{project.area.toLocaleString()} m²</span>
+                          </div>
+                        )}
                         <div className="flex items-center space-x-2">
                           {getCategoryIcon(project.category)}
                           <span>
@@ -322,10 +333,12 @@ export default function Projects() {
                         </span>
                       </div>
                       <div className="space-y-2 text-sm text-muted">
-                        <div className="flex items-center space-x-2">
-                          <MapPin size={16} className="text-primary" />
-                          <span>{project.area.toLocaleString()} m²</span>
-                        </div>
+                        {project.area && (
+                          <div className="flex items-center space-x-2">
+                            <MapPin size={16} className="text-primary" />
+                            <span>{project.area.toLocaleString()} m²</span>
+                          </div>
+                        )}
                         <div className="flex items-center space-x-2">
                           {getCategoryIcon(project.category)}
                           <span>
