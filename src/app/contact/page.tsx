@@ -1,4 +1,3 @@
-import CareersForm from "@/components/CareersForm"
 import { Clock, Mail, MapPin, Phone, Users } from "lucide-react"
 import { Metadata } from "next"
 import Image from "next/image"
@@ -33,8 +32,7 @@ export default function ContactPage() {
       <section className="section bg-white">
         <div className="container-xl">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-            {/* Contact Form */}
-            <div className="space-y-8">
+            {/* <div className="space-y-8">
               <div>
                 <h2 className="mb-6 text-3xl font-bold text-secondary">
                   Send us a Message
@@ -107,9 +105,8 @@ export default function ContactPage() {
                   Send Message
                 </button>
               </form>
-            </div>
+            </div> */}
 
-            {/* Contact Information */}
             <div className="space-y-8">
               <div>
                 <h2 className="mb-6 text-3xl font-bold text-secondary">
@@ -123,7 +120,6 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-6">
-                {/* Phone */}
                 <div className="flex items-start space-x-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                     <Phone size={24} className="text-primary" />
@@ -141,7 +137,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Email */}
                 <div className="flex items-start space-x-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                     <Mail size={24} className="text-primary" />
@@ -159,7 +154,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Office Location */}
                 <div className="flex items-start space-x-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                     <MapPin size={24} className="text-primary" />
@@ -174,7 +168,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Business Hours */}
                 <div className="flex items-start space-x-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                     <Clock size={24} className="text-primary" />
@@ -249,15 +242,18 @@ export default function ContactPage() {
             <h2 className="mb-6 text-3xl font-bold text-secondary">
               Join Our Team
             </h2>
-            <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted">
+            <p className="mx-auto mb-6 max-w-3xl text-lg leading-relaxed text-muted">
               Are you passionate about construction and engineering? We&apos;re
               always looking for talented individuals to join our growing team.
               Send us your resume and tell us why you&apos;d be a great fit for
               EASE.
             </p>
+            <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted">
+              Send your resume to info@ease-int.com
+            </p>
           </div>
 
-          <CareersForm />
+          {/* <CareersForm /> */}
         </div>
       </section>
     </>
