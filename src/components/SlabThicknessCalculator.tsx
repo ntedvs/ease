@@ -5,29 +5,22 @@ import { useState } from "react"
 
 export default function SlabThicknessCalculator() {
   const [slabThickness, setSlabThickness] = useState(26)
+  const [slabLength, setSlabLength] = useState(7.5)
+  const [totalServiceLoad, setTotalServiceLoad] = useState(6)
 
-  const getOptimizedThickness = (thickness: number): number => {
-    const thicknessMap: Record<number, number> = {
-      20: 17,
-      21: 18,
-      22: 18,
-      23: 18,
-      24: 19,
-      25: 20,
-      26: 20,
-      27: 21,
-      28: 22,
-      29: 23,
-      30: 24,
-      31: 24,
-      32: 25,
-    }
-    return thicknessMap[thickness] || thickness
+  const calculateOutput = (
+    thickness: number,
+    length: number,
+    load: number,
+  ): number => {
+    return 0.8125 * thickness * (1 + 0.01 * (length - 7.5) + 0.005 * (load - 6))
   }
 
-  const optimizedThickness = getOptimizedThickness(slabThickness)
-  const savings = slabThickness - optimizedThickness
-  const savingsPercentage = ((savings / slabThickness) * 100).toFixed(1)
+  const calculatedOutput = calculateOutput(
+    slabThickness,
+    slabLength,
+    totalServiceLoad,
+  )
 
   return (
     <section className="section bg-neutral">
@@ -54,46 +47,91 @@ export default function SlabThicknessCalculator() {
                       <Calculator size={24} className="text-primary" />
                     </div>
                     <h3 className="text-2xl font-bold text-secondary">
-                      Slab Thickness Calculator
+                      Post-Tensioning Calculator
                     </h3>
                   </div>
 
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <label
-                        htmlFor="slab-thickness"
-                        className="text-lg font-medium text-secondary"
-                      >
-                        Standard Slab Thickness
-                      </label>
-                      <span className="rounded-lg bg-neutral px-3 py-1 text-lg font-bold text-secondary">
-                        {slabThickness} cm
-                      </span>
+                  <div className="space-y-6">
+                    {/* Slab Thickness Slider */}
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <label
+                          htmlFor="slab-thickness"
+                          className="text-lg font-medium text-secondary"
+                        >
+                          Slab Thickness
+                        </label>
+                        <span className="rounded-lg bg-neutral px-3 py-1 text-lg font-bold text-secondary">
+                          {slabThickness} cm
+                        </span>
+                      </div>
+
+                      <div className="space-y-2">
+                        <input
+                          id="slab-thickness"
+                          type="range"
+                          min="20"
+                          max="32"
+                          value={slabThickness}
+                          onChange={(e) =>
+                            setSlabThickness(Number(e.target.value))
+                          }
+                          className="slider h-3 w-full cursor-pointer appearance-none rounded-lg bg-neutral-dark focus:ring-2 focus:ring-primary focus:outline-none"
+                          style={{
+                            background: `linear-gradient(to right, #e82d22 0%, #e82d22 ${
+                              ((slabThickness - 20) / 12) * 100
+                            }%, #e6e6e6 ${
+                              ((slabThickness - 20) / 12) * 100
+                            }%, #e6e6e6 100%)`,
+                          }}
+                        />
+                        <div className="flex justify-between text-sm text-muted">
+                          <span>20 cm</span>
+                          <span>32 cm</span>
+                        </div>
+                      </div>
                     </div>
 
+                    {/* Slab Length Input */}
                     <div className="space-y-2">
+                      <label
+                        htmlFor="slab-length"
+                        className="text-lg font-medium text-secondary"
+                      >
+                        Slab Length (meters)
+                      </label>
                       <input
-                        id="slab-thickness"
-                        type="range"
-                        min="20"
-                        max="32"
-                        value={slabThickness}
-                        onChange={(e) =>
-                          setSlabThickness(Number(e.target.value))
-                        }
-                        className="slider h-3 w-full cursor-pointer appearance-none rounded-lg bg-neutral-dark focus:ring-2 focus:ring-primary focus:outline-none"
-                        style={{
-                          background: `linear-gradient(to right, #e82d22 0%, #e82d22 ${
-                            ((slabThickness - 20) / 12) * 100
-                          }%, #e6e6e6 ${
-                            ((slabThickness - 20) / 12) * 100
-                          }%, #e6e6e6 100%)`,
-                        }}
+                        id="slab-length"
+                        type="number"
+                        min="1"
+                        max="50"
+                        step="0.1"
+                        value={slabLength}
+                        onChange={(e) => setSlabLength(Number(e.target.value))}
+                        className="w-full rounded-lg border border-border bg-white px-4 py-3 text-lg font-medium text-secondary focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none"
                       />
-                      <div className="flex justify-between text-sm text-muted">
-                        <span>20 cm</span>
-                        <span>32 cm</span>
-                      </div>
+                    </div>
+
+                    {/* Total Service Load Input */}
+                    <div className="space-y-2">
+                      <label
+                        htmlFor="service-load"
+                        className="text-lg font-medium text-secondary"
+                      >
+                        Total Service Load (kN/m²)
+                      </label>
+                      <input
+                        id="service-load"
+                        type="number"
+                        min="1"
+                        max="20"
+                        step="0.1"
+                        value={totalServiceLoad}
+                        onChange={(e) =>
+                          setTotalServiceLoad(Number(e.target.value))
+                        }
+                        className="w-full rounded-lg border border-border bg-white px-4 py-3 text-lg font-medium text-secondary focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none"
+                      />
                     </div>
                   </div>
                 </div>
@@ -105,46 +143,43 @@ export default function SlabThicknessCalculator() {
                       <TrendingDown size={24} className="text-primary" />
                     </div>
                     <h3 className="text-2xl font-bold text-secondary">
-                      Optimization Results
+                      Estimated Results
                     </h3>
                   </div>
 
                   <div className="space-y-4">
-                    <div className="rounded-lg bg-neutral p-4">
+                    <div className="rounded-lg bg-primary/5 p-6">
                       <div className="mb-2 text-sm font-medium text-muted">
-                        With Post-Tensioning
+                        Estimated Output
                       </div>
-                      <div className="text-3xl font-black text-primary">
-                        {optimizedThickness.toFixed(1)} cm
+                      <div className="text-4xl font-black text-primary">
+                        {calculatedOutput.toFixed(2)}
+                      </div>
+                      <div className="mt-1 text-sm text-muted">
+                        Estimate based on post-tensioning analysis
                       </div>
                     </div>
 
-                    <div className="rounded-lg bg-primary/5 p-4">
-                      <div className="mb-2 text-sm font-medium text-muted">
-                        Material Savings
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+                      <div className="rounded-lg bg-neutral p-4 text-center">
+                        <div className="text-lg font-black text-secondary">
+                          {slabThickness} cm
+                        </div>
+                        <div className="text-xs text-muted">Thickness</div>
                       </div>
-                      <div className="flex items-baseline space-x-2">
-                        <span className="text-2xl font-black text-secondary">
-                          {savings.toFixed(1)} cm
-                        </span>
-                        <span className="text-lg font-bold text-primary">
-                          ({savingsPercentage}%)
-                        </span>
+                      <div className="rounded-lg bg-neutral p-4 text-center">
+                        <div className="text-lg font-black text-secondary">
+                          {slabLength} m
+                        </div>
+                        <div className="text-xs text-muted">Length</div>
+                      </div>
+                      <div className="rounded-lg bg-neutral p-4 text-center">
+                        <div className="text-lg font-black text-secondary">
+                          {totalServiceLoad} kN/m²
+                        </div>
+                        <div className="text-xs text-muted">Service Load</div>
                       </div>
                     </div>
-
-                    {savings > 0 && (
-                      <div className="rounded-lg border border-primary/20 bg-primary/5 p-4">
-                        <div className="text-sm font-medium text-primary">
-                          💡 Optimization Available
-                        </div>
-                        <div className="mt-1 text-sm text-muted">
-                          Post-tensioning can reduce your slab thickness by{" "}
-                          {savingsPercentage}% while maintaining structural
-                          performance.
-                        </div>
-                      </div>
-                    )}
                   </div>
                 </div>
               </div>
@@ -153,34 +188,16 @@ export default function SlabThicknessCalculator() {
               <div className="mt-8 border-t border-border pt-8">
                 <div className="text-center">
                   <h4 className="mb-4 text-xl font-bold text-secondary">
-                    Why Choose Post-Tensioning?
+                    Post-Tensioning Analysis Calculator
                   </h4>
-                  <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-                    <div className="space-y-2">
-                      <div className="text-2xl font-black text-primary">
-                        Reduced Material
-                      </div>
-                      <div className="text-sm text-muted">
-                        Lower concrete volume and reduced steel requirements
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="text-2xl font-black text-primary">
-                        Enhanced Strength
-                      </div>
-                      <div className="text-sm text-muted">
-                        Superior structural performance and durability
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="text-2xl font-black text-primary">
-                        Cost Savings
-                      </div>
-                      <div className="text-sm text-muted">
-                        Significant reduction in material and construction costs
-                      </div>
-                    </div>
-                  </div>
+                  <p className="mx-auto max-w-2xl text-sm text-muted">
+                    This calculator provides estimates using engineering
+                    formulas based on slab thickness, length, and service load
+                    parameters. Results are for preliminary assessment only and
+                    are not a guarantee or promise of actual performance.
+                    Professional engineering consultation is required for final
+                    design decisions.
+                  </p>
                 </div>
               </div>
             </div>
