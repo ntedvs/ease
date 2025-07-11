@@ -168,9 +168,9 @@ export default function Home() {
               </h1>
 
               <p className="max-w-lg text-xl leading-relaxed text-white/90">
-                East Africa's specialized engineering partner, delivering complex 
+                East Africa&apos; specialized engineering partner, delivering complex 
                 structural solutions through proven post-tensioning expertise for 
-                the region's most challenging construction needs.
+                the region&apos;s most challenging construction needs.
               </p>
 
               <div className="pt-4">
@@ -283,9 +283,9 @@ export default function Home() {
               Why Choose Post-Tensioning?
             </h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Post-tensioning addresses East Africa's unique construction
+              Post-tensioning addresses East Africa&apos;s unique construction
               challenges—from seismic considerations to rapid urban development—offering
-              proven performance in Ethiopia's diverse climate and soil conditions.
+              proven performance in Ethiopia&apos;s diverse climate and soil conditions.
             </p>
           </div>
 

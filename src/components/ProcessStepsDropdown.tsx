@@ -48,7 +48,7 @@ export default function ProcessStepsDropdown() {
           </h2>
           <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
             Our post-tensioning process follows international standards (EN 1992-1-1, ACI 318) 
-            with specific adaptations for Ethiopian conditions. Here's exactly how we execute each phase:
+            with specific adaptations for Ethiopian conditions. Here&apos;s exactly how we execute each phase:
           </p>
         </div>
 

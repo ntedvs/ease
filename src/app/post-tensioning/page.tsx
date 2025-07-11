@@ -278,11 +278,11 @@ export default function PostTensioning() {
         <div className="container-xl">
           <div className="mx-auto max-w-3xl text-center text-white">
             <h2 className="mb-6 text-4xl font-black text-white md:text-5xl">
-              Let's Discuss Your Post-Tensioning Needs
+              Let&apos;s Discuss Your Post-Tensioning Needs
             </h2>
             <p className="mb-8 text-xl leading-relaxed text-white/90">
-              Whether you're facing spanning challenges or seeking construction
-              efficiencies, we'll evaluate how post-tensioning can work for your
+              Whether you&apos;re facing spanning challenges or seeking construction
+              efficiencies, we&apos;ll evaluate how post-tensioning can work for your
               specific project.
             </p>
             <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
