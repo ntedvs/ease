@@ -47,8 +47,8 @@ export default function ProcessStepsDropdown() {
             Post-Tensioning Process
           </h2>
           <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-            Discover the comprehensive 6-step process EASE follows to deliver superior post-tensioning solutions. 
-            Each phase is carefully executed by our certified technicians using proven methodologies and quality controls.
+            Our post-tensioning process follows international standards (EN 1992-1-1, ACI 318) 
+            with specific adaptations for Ethiopian conditions. Here's exactly how we execute each phase:
           </p>
         </div>
 

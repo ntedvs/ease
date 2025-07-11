@@ -144,9 +144,9 @@ export default function Projects() {
 
   // Static statistics as requested
   const stats = {
-    government: 40,
+    government: 14,
     residential: 20,
-    commercial: 30,
+    commercial: 8,
   }
 
   if (loading) {

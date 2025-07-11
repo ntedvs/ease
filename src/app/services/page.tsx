@@ -28,7 +28,7 @@ export default function ServicesPage() {
       icon: <Anchor size={40} className="text-primary" />,
       image: "/services/post.jpg",
       description:
-        "Advanced post-tensioning solutions for concrete structures, providing superior strength and durability while reducing material costs and construction time.",
+        "Post-tensioning that solves your structural challenges—spanning longer distances with less material, accelerating project timelines, and reducing overall construction costs.",
       details: [
         "Flat slab and beam post-tensioning systems",
         "Ground anchor and soil nail installations",

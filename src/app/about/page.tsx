@@ -85,12 +85,11 @@ export default function About() {
                   Company Overview
                 </h2>
                 <p className="text-lg leading-relaxed text-foreground">
-                  EASE (East Africa Specialized Engineering) was born from a
-                  vision to transform Ethiopia&apos;s construction landscape by
-                  introducing advanced post-tensioning technology to the region.
-                  Our founders recognized the need for innovative structural
-                  solutions that could meet the growing demands of
-                  Ethiopia&apos;s rapidly developing infrastructure.
+                  EASE started with a straightforward goal: bring proven
+                  post-tensioning technology to Ethiopia&apos;s growing construction
+                  sector. Our founders saw the practical benefits—spanning
+                  longer distances with less material, building more efficiently,
+                  and adapting international standards to local conditions.
                 </p>
                 <p className="text-lg leading-relaxed text-foreground">
                   Since our establishment in 2015, our journey has been one of
@@ -376,9 +375,9 @@ export default function About() {
               Our Promise
             </h2>
             <p className="mb-12 text-xl leading-relaxed text-muted">
-              We commit to delivering exceptional construction solutions that
-              exceed expectations while maintaining the highest standards of
-              quality, safety, and environmental responsibility.
+              We deliver reliable construction solutions with consistent quality,
+              safety practices, and environmental consideration built into every
+              project.
             </p>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -650,10 +649,10 @@ export default function About() {
                 </div>
                 <h3 className="text-2xl font-bold text-secondary">Vision</h3>
                 <p className="leading-relaxed text-muted">
-                  To be East Africa&apos;s leading construction and engineering
-                  company, recognized for innovation, quality, and sustainable
-                  development that transforms communities and builds lasting
-                  landmarks for future generations.
+                  To solve East Africa&apos;s infrastructure challenges through
+                  post-tensioning expertise—enabling developers to build higher,
+                  span farther, and complete projects faster while meeting
+                  international standards.
                 </p>
               </div>
             </div>

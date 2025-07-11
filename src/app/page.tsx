@@ -24,7 +24,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   description:
-    "EASE - East Africa Specialized Engineering. Ethiopia's only insurance-backed construction company building landmarks of tomorrow through innovative post-tensioning solutions and advanced structural engineering.",
+    "EASE - East Africa Specialized Engineering. Ethiopia's insurance-backed construction company specializing in post-tensioning solutions and structural engineering for East Africa's infrastructure needs.",
 }
 
 export default function Home() {
@@ -168,10 +168,9 @@ export default function Home() {
               </h1>
 
               <p className="max-w-lg text-xl leading-relaxed text-white/90">
-                Post-tensioning, Pre-cast Solutions, Repair and Strengthening,
-                Structural Bearings, Heavy Lifting, Design, Vertical
-                Post-tensioning, Geotechnical Solutions, Consultancy, Surface
-                Jointless Flooring
+                East Africa's specialized engineering partner, delivering complex 
+                structural solutions through proven post-tensioning expertise for 
+                the region's most challenging construction needs.
               </p>
 
               <div className="pt-4">
@@ -198,9 +197,9 @@ export default function Home() {
               Why Partner with EASE?
             </h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Partner with us to access unmatched expertise, cost-effective
-              solutions, and innovative post-tensioning technology that delivers
-              superior results for your construction project.
+              Partner with us for proven post-tensioning expertise, practical
+              solutions, and technology that enhances structural performance
+              across East Africa.
             </p>
           </div>
 
@@ -284,9 +283,9 @@ export default function Home() {
               Why Choose Post-Tensioning?
             </h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Post-tensioning technology offers superior structural performance
-              and economic advantages, making it the preferred choice for modern
-              construction projects across commercial and residential sectors.
+              Post-tensioning addresses East Africa's unique construction
+              challenges—from seismic considerations to rapid urban development—offering
+              proven performance in Ethiopia's diverse climate and soil conditions.
             </p>
           </div>
 

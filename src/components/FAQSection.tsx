@@ -11,7 +11,7 @@ export default function FAQSection() {
       question:
         "Is post-tensioning more complex than traditional reinforcement?",
       answer:
-        "While post-tensioning requires specialized knowledge, EASE's experienced team makes the process seamless. The technology is well-established with proven systems and clear installation procedures that our certified technicians execute with precision.",
+        "Post-tensioning is a well-established technology we've mastered over 80+ projects. Our certified technicians execute each installation with precision, backed by international standards. The process follows proven methodologies that we've adapted specifically for Ethiopian conditions.",
     },
     {
       question: "Are post-tensioned structures safe during earthquakes?",
