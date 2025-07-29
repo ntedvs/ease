@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation"
 import { useState } from "react"
 
 export default function Header() {
+  const [hov, setHov] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
 
@@ -25,17 +26,16 @@ export default function Header() {
           {/* EASE Brand */}
           <div className="flex items-center">
             <Link
-              href="/"
-              className="flex items-center space-x-2 text-2xl font-black text-secondary transition-colors duration-200 hover:text-primary"
+              href={"/"}
+              onMouseOver={() => setHov(true)}
+              onMouseOut={() => setHov(false)}
             >
               <Image
-                src="/logo.png"
+                src={hov ? "/after.png" : "/before.png"}
                 alt="EASE Logo"
                 width={128}
                 height={128}
-                className="h-12 w-8 object-contain"
               />
-              <span>EASE</span>
             </Link>
           </div>
 

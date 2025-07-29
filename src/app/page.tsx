@@ -1,5 +1,4 @@
 import AnimatedNumber from "@/components/AnimatedNumber"
-import AnimatedStats from "@/components/AnimatedStats"
 import CompanyMarquee from "@/components/CompanyMarquee"
 import ImageCarousel from "@/components/ImageCarousel"
 import TestimonialCarousel from "@/components/TestimonialCarousel"
@@ -155,36 +154,51 @@ export default function Home() {
       <section className="hero-bg relative flex min-h-screen items-center justify-center">
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
+        {/* <div className="absolute inset-0 bg-white/60"></div> */}
 
         {/* Content */}
-        <div className="container-xl relative z-10">
-          <div className="grid min-h-[80vh] grid-cols-1 items-center gap-12 lg:grid-cols-2">
+        <div className="container-xl relative z-10 mt-40 w-full">
+          {/* <div className="grid min-h-[80vh] grid-cols-1 items-center gap-12 lg:grid-cols-2"> */}
+          <div>
             {/* Left Side - Content */}
-            <div className="space-y-8 text-white">
+            <div className="space-y-2 text-white">
               <h1 className="text-5xl leading-tight font-black text-white md:text-6xl lg:text-7xl">
-                <span className="text-primary">Landmarks</span>
-                <br />
-                of Tomorrow
+                <span className="">Landmarks</span>
+                {/* <br /> */} of Tomorrow
               </h1>
 
-              <p className="max-w-lg text-xl leading-relaxed text-white/90">
-                East Africa&apos; specialized engineering partner, delivering complex 
-                structural solutions through proven post-tensioning expertise for 
-                the region&apos;s most challenging construction needs.
+              <p className="text-xl leading-relaxed text-white">
+                Delivering complex structural solutions for the region's most
+                challenging construction needs
               </p>
+
+              <div className="my-6 flex gap-4">
+                <div className="bg-white/20 p-3 pt-4 leading-none">
+                  800,000+ meters of slab
+                </div>
+                <div className="bg-white/20 p-3 pt-4 leading-none">
+                  80+ projects completed
+                </div>
+                <div className="bg-white/20 p-3 pt-4 leading-none">
+                  3+ countries of operation
+                </div>
+                <div className="bg-white/20 p-3 pt-4 leading-none">
+                  10+ years of leadership
+                </div>
+              </div>
 
               <div className="pt-4">
                 <Link
-                  href="/contact"
-                  className="btn btn-primary btn-lg btn-pulse inline-flex items-center space-x-2"
+                  href="/projects"
+                  className="btn btn-primary btn-lg inline-flex items-center space-x-2 rounded-none"
                 >
-                  <span>Contact Us</span>
+                  <span>Explore Our Solutions</span>
                 </Link>
               </div>
             </div>
 
             {/* Right Side - Statistics Grid */}
-            <AnimatedStats stats={statsData} />
+            {/* <AnimatedStats stats={statsData} /> */}
           </div>
         </div>
       </section>
@@ -284,8 +298,9 @@ export default function Home() {
             </h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
               Post-tensioning addresses East Africa&apos;s unique construction
-              challenges—from seismic considerations to rapid urban development—offering
-              proven performance in Ethiopia&apos;s diverse climate and soil conditions.
+              challenges—from seismic considerations to rapid urban
+              development—offering proven performance in Ethiopia&apos;s diverse
+              climate and soil conditions.
             </p>
           </div>
 

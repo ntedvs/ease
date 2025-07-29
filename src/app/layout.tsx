@@ -9,12 +9,12 @@ import {
   Phone,
 } from "lucide-react"
 import { Metadata } from "next"
-import { Inter } from "next/font/google"
+import local from "next/font/local"
 import Image from "next/image"
 import Link from "next/link"
 import { ReactNode } from "react"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = local({ src: "../../public/hel.woff2" })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ease-int.com"),
@@ -92,13 +92,11 @@ function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Image
-                src="/logo.png"
+                src="/after.png"
                 alt="EASE Logo"
                 width={128}
                 height={128}
-                className="h-12 w-8 object-contain"
               />
-              <h3 className="text-2xl font-black text-white">EASE</h3>
             </div>
             <p className="text-lg leading-relaxed text-neutral">
               Landmarks of Tomorrow
@@ -224,7 +222,7 @@ function Footer() {
             <p className="text-sm text-neutral/60">
               Made by{" "}
               <Link
-                href="https://github.com/ntedvs"
+                href="https://briggsdavis.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral transition-colors duration-200 hover:text-primary"

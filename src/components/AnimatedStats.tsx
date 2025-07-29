@@ -89,14 +89,14 @@ export default function AnimatedStats({ stats }: AnimatedStatsProps) {
       {stats.map((stat, index) => (
         <div
           key={index}
-          className="group rounded-xl border border-white/20 bg-white/15 p-6 text-center text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/15 hover:shadow-lg"
+          className="group border-secondary bg-white/15 p-6 text-center text-primary backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/15 hover:shadow-lg"
         >
-          <div className="mb-2 text-3xl font-black text-secondary transition-all duration-300 group-hover:text-white md:text-4xl">
+          <div className="mb-2 text-3xl font-black text-primary transition-all duration-300 group-hover:text-white md:text-4xl">
             {isVisible
               ? formatValue(animatedValues[index] || 0, stat.value)
               : "0"}
           </div>
-          <div className="text-sm text-white/90 transition-all duration-300 group-hover:text-white md:text-base">
+          <div className="text-sm text-white transition-all duration-300 group-hover:text-white md:text-base">
             {stat.label}
           </div>
         </div>
