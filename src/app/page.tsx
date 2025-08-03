@@ -1,5 +1,6 @@
 import AnimatedNumber from "@/components/AnimatedNumber"
 import CompanyMarquee from "@/components/CompanyMarquee"
+import DownloadableResources from "@/components/DownloadableResources"
 import ImageCarousel from "@/components/ImageCarousel"
 import TestimonialCarousel from "@/components/TestimonialCarousel"
 import {
@@ -50,12 +51,6 @@ export default function Home() {
     },
   ]
 
-  const statsData = [
-    { value: "800,000+", label: "Square Meters of Slabs" },
-    { value: "80+", label: "Projects" },
-    { value: "3+", label: "Countries of\nOperation" },
-    { value: "10+", label: "Years of Industry\nLeadership" },
-  ]
 
   const trustedCompanyLogos = [
     {
@@ -163,13 +158,15 @@ export default function Home() {
             {/* Left Side - Content */}
             <div className="space-y-2 text-white">
               <h1 className="text-5xl leading-tight font-black text-white md:text-6xl lg:text-7xl">
-                <span className="">Landmarks</span>
-                {/* <br /> */} of Tomorrow
+                <span className="">Engineering Solutions</span>
+                {/* <br /> */} for Tomorrow
               </h1>
 
               <p className="text-xl leading-relaxed text-white">
-                Delivering complex structural solutions for the region's most
-                challenging construction needs
+                Solving East Africa&apos;s most complex construction challenges
+                through innovative problem-solving expertise and advanced
+                engineering solutions that transform structural performance
+                across the region
               </p>
 
               <div className="my-6 flex gap-4">
@@ -190,9 +187,9 @@ export default function Home() {
               <div className="pt-4">
                 <Link
                   href="/projects"
-                  className="btn btn-primary btn-lg inline-flex items-center space-x-2 rounded-none"
+                  className="btn btn-primary btn-lg inline-flex items-center space-x-2"
                 >
-                  <span>Explore Our Solutions</span>
+                  <span>Discover Our Solution-Driven Approach</span>
                 </Link>
               </div>
             </div>
@@ -208,12 +205,13 @@ export default function Home() {
         <div className="container-xl">
           <div className="mb-16 text-center">
             <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Why Partner with EASE?
+              Why Choose Our Solution-Driven Approach?
             </h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Partner with us for proven post-tensioning expertise, practical
-              solutions, and technology that enhances structural performance
-              across East Africa.
+              Partner with EASE for problem-solving expertise that addresses
+              your most pressing construction challenges through innovative
+              solutions, proven methodologies, and advanced technology that
+              resolves complex structural issues across East Africa.
             </p>
           </div>
 
@@ -227,12 +225,14 @@ export default function Home() {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-secondary">
-                  Free Cost Benefit Analysis
+                  Complimentary Project Analysis
                 </h3>
                 <p className="leading-relaxed text-muted">
-                  Comprehensive evaluation of your project&apos;s financial
-                  impact, helping you make informed decisions with detailed
-                  cost-benefit assessments at no charge.
+                  Resolve budget uncertainties and financial challenges with
+                  comprehensive project evaluations that provide clear
+                  solutions. Our detailed cost-benefit analysis helps you
+                  overcome financial obstacles and make informed decisions at no
+                  charge.
                 </p>
               </div>
             </div>
@@ -246,12 +246,14 @@ export default function Home() {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-secondary">
-                  Free Design Services
+                  Complimentary Design Solutions
                 </h3>
                 <p className="leading-relaxed text-muted">
-                  Professional design consultation and planning services
-                  provided complimentary, ensuring your project meets both
-                  aesthetic and structural requirements.
+                  Solve design challenges through professional consultation and
+                  innovative planning solutions provided at no cost. Our expert
+                  team addresses both aesthetic and structural requirements,
+                  ensuring your project overcomes design obstacles with optimal
+                  results.
                 </p>
               </div>
             </div>
@@ -265,12 +267,14 @@ export default function Home() {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-secondary">
-                  Nationwide Experience
+                  Regional Problem-Solving Expertise
                 </h3>
                 <p className="leading-relaxed text-muted">
-                  Extensive experience across multiple regions and countries,
-                  bringing proven expertise and local knowledge to projects of
-                  any scale and complexity.
+                  Address regional construction challenges with extensive
+                  experience across multiple countries. Our proven
+                  problem-solving methodologies combined with local knowledge
+                  help overcome site-specific obstacles and deliver successful
+                  outcomes for projects of any scale and complexity.
                 </p>
               </div>
             </div>
@@ -294,76 +298,84 @@ export default function Home() {
         <div className="container-xl">
           <div className="mb-16 text-center">
             <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Why Choose Post-Tensioning?
+              How Post-Tensioning Solves Your Challenges
             </h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Post-tensioning addresses East Africa&apos;s unique construction
-              challenges—from seismic considerations to rapid urban
-              development—offering proven performance in Ethiopia&apos;s diverse
-              climate and soil conditions.
+              Post-tensioning technology addresses East Africa&apos;s most pressing
+              construction challenges—from seismic concerns to rapid urban
+              development demands. Our solutions overcome structural
+              limitations, resolve material efficiency problems, and tackle
+              Ethiopia&apos;s diverse climate and challenging soil conditions with
+              proven results.
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {/* Card 1: Reduced Costs */}
-            <div className="group rounded-xl bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
+            <div className="group bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
               <div className="mb-6 flex justify-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 transition-colors duration-300 group-hover:bg-primary/30">
                   <DollarSign size={32} className="text-primary" />
                 </div>
               </div>
               <h3 className="mb-4 text-xl font-bold text-white">
-                Reduced Costs
+                Cost Challenge Solutions
               </h3>
               <p className="text-sm leading-relaxed text-neutral">
-                Significant savings through reduced materials and faster
-                construction compared to traditional methods.
+                Overcome budget constraints with significant cost reductions
+                through innovative material optimization and accelerated
+                construction methods that solve financial pressures.
               </p>
             </div>
 
             {/* Card 2: Increased Span */}
-            <div className="group rounded-xl bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
+            <div className="group bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
               <div className="mb-6 flex justify-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 transition-colors duration-300 group-hover:bg-primary/30">
                   <Maximize2 size={32} className="text-primary" />
                 </div>
               </div>
               <h3 className="mb-4 text-xl font-bold text-white">
-                Increased Span
+                Space Limitation Solutions
               </h3>
               <p className="text-sm leading-relaxed text-neutral">
-                Achieve longer spans with fewer columns, creating flexible open
-                spaces for innovative designs.
+                Solve spatial constraints with longer spans and fewer columns,
+                delivering flexible design solutions that overcome traditional
+                structural limitations for innovative open layouts.
               </p>
             </div>
 
             {/* Card 3: More Floors */}
-            <div className="group rounded-xl bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
+            <div className="group bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
               <div className="mb-6 flex justify-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 transition-colors duration-300 group-hover:bg-primary/30">
                   <Building2 size={32} className="text-primary" />
                 </div>
               </div>
-              <h3 className="mb-4 text-xl font-bold text-white">More Floors</h3>
+              <h3 className="mb-4 text-xl font-bold text-white">
+                Height Restriction Solutions
+              </h3>
               <p className="text-sm leading-relaxed text-neutral">
-                Thinner slabs enable additional floors within the same height,
-                maximizing usable space.
+                Address height limitations through thinner slab technology that
+                enables additional floors within existing building envelopes,
+                solving space maximization challenges effectively.
               </p>
             </div>
 
             {/* Card 4: Faster Construction */}
-            <div className="group rounded-xl bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
+            <div className="group bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
               <div className="mb-6 flex justify-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 transition-colors duration-300 group-hover:bg-primary/30">
                   <Zap size={32} className="text-primary" />
                 </div>
               </div>
               <h3 className="mb-4 text-xl font-bold text-white">
-                Faster Construction
+                Timeline Challenge Solutions
               </h3>
               <p className="text-sm leading-relaxed text-neutral">
-                Accelerate timelines through efficient installation and
-                streamlined construction processes.
+                Resolve schedule pressures through efficient installation
+                techniques and streamlined construction methodologies that
+                overcome time constraints and delivery challenges.
               </p>
             </div>
           </div>
@@ -385,13 +397,14 @@ export default function Home() {
         <div className="container-xl">
           <div className="mb-16 text-center">
             <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Our Comprehensive Services
+              Complete Problem-Solving Solutions
             </h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
               From specialized post-tensioning solutions to complete project
-              management, EASE delivers end-to-end engineering services with
-              decades of proven expertise and innovation across all construction
-              disciplines.
+              management, EASE addresses construction challenges through
+              comprehensive engineering services. Our decades of proven
+              problem-solving expertise and innovative methodologies tackle
+              complex issues across all construction disciplines.
             </p>
           </div>
 
@@ -405,11 +418,13 @@ export default function Home() {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-secondary">
-                  Post-tensioning
+                  Post-Tensioning Solutions
                 </h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  Advanced concrete strengthening technology providing superior
-                  structural performance and significant cost savings.
+                  Address structural challenges with advanced concrete
+                  strengthening technology that resolves performance issues and
+                  overcomes cost constraints through innovative engineering
+                  approaches.
                 </p>
               </div>
             </div>
@@ -423,12 +438,13 @@ export default function Home() {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-secondary">
-                  Design Services
+                  Design Problem-Solving
                 </h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  Comprehensive structural design and engineering consultation
-                  services provided complimentary with our construction
-                  projects.
+                  Resolve design challenges through comprehensive structural
+                  engineering consultation that addresses complex requirements.
+                  Our solution-focused approach is provided complimentary with
+                  construction projects.
                 </p>
               </div>
             </div>
@@ -442,12 +458,13 @@ export default function Home() {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-secondary">
-                  Repair & Strengthening
+                  Structural Rehabilitation Solutions
                 </h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  Specialized rehabilitation services to extend building
-                  lifespan and enhance structural capacity using proven
-                  methodologies.
+                  Solve structural deterioration problems with specialized
+                  rehabilitation techniques that overcome aging infrastructure
+                  challenges, extend building lifespan, and enhance capacity
+                  through proven methodologies.
                 </p>
               </div>
             </div>
@@ -461,11 +478,13 @@ export default function Home() {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-secondary">
-                  Project Management
+                  Project Complexity Solutions
                 </h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  Professional end-to-end project coordination ensuring on-time,
-                  on-budget delivery with superior quality standards.
+                  Address project management challenges through professional
+                  end-to-end coordination that resolves complexity issues,
+                  ensuring on-time, on-budget delivery with superior quality
+                  standards.
                 </p>
               </div>
             </div>
@@ -480,6 +499,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Downloadable Resources Section */}
+      <DownloadableResources />
+
       {/* Insurance Backed Section */}
       <section className="section bg-primary">
         <div className="container-xl">
@@ -491,19 +513,22 @@ export default function Home() {
             </div>
 
             <h2 className="mb-6 text-4xl font-black text-white md:text-5xl">
-              Ethiopia&apos;s Only{" "}
-              <span className="text-white/90">Insurance-Backed</span>{" "}
+              Solving Risk Challenges:{" "}
+              <span className="text-white/90">
+                Ethiopia&apos;s Only Insurance-Backed
+              </span>{" "}
               Construction Company
             </h2>
 
             <p className="mb-12 text-xl leading-relaxed text-white/90">
-              EASE is the only construction company in Ethiopia with
-              comprehensive insurance coverage, providing our clients with
-              unmatched security and peace of mind for their projects.
+              EASE addresses project risk concerns as Ethiopia&apos;s only
+              construction company with comprehensive insurance coverage,
+              solving security challenges and providing unmatched protection and
+              peace of mind for our clients.
             </p>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              <div className="rounded-xl bg-white/10 p-8 backdrop-blur-sm">
+              <div className="bg-white/10 p-8 backdrop-blur-sm">
                 <AnimatedNumber
                   value={10}
                   prefix="$"
@@ -526,7 +551,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="rounded-xl bg-white/10 p-8 backdrop-blur-sm">
+              <div className="bg-white/10 p-8 backdrop-blur-sm">
                 <AnimatedNumber
                   value={5.5}
                   prefix="$"
@@ -550,12 +575,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-12 rounded-xl bg-white/5 p-6 backdrop-blur-sm">
+            <div className="mt-12 bg-white/5 p-6 backdrop-blur-sm">
               <p className="text-lg font-medium text-white">
                 <Lightbulb size={20} className="mr-2 inline text-white" />{" "}
-                <strong>Why This Matters:</strong> Our insurance backing means
-                your project is protected against unforeseen circumstances,
-                giving you confidence in our commitment to quality and
+                <strong>Risk Solution:</strong> Our insurance backing solves
+                project protection concerns by eliminating risks from unforeseen
+                circumstances, addressing security challenges and giving you
+                complete confidence in our commitment to quality and
                 accountability.
               </p>
             </div>
@@ -586,7 +612,7 @@ export default function Home() {
                   alt="Rudloff StrongForce International - EASE's strategic partner specializing in post-tensioning systems and prestressed concrete solutions"
                   width={500}
                   height={200}
-                  className="rounded-md shadow-lg"
+                  className="shadow-lg"
                 />
               </div>
 
@@ -638,17 +664,19 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Nationwide Coverage Section */}
       <section className="section bg-secondary">
         <div className="container-xl">
           <div className="mb-16 text-center">
             <h2 className="mb-6 text-4xl font-black text-white md:text-5xl">
-              Nationwide Coverage
+              Solving Regional Construction Challenges
             </h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-neutral">
               From bustling urban centers to remote rural communities, EASE
-              delivers comprehensive construction and engineering solutions
-              across all regions of Ethiopia.
+              addresses diverse construction challenges and delivers
+              comprehensive engineering solutions across all regions of
+              Ethiopia.
             </p>
           </div>
 
@@ -675,9 +703,9 @@ export default function Home() {
                   Addis Ababa
                 </h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  Serving Ethiopia&apos;s capital with cutting-edge construction
-                  solutions for commercial, residential, and infrastructure
-                  projects.
+                  Addressing urban construction challenges in Ethiopia&apos;s capital
+                  through cutting-edge solutions for commercial, residential,
+                  and infrastructure projects.
                 </p>
               </div>
             </div>
@@ -703,8 +731,9 @@ export default function Home() {
                   Rural Areas
                 </h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  Bringing modern construction techniques and infrastructure
-                  development to remote communities across all regions.
+                  Solving rural construction challenges by bringing modern
+                  techniques and infrastructure solutions to remote communities
+                  across all regions.
                 </p>
               </div>
             </div>
@@ -779,7 +808,7 @@ export default function Home() {
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src="/projects/omo.png"
-                  alt="Omo River Bridge - Lifting and repairing a collapsed bridge, and proceeding to enhance the bridge's capacity via external post-tensioning. In collaboration with VSL."
+                  alt="Omo River Bridge - Lifting and repairing a collapsed bridge, and proceeding to enhance the bridge&apos;s capacity via external post-tensioning. In collaboration with VSL."
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

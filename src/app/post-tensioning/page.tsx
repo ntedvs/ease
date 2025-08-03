@@ -1,12 +1,11 @@
 import AnimatedNumber from "@/components/AnimatedNumber"
+import DownloadableResources from "@/components/DownloadableResources"
 import FAQSection from "@/components/FAQSection"
 import ProcessStepsDropdown from "@/components/ProcessStepsDropdown"
 import SlabThicknessCalculator from "@/components/SlabThicknessCalculator"
 import {
   Building2,
   DollarSign,
-  Download,
-  FileText,
   Leaf,
   Maximize2,
   Shield,
@@ -141,7 +140,7 @@ export default function PostTensioning() {
             ))}
           </div>
 
-          <div className="mt-16 rounded-xl bg-primary p-8 text-white">
+          <div className="mt-16 bg-primary p-8 text-white">
             <div className="mx-auto max-w-3xl text-center">
               <h3 className="mb-4 text-2xl font-bold text-white">
                 Key Performance Metrics
@@ -168,38 +167,8 @@ export default function PostTensioning() {
       {/* Post-Tensioning Process Section */}
       <ProcessStepsDropdown />
 
-      {/* Technical Resources Section */}
-      <section className="section bg-white">
-        <div className="container-xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Technical Resources
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Access comprehensive technical documentation and engineering
-              resources for post-tensioning design and implementation.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6">
-            <Link
-              href="/RSF Booklet.pdf"
-              target="_blank"
-              className="btn btn-primary btn-lg inline-flex w-full items-center space-x-2 sm:w-auto"
-            >
-              <Download size={20} />
-              <span>Post-tensioning Technical Systems Booklet</span>
-            </Link>
-            <Link
-              href="#"
-              className="btn btn-secondary btn-lg inline-flex w-full items-center space-x-2 sm:w-auto"
-            >
-              <FileText size={20} />
-              <span>Engineering Note Series</span>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Downloadable Resources Section */}
+      <DownloadableResources />
 
       {/* Slab Thickness Calculator Section */}
       <SlabThicknessCalculator />
@@ -225,7 +194,7 @@ export default function PostTensioning() {
             </p>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <div className="rounded-xl bg-primary/10 p-6">
+              <div className="bg-primary/10 p-6">
                 <AnimatedNumber
                   value={10}
                   prefix="$"
@@ -241,7 +210,7 @@ export default function PostTensioning() {
                 </p>
               </div>
 
-              <div className="rounded-xl bg-primary/10 p-6">
+              <div className="bg-primary/10 p-6">
                 <AnimatedNumber
                   value={5.5}
                   prefix="$"
@@ -258,7 +227,7 @@ export default function PostTensioning() {
               </div>
             </div>
 
-            <div className="mt-8 rounded-xl bg-primary/5 p-4">
+            <div className="mt-8 bg-primary/5 p-4">
               <p className="text-white">
                 <strong>Risk-Free Post-Tensioning:</strong> Our comprehensive
                 insurance coverage eliminates project risks, ensuring your

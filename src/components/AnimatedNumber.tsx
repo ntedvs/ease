@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 
 interface AnimatedNumberProps {
   value: number
@@ -26,7 +26,7 @@ export default function AnimatedNumber({
   const numberRef = useRef<HTMLDivElement>(null)
 
   // Convert single value to array for consistency with AnimatedStats pattern
-  const targetValues = [value]
+  const targetValues = useMemo(() => [value], [value])
 
   useEffect(() => {
     const observer = new IntersectionObserver(

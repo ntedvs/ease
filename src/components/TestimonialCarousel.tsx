@@ -153,7 +153,7 @@ export default function TestimonialCarousel({
       </button>
 
       {/* Main Testimonial Card */}
-      <div className="mx-0 rounded-xl bg-white px-8 py-6 shadow-lg md:mx-20 md:px-12 md:py-8">
+      <div className="mx-0 bg-white px-8 py-6 shadow-lg md:mx-20 md:px-12 md:py-8">
         {/* Testimonial Content */}
         <div className="space-y-6 text-center">
           <blockquote className="text-lg leading-relaxed font-medium text-secondary italic md:text-xl">

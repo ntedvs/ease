@@ -99,7 +99,7 @@ export default function CareersForm() {
             />
             <label
               htmlFor="resume"
-              className="flex cursor-pointer items-center justify-center rounded-lg border-2 border-dashed border-border bg-neutral/30 px-6 py-8 text-center transition-all duration-200 hover:border-primary hover:bg-primary/5"
+              className="flex cursor-pointer items-center justify-center border-2 border-dashed border-border bg-neutral/30 px-6 py-8 text-center transition-all duration-200 hover:border-primary hover:bg-primary/5"
               onDragOver={(e) => {
                 e.preventDefault();
                 e.currentTarget.classList.add('border-primary', 'bg-primary/10');

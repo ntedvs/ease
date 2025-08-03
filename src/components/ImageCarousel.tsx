@@ -129,7 +129,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
         role="region"
         aria-label="Project image carousel"
       >
-        <div className="absolute inset-0 overflow-hidden rounded-2xl shadow-xl">
+        <div className="absolute inset-0 overflow-hidden shadow-xl">
           <Image
             src={images[currentImageIndex].src}
             alt={images[currentImageIndex].alt}

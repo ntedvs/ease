@@ -1,3 +1,4 @@
+import DownloadableResources from "@/components/DownloadableResources"
 import {
   Anchor,
   Building,
@@ -28,7 +29,7 @@ export default function ServicesPage() {
       icon: <Anchor size={40} className="text-primary" />,
       image: "/services/post.jpg",
       description:
-        "Post-tensioning that solves your structural challenges—spanning longer distances with less material, accelerating project timelines, and reducing overall construction costs.",
+        "Solve structural limitations with post-tensioning solutions that overcome spanning challenges, accelerate project timelines, and address cost concerns through innovative material efficiency.",
       details: [
         "Flat slab and beam post-tensioning systems",
         "Ground anchor and soil nail installations",
@@ -41,7 +42,7 @@ export default function ServicesPage() {
       icon: <Building size={40} className="text-primary" />,
       image: "/services/pre-cast.jpg",
       description:
-        "Complete precast concrete solutions including design, manufacturing, and installation of precast elements for efficient and high-quality construction.",
+        "Address construction efficiency challenges with complete precast concrete solutions that solve manufacturing bottlenecks and deliver high-quality, streamlined construction processes.",
       details: [
         "Precast concrete design and engineering",
         "Manufacturing quality control and testing",
@@ -54,7 +55,7 @@ export default function ServicesPage() {
       icon: <Shield size={40} className="text-primary" />,
       image: "/services/repair.webp",
       description:
-        "Specialized structural repair and strengthening services to extend the life of existing buildings and infrastructure through proven methodologies.",
+        "Tackle structural deterioration challenges with specialized repair and strengthening solutions that solve aging infrastructure problems through proven problem-solving methodologies.",
       details: [
         "Concrete repair and rehabilitation",
         "Carbon fiber and steel plate strengthening",
@@ -67,7 +68,7 @@ export default function ServicesPage() {
       icon: <Layers size={40} className="text-primary" />,
       image: "/services/structural.png",
       description:
-        "High-quality structural bearing solutions for bridges and buildings, ensuring proper load transfer and accommodating structural movements.",
+        "Solve load transfer challenges with high-quality structural bearing solutions that address movement accommodation issues in bridges and buildings.",
       details: [
         "Elastomeric and steel bearings",
         "Seismic isolation systems",
@@ -80,7 +81,7 @@ export default function ServicesPage() {
       icon: <TrendingUp size={40} className="text-primary" />,
       image: "/services/heavy.webp",
       description:
-        "Specialized heavy lifting and jacking services for construction, renovation, and structural modification projects requiring precise load management.",
+        "Overcome heavy lifting challenges with specialized jacking solutions for construction, renovation, and structural modification projects that require precise load management approaches.",
       details: [
         "Hydraulic jacking and lifting systems",
         "Load transfer and temporary support",
@@ -93,7 +94,7 @@ export default function ServicesPage() {
       icon: <PenTool size={40} className="text-primary" />,
       image: "/services/design.jpg",
       description:
-        "Comprehensive structural design services combining innovative engineering solutions with practical construction considerations for optimal results.",
+        "Overcome design challenges with comprehensive structural solutions that address complex engineering problems through innovative approaches and practical construction methodologies.",
       details: [
         "Structural analysis and design",
         "Post-tensioning system design",
@@ -106,7 +107,7 @@ export default function ServicesPage() {
       icon: <Cog size={40} className="text-primary" />,
       image: "/services/vertical.webp",
       description:
-        "Specialized vertical post-tensioning systems for high-rise buildings and towers, providing enhanced structural performance and construction efficiency.",
+        "Solve high-rise construction challenges with specialized vertical post-tensioning systems that address structural performance issues and overcome construction efficiency obstacles.",
       details: [
         "High-rise building core walls",
         "Precast concrete connections",
@@ -119,7 +120,7 @@ export default function ServicesPage() {
       icon: <Hammer size={40} className="text-primary" />,
       image: "/services/geotechnical.jpg",
       description:
-        "Complete geotechnical engineering services including soil investigation, foundation design, and ground improvement solutions for challenging sites.",
+        "Tackle challenging site conditions with complete geotechnical engineering solutions that solve soil problems, address foundation challenges, and overcome ground improvement obstacles.",
       details: [
         "Soil investigation and testing",
         "Foundation design and analysis",
@@ -132,7 +133,7 @@ export default function ServicesPage() {
       icon: <Settings size={40} className="text-primary" />,
       image: "/services/engineering.jpg",
       description:
-        "Professional project management services ensuring successful delivery of complex engineering projects on time, within budget, and to specification.",
+        "Solve project complexity challenges with professional management solutions that address timeline pressures, budget constraints, and specification requirements for successful delivery.",
       details: [
         "Project planning and scheduling",
         "Quality assurance and control",
@@ -145,7 +146,7 @@ export default function ServicesPage() {
       icon: <Wrench size={40} className="text-primary" />,
       image: "/services/consultancy.png",
       description:
-        "Expert engineering consultancy services providing technical guidance, project advisory, and specialized expertise for complex construction challenges.",
+        "Address complex construction problems with expert engineering consultancy solutions that provide technical guidance and specialized problem-solving expertise for challenging projects.",
       details: [
         "Technical consulting and advisory services",
         "Project feasibility and risk assessment",
@@ -158,7 +159,7 @@ export default function ServicesPage() {
       icon: <Grid3X3 size={40} className="text-primary" />,
       image: "/services/jointless.png",
       description:
-        "Advanced jointless flooring systems providing seamless, durable surfaces for industrial, commercial, and specialized applications requiring high performance.",
+        "Solve flooring challenges with advanced jointless systems that address durability concerns and performance requirements for industrial, commercial, and specialized applications.",
       details: [
         "Industrial grade jointless floor systems",
         "Chemical resistant and anti-static options",
@@ -178,10 +179,10 @@ export default function ServicesPage() {
               Our Services
             </h1>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-neutral">
-              EASE provides comprehensive construction and engineering services,
-              combining decades of expertise with innovative solutions to
-              deliver exceptional results across diverse project types and
-              scales.
+              EASE solves complex construction challenges through comprehensive
+              engineering services, combining decades of problem-solving expertise
+              with innovative approaches to deliver exceptional solutions across
+              diverse project types and scales.
             </p>
           </div>
         </div>
@@ -239,7 +240,7 @@ export default function ServicesPage() {
                       index % 2 === 1 ? "lg:col-start-1" : ""
                     }`}
                   >
-                    <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-neutral/50 transition-all duration-300 group-hover:shadow-md">
+                    <div className="relative aspect-video w-full overflow-hidden bg-neutral/50 transition-all duration-300 group-hover:shadow-md">
                       <Image
                         src={service.image}
                         alt={`${service.name} service illustration`}
@@ -255,6 +256,9 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      {/* Downloadable Resources Section */}
+      <DownloadableResources />
 
       {/* Call to Action Section */}
       <section className="section bg-neutral">

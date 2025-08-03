@@ -12,7 +12,7 @@
   --color-foreground: #15244c;
   --color-muted: #6b7280;
   --color-border: #e5e7eb;
-  --color-error: #ef4444;
+  --color-error: #e82d22;
 }
 
 @layer base {
@@ -70,7 +70,7 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm leading-none font-medium transition-all duration-200 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50;
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm leading-none font-medium transition-all duration-200 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50;
   }
 
   .btn-primary {
@@ -86,11 +86,11 @@
   }
 
   .form-input {
-    @apply w-full rounded-lg border border-border bg-white px-4 py-3 text-foreground placeholder-muted focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none;
+    @apply w-full border border-border bg-white px-4 py-3 text-foreground placeholder-muted focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none;
   }
 
   .form-textarea {
-    @apply min-h-24 w-full resize-y rounded-lg border border-border bg-white px-4 py-3 text-foreground placeholder-muted focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none;
+    @apply min-h-24 w-full resize-y border border-border bg-white px-4 py-3 text-foreground placeholder-muted focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none;
   }
 
   .form-label {
@@ -98,7 +98,7 @@
   }
 
   .card {
-    @apply rounded-xl border border-border bg-white shadow-sm;
+    @apply border border-border bg-white shadow-sm;
   }
 
   .card-body {
@@ -122,11 +122,11 @@
   }
 
   .section {
-    @apply py-16 md:py-24 lg:py-32;
+    @apply py-20 md:py-32 lg:py-40;
   }
 
   .section-sm {
-    @apply py-8 md:py-12 lg:py-16;
+    @apply py-12 md:py-16 lg:py-20;
   }
 
   /* Hero background styles */
@@ -177,6 +177,62 @@
 
   .btn-pulse {
     animation: pulse-subtle 5s ease-in-out infinite;
+  }
+
+  /* Hover animations */
+  .hover-scale {
+    @apply transition-transform duration-200 ease-out;
+  }
+  .hover-scale:hover {
+    @apply scale-[1.02];
+  }
+
+  .hover-shadow {
+    @apply transition-shadow duration-200 ease-out;
+  }
+  .hover-shadow:hover {
+    @apply shadow-lg;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-200 ease-out;
+  }
+  .hover-lift:hover {
+    @apply -translate-y-0.5 shadow-lg;
+  }
+
+  /* Interactive element hover states */
+  button:hover,
+  .btn:hover {
+    @apply scale-[1.02] shadow-lg;
+  }
+
+  a:hover {
+    @apply text-primary;
+  }
+
+  .card {
+    @apply transition-all duration-200 ease-out;
+  }
+  .card:hover {
+    @apply -translate-y-0.5 shadow-lg;
+  }
+
+  /* Icon hover animation */
+  .icon-hover {
+    @apply transition-transform duration-200 ease-out;
+  }
+  .icon-hover:hover {
+    animation: icon-bounce 0.3s ease-out;
+  }
+
+  @keyframes icon-bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
   }
 
   /* Reduced motion support */

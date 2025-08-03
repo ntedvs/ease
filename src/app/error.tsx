@@ -36,7 +36,7 @@ export default function Error({ error, reset }: ErrorProps) {
               Our team has been notified and is working to resolve the issue.
             </p>
             {process.env.NODE_ENV === "development" && (
-              <details className="mt-4 rounded-lg bg-error/5 p-4 text-left">
+              <details className="mt-4 bg-error/5 p-4 text-left">
                 <summary className="cursor-pointer font-medium text-error">
                   Error Details (Development Mode)
                 </summary>
@@ -71,7 +71,7 @@ export default function Error({ error, reset }: ErrorProps) {
           </div>
 
           {/* Help Section */}
-          <div className="mt-12 rounded-xl bg-white p-6">
+          <div className="mt-12 bg-white p-6">
             <h3 className="mb-4 text-lg font-semibold text-secondary">
               Need Immediate Assistance?
             </h3>
@@ -103,25 +103,25 @@ export default function Error({ error, reset }: ErrorProps) {
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
               <Link
                 href="/about"
-                className="rounded-lg border border-border bg-white p-3 text-center text-sm transition-all duration-200 hover:border-primary hover:shadow-md"
+                className="border border-border bg-white p-3 text-center text-sm transition-all duration-200 hover:border-primary hover:shadow-md"
               >
                 About Us
               </Link>
               <Link
                 href="/projects"
-                className="rounded-lg border border-border bg-white p-3 text-center text-sm transition-all duration-200 hover:border-primary hover:shadow-md"
+                className="border border-border bg-white p-3 text-center text-sm transition-all duration-200 hover:border-primary hover:shadow-md"
               >
                 Projects
               </Link>
               <Link
                 href="/services"
-                className="rounded-lg border border-border bg-white p-3 text-center text-sm transition-all duration-200 hover:border-primary hover:shadow-md"
+                className="border border-border bg-white p-3 text-center text-sm transition-all duration-200 hover:border-primary hover:shadow-md"
               >
                 Services
               </Link>
               <Link
                 href="/contact"
-                className="rounded-lg border border-border bg-white p-3 text-center text-sm transition-all duration-200 hover:border-primary hover:shadow-md"
+                className="border border-border bg-white p-3 text-center text-sm transition-all duration-200 hover:border-primary hover:shadow-md"
               >
                 Contact
               </Link>

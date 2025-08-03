@@ -49,25 +49,25 @@ export default function NotFound() {
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
               <Link
                 href="/about"
-                className="rounded-lg border border-border bg-white p-4 text-center transition-all duration-200 hover:border-primary hover:shadow-md"
+                className="border border-border bg-white p-4 text-center transition-all duration-200 hover:border-primary hover:shadow-md"
               >
                 <span className="font-medium text-secondary">About Us</span>
               </Link>
               <Link
                 href="/projects"
-                className="rounded-lg border border-border bg-white p-4 text-center transition-all duration-200 hover:border-primary hover:shadow-md"
+                className="border border-border bg-white p-4 text-center transition-all duration-200 hover:border-primary hover:shadow-md"
               >
                 <span className="font-medium text-secondary">Projects</span>
               </Link>
               <Link
                 href="/services"
-                className="rounded-lg border border-border bg-white p-4 text-center transition-all duration-200 hover:border-primary hover:shadow-md"
+                className="border border-border bg-white p-4 text-center transition-all duration-200 hover:border-primary hover:shadow-md"
               >
                 <span className="font-medium text-secondary">Services</span>
               </Link>
               <Link
                 href="/contact"
-                className="rounded-lg border border-border bg-white p-4 text-center transition-all duration-200 hover:border-primary hover:shadow-md"
+                className="border border-border bg-white p-4 text-center transition-all duration-200 hover:border-primary hover:shadow-md"
               >
                 <span className="font-medium text-secondary">Contact</span>
               </Link>
@@ -75,7 +75,7 @@ export default function NotFound() {
           </div>
 
           {/* Contact Information */}
-          <div className="mt-12 rounded-xl bg-white p-6 text-center">
+          <div className="mt-12 bg-white p-6 text-center">
             <h3 className="mb-4 text-lg font-semibold text-secondary">
               Need Help?
             </h3>

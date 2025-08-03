@@ -1,10 +1,10 @@
 import AnimatedNumber from "@/components/AnimatedNumber"
+import LegacyTimeline from "@/components/LegacyTimeline"
 import {
   Award,
   Building,
   Building2,
   Calendar,
-  Download,
   Eye,
   Flag,
   Globe,
@@ -18,7 +18,6 @@ import {
 } from "lucide-react"
 import { Metadata } from "next"
 import Image from "next/image"
-import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -44,13 +43,13 @@ export default function About() {
       icon: Lightbulb,
       title: "Innovation",
       description:
-        "We embrace cutting-edge technologies and creative problem-solving approaches to pioneer new solutions in construction and engineering.",
+        "We embrace cutting-edge technologies and innovative problem-solving methodologies to pioneer breakthrough solutions for complex construction and engineering challenges.",
     },
     {
       icon: Users,
       title: "Collaboration",
       description:
-        "We believe in the power of teamwork and partnership, working closely with clients, communities, and stakeholders to achieve shared success.",
+        "We believe in collaborative problem-solving, working closely with clients, communities, and stakeholders to tackle challenges together and achieve shared success.",
     },
   ]
 
@@ -66,9 +65,9 @@ export default function About() {
               About <span className="text-primary">EASE</span>
             </h1>
             <p className="text-xl leading-relaxed text-white/90 md:text-2xl">
-              Building icons that inspire future generations through innovative
-              post-tensioning construction solutions and advanced structural
-              engineering across East Africa.
+              Solving construction challenges to build icons that inspire future
+              generations through innovative post-tensioning solutions and advanced
+              problem-solving engineering methodologies across East Africa.
             </p>
           </div>
         </div>
@@ -85,26 +84,26 @@ export default function About() {
                   Company Overview
                 </h2>
                 <p className="text-lg leading-relaxed text-foreground">
-                  EASE started with a straightforward goal: bring proven
-                  post-tensioning technology to Ethiopia&apos;s growing construction
-                  sector. Our founders saw the practical benefits—spanning
-                  longer distances with less material, building more efficiently,
-                  and adapting international standards to local conditions.
+                  EASE started with a clear mission: solve Ethiopia&apos;s construction
+                  challenges by bringing proven post-tensioning technology to the
+                  growing sector. Our founders identified critical problems—limitations
+                  in spanning distances, material inefficiencies, and the need to
+                  adapt international standards to address local conditions.
                 </p>
                 <p className="text-lg leading-relaxed text-foreground">
                   Since our establishment in 2015, our journey has been one of
-                  continuous growth and learning. Starting with a small team of
-                  dedicated engineers, we have grown into a trusted name in
-                  Ethiopian construction, building relationships with clients
-                  who have become partners in our mission to create lasting
-                  landmarks for future generations.
+                  continuous problem-solving innovation and learning. Starting with a
+                  small team of dedicated engineers, we have grown into a trusted
+                  solution provider in Ethiopian construction, building collaborative
+                  partnerships with clients who share our mission to overcome challenges
+                  and create lasting landmarks for future generations.
                 </p>
               </div>
             </div>
 
             {/* Right Side - Company Image */}
             <div className="relative hidden lg:block">
-              <div className="relative aspect-square overflow-hidden rounded-2xl">
+              <div className="relative aspect-square overflow-hidden">
                 <Image
                   src="/construction.jpg"
                   alt="EASE construction site showcasing professional team implementing advanced post-tensioning technology and precision engineering methodologies in Ethiopia"
@@ -257,7 +256,7 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="rounded-xl bg-primary/5 p-6">
+              <div className="bg-primary/5 p-6">
                 <h4 className="mb-3 text-lg font-bold text-secondary">
                   What This Partnership Means for Ethiopia
                 </h4>
@@ -318,11 +317,11 @@ export default function About() {
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-secondary">
-                    Technical Expertise
+                    Problem-Solving Expertise
                   </h3>
                   <p className="leading-relaxed text-muted">
-                    Specialized knowledge in post-tensioning technology and
-                    advanced structural engineering solutions.
+                    Specialized problem-solving methodologies in post-tensioning
+                    technology and advanced structural engineering challenges.
                   </p>
                 </div>
               </div>
@@ -339,8 +338,8 @@ export default function About() {
                     Proven Experience
                   </h3>
                   <p className="leading-relaxed text-muted">
-                    Over a decade of successful project delivery across diverse
-                    construction sectors and challenging environments.
+                    Over a decade of successfully overcoming construction challenges
+                    and delivering solutions across diverse sectors and demanding environments.
                   </p>
                 </div>
               </div>
@@ -382,7 +381,7 @@ export default function About() {
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               {/* Quality Promise */}
-              <div className="rounded-xl bg-secondary p-8 text-white">
+              <div className="bg-secondary p-8 text-white">
                 <h3 className="mb-4 text-2xl font-bold text-white">
                   Quality Excellence
                 </h3>
@@ -394,7 +393,7 @@ export default function About() {
               </div>
 
               {/* Partnership Promise */}
-              <div className="rounded-xl bg-primary p-8 text-white">
+              <div className="bg-primary p-8 text-white">
                 <h3 className="mb-4 text-2xl font-bold text-white">
                   True Partnership
                 </h3>
@@ -470,7 +469,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="mt-12 rounded-xl bg-primary/5 p-8">
+            <div className="mt-12 bg-primary/5 p-8">
               <h4 className="mb-4 text-xl font-bold text-secondary">
                 What This Means for You
               </h4>
@@ -506,123 +505,14 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Experience Section */}
-      <section className="section bg-neutral">
-        <div className="container-xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Our Experience
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              A decade of transformative projects and strategic partnerships
-              that have shaped Ethiopia&apos;s construction landscape and
-              established our reputation for excellence.
-            </p>
-          </div>
+      {/* Legacy Timeline Section */}
+      <LegacyTimeline
+        title="Our Legacy & Heritage"
+        subtitle="A decade of transformative projects and strategic partnerships that have shaped Ethiopia's construction landscape, honoring our heritage while building towards the future."
+        ctaText="View Our Complete Journey"
+        ctaLink="/projects"
+      />
 
-          {/* Experience Timeline */}
-          <div className="mx-auto max-w-4xl space-y-8">
-            {/* 2015 - Foundation */}
-            <div className="flex items-start space-x-6">
-              <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary font-bold text-white">
-                  2015
-                </div>
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold text-secondary">
-                  Company Foundation
-                </h3>
-                <p className="leading-relaxed text-muted">
-                  EASE was established with a vision to introduce advanced
-                  post-tensioning technology to Ethiopia&apos;s construction
-                  industry, bringing international expertise to local projects.
-                </p>
-              </div>
-            </div>
-
-            {/* 2018 - Expansion */}
-            <div className="flex items-start space-x-6">
-              <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary font-bold text-white">
-                  2018
-                </div>
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold text-secondary">
-                  Strategic Partnership
-                </h3>
-                <p className="leading-relaxed text-muted">
-                  Formed strategic alliance with Rudloff StrongForce
-                  International, bringing over 60 years of specialized
-                  post-tensioning expertise to Ethiopia.
-                </p>
-              </div>
-            </div>
-
-            {/* 2020 - Growth */}
-            <div className="flex items-start space-x-6">
-              <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary font-bold text-white">
-                  2020
-                </div>
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold text-secondary">
-                  Nationwide Expansion
-                </h3>
-                <p className="leading-relaxed text-muted">
-                  Extended operations beyond Addis Ababa, delivering projects
-                  across multiple regions and establishing presence in rural
-                  communities.
-                </p>
-              </div>
-            </div>
-
-            {/* 2024 - Present */}
-            <div className="flex items-start space-x-6">
-              <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary font-bold text-white">
-                  2024
-                </div>
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold text-secondary">
-                  Industry Leadership
-                </h3>
-                <p className="leading-relaxed text-muted">
-                  Recognized as Ethiopia&apos;s leading post-tensioning
-                  specialist with over 80 completed projects and expanding
-                  operations across East Africa.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Company Profile Download Section */}
-      <section className="section bg-white">
-        <div className="container-xl">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Company Profile
-            </h2>
-            <p className="mb-8 text-xl leading-relaxed text-muted">
-              Download our comprehensive company profile to learn more about our
-              capabilities, past projects, and technical expertise.
-            </p>
-            <Link
-              href="/EASE Profile.pdf"
-              target="_blank"
-              className="btn btn-primary btn-lg inline-flex items-center space-x-2"
-            >
-              <Download size={20} />
-              <span>Download Company Profile</span>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Philosophy Section */}
       <section className="section bg-neutral">
@@ -649,10 +539,10 @@ export default function About() {
                 </div>
                 <h3 className="text-2xl font-bold text-secondary">Vision</h3>
                 <p className="leading-relaxed text-muted">
-                  To solve East Africa&apos;s infrastructure challenges through
-                  post-tensioning expertise—enabling developers to build higher,
-                  span farther, and complete projects faster while meeting
-                  international standards.
+                  To solve East Africa&apos;s most pressing infrastructure challenges
+                  through innovative post-tensioning expertise—enabling developers to
+                  overcome limitations, build higher, span farther, and complete projects
+                  faster while meeting international standards.
                 </p>
               </div>
             </div>
@@ -667,11 +557,10 @@ export default function About() {
                 </div>
                 <h3 className="text-2xl font-bold text-secondary">Mission</h3>
                 <p className="leading-relaxed text-muted">
-                  To deliver exceptional construction solutions through
-                  innovative post-tensioning technology, expert craftsmanship,
-                  and collaborative partnerships, creating value for our clients
-                  while contributing to Ethiopia&apos;s infrastructure
-                  development.
+                  To solve construction challenges through innovative post-tensioning
+                  technology, expert problem-solving approaches, and collaborative
+                  partnerships, creating value for our clients while addressing
+                  Ethiopia&apos;s infrastructure development needs.
                 </p>
               </div>
             </div>
@@ -686,10 +575,10 @@ export default function About() {
                 </div>
                 <h3 className="text-2xl font-bold text-secondary">Values</h3>
                 <p className="leading-relaxed text-muted">
-                  Environmental accountability, excellence, innovation, and
-                  collaboration guide every aspect of our work, ensuring we
-                  deliver superior results while maintaining the highest ethical
-                  and professional standards.
+                  Environmental accountability, excellence in problem-solving,
+                  innovative approaches to challenges, and collaborative solutions
+                  guide every aspect of our work, ensuring we deliver superior results
+                  while maintaining the highest ethical and professional standards.
                 </p>
               </div>
             </div>

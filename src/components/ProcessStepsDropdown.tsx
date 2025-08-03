@@ -89,7 +89,7 @@ export default function ProcessStepsDropdown() {
                         <p className="mb-4 leading-relaxed text-muted">
                           {step.description}
                         </p>
-                        <div className="aspect-video overflow-hidden rounded-lg bg-neutral-dark flex items-center justify-center">
+                        <div className="aspect-video overflow-hidden bg-neutral-dark flex items-center justify-center">
                           <div className="text-center">
                             <p className="text-lg font-semibold text-secondary mb-2">Coming Soon</p>
                             <p className="text-sm text-muted">Step-specific video demonstration</p>

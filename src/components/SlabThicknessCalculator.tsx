@@ -61,7 +61,7 @@ export default function SlabThicknessCalculator() {
                         >
                           Slab Thickness
                         </label>
-                        <span className="rounded-lg bg-neutral px-3 py-1 text-lg font-bold text-secondary">
+                        <span className="bg-neutral px-3 py-1 text-lg font-bold text-secondary">
                           {slabThickness} cm
                         </span>
                       </div>
@@ -76,7 +76,7 @@ export default function SlabThicknessCalculator() {
                           onChange={(e) =>
                             setSlabThickness(Number(e.target.value))
                           }
-                          className="slider h-3 w-full cursor-pointer appearance-none rounded-lg bg-neutral-dark focus:ring-2 focus:ring-primary focus:outline-none"
+                          className="slider h-3 w-full cursor-pointer appearance-none bg-neutral-dark focus:ring-2 focus:ring-primary focus:outline-none"
                           style={{
                             background: `linear-gradient(to right, #e82d22 0%, #e82d22 ${
                               ((slabThickness - 20) / 12) * 100
@@ -108,7 +108,7 @@ export default function SlabThicknessCalculator() {
                         step="0.1"
                         value={slabLength}
                         onChange={(e) => setSlabLength(Number(e.target.value))}
-                        className="w-full rounded-lg border border-border bg-white px-4 py-3 text-lg font-medium text-secondary focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none"
+                        className="w-full border border-border bg-white px-4 py-3 text-lg font-medium text-secondary focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none"
                       />
                     </div>
 
@@ -130,7 +130,7 @@ export default function SlabThicknessCalculator() {
                         onChange={(e) =>
                           setTotalServiceLoad(Number(e.target.value))
                         }
-                        className="w-full rounded-lg border border-border bg-white px-4 py-3 text-lg font-medium text-secondary focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none"
+                        className="w-full border border-border bg-white px-4 py-3 text-lg font-medium text-secondary focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none"
                       />
                     </div>
                   </div>
@@ -148,7 +148,7 @@ export default function SlabThicknessCalculator() {
                   </div>
 
                   <div className="space-y-4">
-                    <div className="rounded-lg bg-primary/5 p-6">
+                    <div className="bg-primary/5 p-6">
                       <div className="mb-2 text-sm font-medium text-muted">
                         Estimated Output
                       </div>
@@ -161,19 +161,19 @@ export default function SlabThicknessCalculator() {
                     </div>
 
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-                      <div className="rounded-lg bg-neutral p-4 text-center">
+                      <div className="bg-neutral p-4 text-center">
                         <div className="text-lg font-black text-secondary">
                           {slabThickness} cm
                         </div>
                         <div className="text-xs text-muted">Thickness</div>
                       </div>
-                      <div className="rounded-lg bg-neutral p-4 text-center">
+                      <div className="bg-neutral p-4 text-center">
                         <div className="text-lg font-black text-secondary">
                           {slabLength} m
                         </div>
                         <div className="text-xs text-muted">Length</div>
                       </div>
-                      <div className="rounded-lg bg-neutral p-4 text-center">
+                      <div className="bg-neutral p-4 text-center">
                         <div className="text-lg font-black text-secondary">
                           {totalServiceLoad} kN/m²
                         </div>
