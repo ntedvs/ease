@@ -2,7 +2,7 @@
 
 @theme {
   --color-primary: #e82d22;
-  --color-primary-dark: #c02119;
+  --color-primary-dark: #b01e16;
   --color-secondary: #15244c;
   --color-secondary-light: #1e3260;
   --color-neutral: #f2f2f2;
@@ -74,11 +74,11 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-white shadow-lg hover:bg-primary-dark hover:shadow-xl focus:ring-primary;
+    @apply bg-primary text-white shadow-lg hover:bg-primary-dark hover:text-white hover:shadow-xl focus:ring-primary;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-white shadow-lg hover:bg-secondary-light hover:shadow-xl focus:ring-secondary;
+    @apply bg-secondary text-white shadow-lg hover:bg-secondary-light hover:text-white hover:shadow-xl focus:ring-secondary;
   }
 
   .btn-lg {
@@ -164,21 +164,6 @@
     animation: marquee2 35s linear infinite;
   }
 
-  /* Subtle button pulse animation */
-  @keyframes pulse-subtle {
-    0%,
-    100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-  }
-
-  .btn-pulse {
-    animation: pulse-subtle 5s ease-in-out infinite;
-  }
-
   /* Hover animations */
   .hover-scale {
     @apply transition-transform duration-200 ease-out;
@@ -238,8 +223,7 @@
   /* Reduced motion support */
   @media (prefers-reduced-motion: reduce) {
     .animate-marquee,
-    .animate-marquee2,
-    .btn-pulse {
+    .animate-marquee2 {
       animation-play-state: paused;
     }
 

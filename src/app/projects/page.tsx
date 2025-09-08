@@ -170,7 +170,7 @@ export default function Projects() {
             </h1>
             <p className="text-xl leading-relaxed text-white/90 md:text-2xl">
               Discover our extensive portfolio of construction projects across
-              Ethiopia. From government buildings to residential complexes, see
+              East Africa. From government buildings to residential complexes, see
               how EASE delivers excellence in every project.
             </p>
           </div>
@@ -186,7 +186,7 @@ export default function Projects() {
             </h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
               Over a decade of successful project delivery across diverse
-              sectors and challenging environments throughout Ethiopia.
+              sectors and challenging environments throughout East Africa.
             </p>
           </div>
 

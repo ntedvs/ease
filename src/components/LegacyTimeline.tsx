@@ -1,10 +1,8 @@
 "use client"
 
 import {
-  Building,
   CheckCircle,
   Flag,
-  Shield,
   TrendingUp,
   Users,
 } from "lucide-react"
@@ -30,49 +28,33 @@ interface LegacyTimelineProps {
 const timelineEvents: TimelineEvent[] = [
   {
     year: "2015",
-    title: "Foundation & Vision",
+    title: "From PACE to EASE",
     description:
-      "EASE was established with a clear mission to solve Ethiopia's most complex structural engineering challenges through innovative post-tensioning solutions and precision construction methodologies.",
+      "Evolving from the legacy of PACE, EASE was founded to bring advanced engineering technology into Ethiopia's construction industry, combining decades of local structural excellence with international expertise.",
     icon: Flag,
     side: "left",
   },
   {
-    year: "2016-2017",
-    title: "First Major Breakthroughs",
+    year: "2018",
+    title: "Strategic Partnership",
     description:
-      "Successfully delivered our inaugural post-tensioning projects, solving critical structural challenges and establishing our reputation for innovative problem-solving in Ethiopia's construction industry.",
-    icon: Building,
-    side: "right",
-  },
-  {
-    year: "2018-2019",
-    title: "Strategic Partnership Development",
-    description:
-      "Forged strategic partnership with Rudloff StrongForce International, bringing 60+ years of global expertise to Ethiopia and enhancing our technical capabilities with EOTA-certified solutions.",
+      "Formed strategic alliance with International Engineering Specialists bringing over 60 years of specialized solutions expertise to Ethiopia.",
     icon: Users,
-    side: "left",
-  },
-  {
-    year: "2020-2021",
-    title: "Rapid Growth & Innovation",
-    description:
-      "Expanded our service portfolio and geographical reach, developing innovative solutions for complex infrastructure challenges while maintaining our commitment to precision and quality.",
-    icon: TrendingUp,
     side: "right",
   },
   {
-    year: "2022-2023",
-    title: "Insurance Leadership Achievement",
+    year: "2020",
+    title: "Nationwide Expansion",
     description:
-      "Became Ethiopia's first and only insurance-backed construction company with $15.5M in comprehensive coverage, solving the critical problem of project security and client confidence.",
-    icon: Shield,
+      "Extended operations beyond Addis Ababa, delivering projects across multiple regions and establishing presence in rural communities.",
+    icon: TrendingUp,
     side: "left",
   },
   {
-    year: "2024-Present",
-    title: "Engineering Excellence Milestones",
+    year: "2024",
+    title: "Industry Leadership",
     description:
-      "Achieved remarkable milestones: 80+ completed projects, 800,000+ square meters of structural solutions, and multi-country operations, establishing EASE as East Africa's premier engineering solutions provider.",
+      "Recognized as Ethiopia's leading post-tensioning specialist with over 80 completed projects and expanding operations across East Africa.",
     icon: CheckCircle,
     side: "right",
   },
@@ -184,7 +166,7 @@ export default function LegacyTimeline({
         {/* Call to Action */}
         {showCTA && (
           <div className="mt-16 text-center">
-            <Link href={ctaLink} className="btn btn-primary btn-lg btn-pulse">
+            <Link href={ctaLink} className="btn btn-primary btn-lg">
               {ctaText}
             </Link>
           </div>

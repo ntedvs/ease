@@ -171,16 +171,16 @@ export default function Home() {
 
               <div className="my-6 flex gap-4">
                 <div className="bg-white/20 p-3 pt-4 leading-none">
-                  800,000+ meters of slab
+                  800,000+ square meters
                 </div>
                 <div className="bg-white/20 p-3 pt-4 leading-none">
-                  80+ projects completed
+                  120+ projects completed
                 </div>
                 <div className="bg-white/20 p-3 pt-4 leading-none">
-                  3+ countries of operation
+                  5+ countries of operation
                 </div>
                 <div className="bg-white/20 p-3 pt-4 leading-none">
-                  10+ years of leadership
+                  40+ years of leadership
                 </div>
               </div>
 
@@ -285,7 +285,7 @@ export default function Home() {
             <Link
               href="/EASE Profile.pdf"
               target="_blank"
-              className="btn btn-primary btn-lg btn-pulse"
+              className="btn btn-primary btn-lg"
             >
               View Our Profile
             </Link>
@@ -293,8 +293,152 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Post-Tensioning Section */}
+      {/* EPC Engineering Solutions Section */}
       <section className="section bg-neutral">
+        <div className="container-xl">
+          <div className="mb-16 text-center">
+            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
+              Comprehensive EPC Solutions for Complex Challenges
+            </h2>
+            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
+              EASE operates as a next-generation EPC (Engineering, Procurement, and Construction) company, solving East Africa&apos;s most complex, high-stakes infrastructure challenges through innovative problem-solving expertise and precision engineering solutions.
+            </p>
+          </div>
+
+          {/* Core Services Grid */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {/* Bridge Construction & Infrastructure */}
+            <div className="card group transition-all duration-300 hover:shadow-lg">
+              <div className="card-body space-y-6 text-center">
+                <div className="flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                    <Anchor size={32} className="text-primary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-secondary">
+                  Bridge & Infrastructure Solutions
+                </h3>
+                <p className="text-sm leading-relaxed text-muted">
+                  Solve major infrastructure challenges through advanced bridge construction and heavy civil engineering that addresses complex logistics and extreme technical requirements.
+                </p>
+              </div>
+            </div>
+
+            {/* High-rise Commercial Buildings */}
+            <div className="card group transition-all duration-300 hover:shadow-lg">
+              <div className="card-body space-y-6 text-center">
+                <div className="flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                    <Building size={32} className="text-primary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-secondary">
+                  High-Rise Commercial Solutions
+                </h3>
+                <p className="text-sm leading-relaxed text-muted">
+                  Address vertical construction challenges through sophisticated high-rise engineering that overcomes complex architectural requirements and structural limitations.
+                </p>
+              </div>
+            </div>
+
+            {/* Industrial Manufacturing Facilities */}
+            <div className="card group transition-all duration-300 hover:shadow-lg">
+              <div className="card-body space-y-6 text-center">
+                <div className="flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                    <Settings size={32} className="text-primary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-secondary">
+                  Industrial Facility Solutions
+                </h3>
+                <p className="text-sm leading-relaxed text-muted">
+                  Resolve complex industrial construction needs through specialized manufacturing facility engineering that addresses precision requirements and operational challenges.
+                </p>
+              </div>
+            </div>
+
+            {/* Multi-story Residential */}
+            <div className="card group transition-all duration-300 hover:shadow-lg">
+              <div className="card-body space-y-6 text-center">
+                <div className="flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                    <Building2 size={32} className="text-primary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-secondary">
+                  Multi-Story Residential Solutions
+                </h3>
+                <p className="text-sm leading-relaxed text-muted">
+                  Solve housing development challenges through innovative multi-story construction that addresses urban density requirements and residential complexity.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Key Differentiators Section */}
+          <div className="mt-16">
+            <h3 className="mb-12 text-center text-3xl font-black text-secondary">
+              Taking On Projects Others Won&apos;t Attempt
+            </h3>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="bg-primary/5 p-8">
+                <h4 className="mb-4 text-xl font-bold text-secondary">
+                  Heavy Lifting Capabilities
+                </h4>
+                <p className="leading-relaxed text-muted">
+                  Solved unprecedented challenges by successfully recovering a 550-tonne collapsed bridge, demonstrating our capacity to handle extreme technical situations that others cannot attempt.
+                </p>
+              </div>
+              <div className="bg-primary/5 p-8">
+                <h4 className="mb-4 text-xl font-bold text-secondary">
+                  Sky-High Engineering
+                </h4>
+                <p className="leading-relaxed text-muted">
+                  Address vertical construction challenges through precision engineering of 70-meter elevated skybridges, solving complex height and accessibility problems with innovative solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Project Scale Statistics */}
+          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div className="text-center">
+              <AnimatedNumber
+                value={400}
+                prefix="$"
+                suffix="M+"
+                decimalPlaces={0}
+                className="mb-4 text-5xl font-black text-primary"
+              />
+              <h3 className="mb-2 text-xl font-bold text-secondary">
+                Landmark Projects Delivered
+              </h3>
+              <p className="text-muted">
+                Successfully completed major infrastructure and commercial projects across challenging environments
+              </p>
+            </div>
+            <div className="text-center">
+              <AnimatedNumber
+                value={150}
+                prefix="$"
+                suffix="M+"
+                decimalPlaces={0}
+                className="mb-4 text-5xl font-black text-primary"
+              />
+              <h3 className="mb-2 text-xl font-bold text-secondary">
+                Active Project Portfolio
+              </h3>
+              <p className="text-muted">
+                Current high-stakes projects in progress, operating in high-risk, unconventional environments
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Post-Tensioning Section */}
+      <section className="section bg-white">
         <div className="container-xl">
           <div className="mb-16 text-center">
             <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
@@ -384,7 +528,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <Link
               href="/post-tensioning"
-              className="btn btn-primary btn-lg btn-pulse"
+              className="btn btn-primary btn-lg"
             >
               Learn More About Post-Tensioning
             </Link>
@@ -492,7 +636,7 @@ export default function Home() {
 
           {/* Learn More About Our Services Button */}
           <div className="mt-12 text-center">
-            <Link href="/services" className="btn btn-primary btn-lg btn-pulse">
+            <Link href="/services" className="btn btn-primary btn-lg">
               Learn More About Our Services
             </Link>
           </div>
@@ -829,7 +973,7 @@ export default function Home() {
 
           {/* View All Projects Button */}
           <div className="text-center">
-            <Link href="/projects" className="btn btn-primary btn-lg btn-pulse">
+            <Link href="/projects" className="btn btn-primary btn-lg">
               View All Projects
             </Link>
           </div>

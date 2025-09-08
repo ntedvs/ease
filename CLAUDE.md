@@ -2,87 +2,79 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Overview
+## Development Commands
 
-This is the **EASE** (East Africa Specialized Engineering) company website - a Next.js application showcasing an Ethiopian construction and engineering company that specializes in post-tensioning solutions and structural engineering. The site displays their projects, services, and company information.
+- `pnpm dev` - Start development server with Turbopack (recommended)
+- `pnpm build` - Build production version
+- `pnpm start` - Start production server
+- `pnpm lint` - Run ESLint checks
 
-## Technology Stack
+Use pnpm as the package manager (configured via pnpm-workspace.yaml).
 
-- **Framework**: Next.js 15.3.4 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS 4.1.11 with custom theme
-- **Package Manager**: pnpm (workspace setup)
-- **Icons**: Lucide React
-- **Development**: ESLint with Next.js config, Prettier with Tailwind plugin
+## Project Architecture
 
-## Common Development Commands
+**EASE** is a Next.js 15 corporate website for an Ethiopian construction company specializing in post-tensioning solutions. The architecture follows Next.js App Router patterns with a component-based design system.
 
-```bash
-# Development server with turbopack
-pnpm dev
+### Key Architectural Patterns
 
-# Production build
-pnpm build
+**Styling Architecture:**
 
-# Start production server
-pnpm start
+- TailwindCSS v4 with custom theme defined in `src/styles/base.css`
+- Brand colors: Primary red (#e82d22), Secondary navy (#15244c)
+- Custom component classes (.btn, .form-input, etc.) defined in @layer components
+- Prettier configured with Tailwind plugin for class sorting
 
-# Lint code
-pnpm lint
+**Data Flow:**
 
-# Format code (inferred from prettier config)
-npx prettier --write .
-```
+- Static project data managed in `projects.json` (80+ construction projects)
+- No external API dependencies - all content is static/file-based
+- Images organized by category in `/public` (logos, projects, insurance docs, etc.)
 
-## Project Structure
+**Component Patterns:**
+
+- All components are client-side ("use client") when requiring interactivity
+- Consistent prop patterns for reusable components (AnimatedNumber, ImageCarousel, etc.)
+- Navigation uses `usePathname()` for active states
+- Mobile-first responsive design throughout
+
+**SEO & Metadata:**
+
+- Comprehensive structured data in root layout for business schema
+- OpenGraph and Twitter card metadata configured
+- Custom metadata per page using Next.js Metadata API
+
+### File Structure Notes
 
 - `src/app/` - Next.js App Router pages and layouts
-  - Main pages: `page.tsx` (home), `about/`, `contact/`, `services/`, `projects/`, `post-tensioning/`
-- `src/components/` - Reusable React components (Header, AnimatedStats, BounceLoader, etc.)
-- `src/styles/base.css` - Tailwind CSS with custom theme variables
-- `public/` - Static assets including project images, logos, and company documents
-- `projects.json` - Project data with 75+ construction projects
+- `src/components/` - Reusable UI components
+- `src/styles/base.css` - Main stylesheet with Tailwind imports and custom theme
+- `projects.json` - Central data source for all project information
+- `/public/` - Static assets organized by type (logos/, projects/, insurance/, etc.)
 
-## Key Architecture Details
+### Configuration Details
 
-### Styling System
+**TypeScript:** Strict mode enabled with path mapping (`@/*` → `./src/*`)
 
-- Uses Tailwind CSS 4.1.11 with custom CSS variables defined in `src/styles/base.css`
-- Custom color palette: primary (#e82d22), secondary (#15244c), neutral (#f2f2f2)
-- Responsive design with mobile-first approach
-- Custom utility classes for nav links and container layouts
+**Prettier:** Configured with no semicolons, Tailwind class sorting enabled
 
-### Data Management
+**ESLint:** Uses Next.js core-web-vitals and TypeScript configs via FlatCompat
 
-- Project data stored in `projects.json` with structure: name, area, signingDate, category, hasImage, imageUrl, year
-- Projects categorized as: Apartment, Mixed Use, Hotel, Government, Hospital, Commercial, etc.
-- Static images organized in `public/projects/`, `public/services/`, `public/logos/`
+**Next.js:** Minimal config, relies on defaults with App Router
 
-### Component Architecture
+### Content Management
 
-- Header component with responsive navigation and mobile menu
-- Layout component with SEO metadata, structured data (JSON-LD), and footer
-- Specialized components: AnimatedStats, ImageCarousel, TestimonialCarousel, CompanyMarquee
-- All components use TypeScript with proper typing
+Project data is centralized in `projects.json` with schema:
 
-### SEO & Metadata
+```typescript
+{
+  name: string
+  area: number
+  signingDate: string
+  category: string
+  hasImage: boolean
+  imageUrl: string | null
+  year: number
+}
+```
 
-- Comprehensive SEO setup in layout.tsx with OpenGraph, Twitter Cards, and structured data
-- Company information optimized for Ethiopian construction/engineering searches
-- Metadata includes contact info, social media links, and service descriptions
-
-## Configuration Files
-
-- `next.config.ts` - Basic Next.js configuration
-- `tsconfig.json` - TypeScript config with path mapping (`@/*` → `./src/*`)
-- `eslint.config.mjs` - ESLint with Next.js and TypeScript rules
-- `prettier.config.mjs` - Prettier with Tailwind plugin, no semicolons
-- `postcss.config.mjs` - PostCSS with Tailwind CSS plugin
-
-## Development Notes
-
-- The site is production-ready with proper error handling (`error.tsx`, `not-found.tsx`)
-- Uses Next.js Image component for optimized images
-- Implements responsive design patterns throughout
-- Company established in 2015, completed 75+ projects across 550,000+ square meters
-- Partnership with international suppliers like Rudloph Strong Force mentioned in codebase
+Static assets follow organized directory structure in `/public` for easy maintenance and CDN optimization.
