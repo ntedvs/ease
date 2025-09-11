@@ -51,7 +51,6 @@ export default function Home() {
     },
   ]
 
-
   const trustedCompanyLogos = [
     {
       src: "/logos/1.png",
@@ -169,7 +168,7 @@ export default function Home() {
                 across the region
               </p>
 
-              <div className="my-6 flex gap-4">
+              <div className="my-6 flex flex-col gap-4 md:flex-row">
                 <div className="bg-white/20 p-3 pt-4 leading-none">
                   800,000+ square meters
                 </div>
@@ -301,7 +300,10 @@ export default function Home() {
               Comprehensive EPC Solutions for Complex Challenges
             </h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              EASE operates as a next-generation EPC (Engineering, Procurement, and Construction) company, solving East Africa&apos;s most complex, high-stakes infrastructure challenges through innovative problem-solving expertise and precision engineering solutions.
+              EASE operates as a next-generation EPC (Engineering, Procurement,
+              and Construction) company, solving East Africa&apos;s most
+              complex, high-stakes infrastructure challenges through innovative
+              problem-solving expertise and precision engineering solutions.
             </p>
           </div>
 
@@ -319,7 +321,9 @@ export default function Home() {
                   Bridge & Infrastructure Solutions
                 </h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  Solve major infrastructure challenges through advanced bridge construction and heavy civil engineering that addresses complex logistics and extreme technical requirements.
+                  Solve major infrastructure challenges through advanced bridge
+                  construction and heavy civil engineering that addresses
+                  complex logistics and extreme technical requirements.
                 </p>
               </div>
             </div>
@@ -336,7 +340,9 @@ export default function Home() {
                   High-Rise Commercial Solutions
                 </h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  Address vertical construction challenges through sophisticated high-rise engineering that overcomes complex architectural requirements and structural limitations.
+                  Address vertical construction challenges through sophisticated
+                  high-rise engineering that overcomes complex architectural
+                  requirements and structural limitations.
                 </p>
               </div>
             </div>
@@ -353,7 +359,9 @@ export default function Home() {
                   Industrial Facility Solutions
                 </h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  Resolve complex industrial construction needs through specialized manufacturing facility engineering that addresses precision requirements and operational challenges.
+                  Resolve complex industrial construction needs through
+                  specialized manufacturing facility engineering that addresses
+                  precision requirements and operational challenges.
                 </p>
               </div>
             </div>
@@ -370,7 +378,9 @@ export default function Home() {
                   Multi-Story Residential Solutions
                 </h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  Solve housing development challenges through innovative multi-story construction that addresses urban density requirements and residential complexity.
+                  Solve housing development challenges through innovative
+                  multi-story construction that addresses urban density
+                  requirements and residential complexity.
                 </p>
               </div>
             </div>
@@ -387,7 +397,10 @@ export default function Home() {
                   Heavy Lifting Capabilities
                 </h4>
                 <p className="leading-relaxed text-muted">
-                  Solved unprecedented challenges by successfully recovering a 550-tonne collapsed bridge, demonstrating our capacity to handle extreme technical situations that others cannot attempt.
+                  Solved unprecedented challenges by successfully recovering a
+                  550-tonne collapsed bridge, demonstrating our capacity to
+                  handle extreme technical situations that others cannot
+                  attempt.
                 </p>
               </div>
               <div className="bg-primary/5 p-8">
@@ -395,7 +408,9 @@ export default function Home() {
                   Sky-High Engineering
                 </h4>
                 <p className="leading-relaxed text-muted">
-                  Address vertical construction challenges through precision engineering of 70-meter elevated skybridges, solving complex height and accessibility problems with innovative solutions.
+                  Address vertical construction challenges through precision
+                  engineering of 70-meter elevated skybridges, solving complex
+                  height and accessibility problems with innovative solutions.
                 </p>
               </div>
             </div>
@@ -415,7 +430,8 @@ export default function Home() {
                 Landmark Projects Delivered
               </h3>
               <p className="text-muted">
-                Successfully completed major infrastructure and commercial projects across challenging environments
+                Successfully completed major infrastructure and commercial
+                projects across challenging environments
               </p>
             </div>
             <div className="text-center">
@@ -430,7 +446,8 @@ export default function Home() {
                 Active Project Portfolio
               </h3>
               <p className="text-muted">
-                Current high-stakes projects in progress, operating in high-risk, unconventional environments
+                Current high-stakes projects in progress, operating in
+                high-risk, unconventional environments
               </p>
             </div>
           </div>
@@ -445,12 +462,12 @@ export default function Home() {
               How Post-Tensioning Solves Your Challenges
             </h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Post-tensioning technology addresses East Africa&apos;s most pressing
-              construction challenges—from seismic concerns to rapid urban
-              development demands. Our solutions overcome structural
+              Post-tensioning technology addresses East Africa&apos;s most
+              pressing construction challenges—from seismic concerns to rapid
+              urban development demands. Our solutions overcome structural
               limitations, resolve material efficiency problems, and tackle
-              Ethiopia&apos;s diverse climate and challenging soil conditions with
-              proven results.
+              Ethiopia&apos;s diverse climate and challenging soil conditions
+              with proven results.
             </p>
           </div>
 
@@ -526,10 +543,7 @@ export default function Home() {
 
           {/* Learn More About Post-Tensioning Button */}
           <div className="mt-12 text-center">
-            <Link
-              href="/post-tensioning"
-              className="btn btn-primary btn-lg"
-            >
+            <Link href="/post-tensioning" className="btn btn-primary btn-lg">
               Learn More About Post-Tensioning
             </Link>
           </div>
@@ -808,7 +822,6 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* Nationwide Coverage Section */}
       <section className="section bg-secondary">
         <div className="container-xl">
@@ -847,9 +860,9 @@ export default function Home() {
                   Addis Ababa
                 </h3>
                 <p className="text-sm leading-relaxed text-muted">
-                  Addressing urban construction challenges in Ethiopia&apos;s capital
-                  through cutting-edge solutions for commercial, residential,
-                  and infrastructure projects.
+                  Addressing urban construction challenges in Ethiopia&apos;s
+                  capital through cutting-edge solutions for commercial,
+                  residential, and infrastructure projects.
                 </p>
               </div>
             </div>
@@ -952,7 +965,7 @@ export default function Home() {
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src="/projects/omo.png"
-                  alt="Omo River Bridge - Lifting and repairing a collapsed bridge, and proceeding to enhance the bridge&apos;s capacity via external post-tensioning. In collaboration with VSL."
+                  alt="Omo River Bridge - Lifting and repairing a collapsed bridge, and proceeding to enhance the bridge's capacity via external post-tensioning. In collaboration with VSL."
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
