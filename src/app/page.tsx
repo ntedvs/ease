@@ -142,6 +142,20 @@ export default function Home() {
       title: "Project Coordinator",
       company: "Omo River Bridge",
     },
+    {
+      quote:
+        "This award is given to EASE engineering PLC in recognition of your invaluable contribution and commitment to excellence in the successful execution of our 21-floor building project within a 6-month period of time.",
+      name: "Oumer Yasiner Yasin",
+      title: "Representative",
+      company: "Huda Engineering PLC",
+    },
+    {
+      quote:
+        "In heartfelt recognition of your valued partnership and unwavering support to Akoya Group. Your dedication, professionalism and trust have played a significant role in strengthening our shared vision of excellence across our diverse business sectors.",
+      name: "Habib Mohamed",
+      title: "Representative",
+      company: "Akoya Group",
+    },
   ]
 
   return (
