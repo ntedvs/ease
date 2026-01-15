@@ -110,35 +110,35 @@ export default function Home() {
         "Throughout the scope of the PT works at the project, the EASE showcased remarkable ingenuity and forward-thinking in proposing and implementing an innovative post-tension slab solution to connect twin towers situated 70 meters above the ground level.",
       name: "Dr. Alemayehu Tekle",
       title: "Director of Infrastructure Development",
-      company: "Ministry of Urban Development",
+      company: "Elilta Real Estate",
     },
     {
       quote:
         "They exemplified exceptional customer service by providing after sales support three years post-project completion.",
       name: "Sarah Mekonnen",
       title: "Property Developer",
-      company: "Addis Properties Ltd.",
+      company: "Refenti Apartments",
     },
     {
       quote:
         "Throughout the duration of their involvement, EASE consistently demonstrated a remarkable level of professionalism, diligence, and quality in their work.",
       name: "Birhanu Tiruneh",
       title: "City Planning Manager",
-      company: "Addis Ababa City Administration",
+      company: "Yeka Parking",
     },
     {
       quote:
         "EASE has consistently delivered excellence and innovation, making them an invaluable partner for any construction project.",
       name: "Mr. Shaka Gurmesa",
-      title: "Marketing Spea",
-      company: "Golden Star",
+      title: "Marketing Manager",
+      company: "Golden Star Building",
     },
     {
       quote:
         "Their proactive approach, coupled with their willingness to take on additional responsibilities, played a pivotal role in overcoming challenges and achieving our project goals.",
       name: "Biruk Tesfaye",
       title: "Project Coordinator",
-      company: "Ethiopian Railways Corporation",
+      company: "Omo River Bridge",
     },
   ]
 
@@ -170,7 +170,7 @@ export default function Home() {
 
               <div className="my-6 flex flex-col gap-4 md:flex-row">
                 <div className="bg-white/20 p-3 pt-4 leading-none">
-                  800,000+ square meters
+                  900,000+ square meters
                 </div>
                 <div className="bg-white/20 p-3 pt-4 leading-none">
                   120+ projects completed

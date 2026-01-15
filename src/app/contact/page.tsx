@@ -126,13 +126,19 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-secondary">
-                      Phone Number
+                      Phone Numbers
                     </h3>
                     <Link
                       href="tel:+251116671615"
-                      className="text-muted transition-colors duration-200 hover:text-primary"
+                      className="block text-muted transition-colors duration-200 hover:text-primary"
                     >
-                      +251 11 667 1615
+                      +251 116 671 615
+                    </Link>
+                    <Link
+                      href="tel:+251968601177"
+                      className="block text-muted transition-colors duration-200 hover:text-primary"
+                    >
+                      +251 968 601 177
                     </Link>
                   </div>
                 </div>

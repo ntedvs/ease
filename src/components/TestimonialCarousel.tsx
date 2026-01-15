@@ -164,10 +164,9 @@ export default function TestimonialCarousel({
             <div className="text-lg font-bold text-secondary">
               {currentTestimonial.name}
             </div>
-            {/* <div className="text-sm text-muted">{currentTestimonial.title}</div>
             <div className="text-base font-semibold text-primary">
               {currentTestimonial.company}
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

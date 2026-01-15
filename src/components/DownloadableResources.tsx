@@ -1,6 +1,6 @@
 "use client"
 
-import { Download, FileText, Users, Shield, Wrench, Book } from "lucide-react"
+import { Download, Users, Wrench } from "lucide-react"
 
 interface DownloadItem {
   title: string
@@ -16,18 +16,10 @@ export default function DownloadableResources() {
     {
       title: "Company Profile",
       description: "Comprehensive overview of EASE's capabilities and problem-solving approach",
-      fileSize: "6.3 MB",
+      fileSize: "3.9 MB",
       icon: <Users className="h-8 w-8 text-primary" />,
       href: "/EaseProfile.pdf",
       available: true,
-    },
-    {
-      title: "Project Portfolio",
-      description: "Detailed case studies showcasing our engineering solutions across 75+ projects",
-      fileSize: "TBD",
-      icon: <FileText className="h-8 w-8 text-primary" />,
-      href: "/downloads/ease-project-portfolio.pdf",
-      available: false,
     },
     {
       title: "Post-Tensioning Guidelines",
@@ -36,22 +28,6 @@ export default function DownloadableResources() {
       icon: <Wrench className="h-8 w-8 text-primary" />,
       href: "/RSFBooklet.pdf",
       available: true,
-    },
-    {
-      title: "Safety Standards Manual",
-      description: "Comprehensive safety protocols solving workplace hazard challenges",
-      fileSize: "TBD",
-      icon: <Shield className="h-8 w-8 text-primary" />,
-      href: "/downloads/safety-standards-manual.pdf",
-      available: false,
-    },
-    {
-      title: "Technical Specifications",
-      description: "Engineering standards and specifications for problem-free project execution",
-      fileSize: "TBD",
-      icon: <Book className="h-8 w-8 text-primary" />,
-      href: "/downloads/technical-specifications.pdf",
-      available: false,
     },
   ]
 
