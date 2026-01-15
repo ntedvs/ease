@@ -1,6 +1,6 @@
 "use client"
 
-import { Download, Users, Wrench } from "lucide-react"
+import { Download, Users, Wrench, Building2 } from "lucide-react"
 
 interface DownloadItem {
   title: string
@@ -27,6 +27,14 @@ export default function DownloadableResources() {
       fileSize: "5.9 MB",
       icon: <Wrench className="h-8 w-8 text-primary" />,
       href: "/RSFBooklet.pdf",
+      available: true,
+    },
+    {
+      title: "Project Portfolio",
+      description: "Showcase of completed and ongoing construction projects built with EASE",
+      fileSize: "3.4 MB",
+      icon: <Building2 className="h-8 w-8 text-primary" />,
+      href: "/EaseProjectPortfolio.pdf",
       available: true,
     },
   ]

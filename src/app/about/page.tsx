@@ -56,7 +56,10 @@ export default function About() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-bg relative flex min-h-[70vh] items-center justify-center">
+      <section
+        className="relative flex min-h-[70vh] items-center justify-center bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/projects/refenti.webp')" }}
+      >
         <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="container-xl relative z-10">
