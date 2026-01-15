@@ -1,4 +1,5 @@
 import DownloadableResources from "@/components/DownloadableResources"
+import FadeIn from "@/components/FadeIn"
 import {
   Anchor,
   Building,
@@ -172,17 +173,22 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="section-sm bg-secondary">
-        <div className="container-xl">
-          <div className="text-center text-white">
+      <section
+        className="relative flex min-h-[70vh] items-center justify-center bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/5.png')" }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        <div className="container-xl relative z-10">
+          <div className="mx-auto max-w-4xl text-center text-white">
             <h1 className="mb-6 text-4xl font-black text-white md:text-5xl">
               Our Services
             </h1>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-neutral">
               EASE solves complex construction challenges through comprehensive
-              engineering services, combining decades of problem-solving expertise
-              with innovative approaches to deliver exceptional solutions across
-              diverse project types and scales.
+              engineering services, combining decades of problem-solving
+              expertise with innovative approaches to deliver exceptional
+              solutions across diverse project types and scales.
             </p>
           </div>
         </div>
@@ -193,65 +199,64 @@ export default function ServicesPage() {
         <div className="container-xl">
           <div className="space-y-12">
             {services.map((service, index) => (
-              <div
-                key={index}
-                className="card group transition-all duration-300 hover:shadow-lg"
-              >
-                <div
-                  className={`grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12 ${
-                    index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
-                  }`}
-                >
-                  {/* Content Side */}
+              <FadeIn key={index} delay={index * 0.1}>
+                <div className="card group transition-all duration-300 hover:shadow-lg">
                   <div
-                    className={`space-y-6 px-12 py-8 ${
-                      index % 2 === 1 ? "lg:col-start-2" : ""
+                    className={`grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12 ${
+                      index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
                     }`}
                   >
-                    <div className="flex items-center space-x-4">
-                      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                        {service.icon}
+                    {/* Content Side */}
+                    <div
+                      className={`space-y-6 px-12 py-8 ${
+                        index % 2 === 1 ? "lg:col-start-2" : ""
+                      }`}
+                    >
+                      <div className="flex items-center space-x-4">
+                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                          {service.icon}
+                        </div>
+                        <h3 className="text-2xl font-bold text-secondary">
+                          {service.name}
+                        </h3>
                       </div>
-                      <h3 className="text-2xl font-bold text-secondary">
-                        {service.name}
-                      </h3>
+
+                      <p className="text-lg leading-relaxed text-muted">
+                        {service.description}
+                      </p>
+
+                      <ul className="space-y-2">
+                        {service.details.map((detail, detailIndex) => (
+                          <li
+                            key={detailIndex}
+                            className="flex items-start space-x-3"
+                          >
+                            <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-primary"></div>
+                            <span className="text-foreground">{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
 
-                    <p className="text-lg leading-relaxed text-muted">
-                      {service.description}
-                    </p>
-
-                    <ul className="space-y-2">
-                      {service.details.map((detail, detailIndex) => (
-                        <li
-                          key={detailIndex}
-                          className="flex items-start space-x-3"
-                        >
-                          <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-primary"></div>
-                          <span className="text-foreground">{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Image Side */}
-                  <div
-                    className={`px-12 py-8 ${
-                      index % 2 === 1 ? "lg:col-start-1" : ""
-                    }`}
-                  >
-                    <div className="relative aspect-video w-full overflow-hidden bg-neutral/50 transition-all duration-300 group-hover:shadow-md">
-                      <Image
-                        src={service.image}
-                        alt={`${service.name} service illustration`}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
+                    {/* Image Side */}
+                    <div
+                      className={`px-12 py-8 ${
+                        index % 2 === 1 ? "lg:col-start-1" : ""
+                      }`}
+                    >
+                      <div className="relative aspect-video w-full overflow-hidden bg-neutral/50 transition-all duration-300 group-hover:shadow-md">
+                        <Image
+                          src={service.image}
+                          alt={`${service.name} service illustration`}
+                          fill
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>

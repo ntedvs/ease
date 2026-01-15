@@ -1,6 +1,8 @@
 import AnimatedNumber from "@/components/AnimatedNumber"
 import CompanyMarquee from "@/components/CompanyMarquee"
 import DownloadableResources from "@/components/DownloadableResources"
+import FadeIn from "@/components/FadeIn"
+import HeroSlideshow from "@/components/HeroSlideshow"
 import ImageCarousel from "@/components/ImageCarousel"
 import TestimonialCarousel from "@/components/TestimonialCarousel"
 import {
@@ -145,10 +147,12 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-bg relative flex min-h-screen items-center justify-center">
+      <section className="relative flex min-h-screen items-center justify-center">
+        {/* Slideshow Background */}
+        <HeroSlideshow />
+
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
-        {/* <div className="absolute inset-0 bg-white/60"></div> */}
+        <div className="absolute inset-0 z-[2] bg-black/50"></div>
 
         {/* Content */}
         <div className="container-xl relative z-10 mt-40 w-full">
@@ -202,81 +206,89 @@ export default function Home() {
       {/* Why Partner with EASE Section */}
       <section className="section bg-white">
         <div className="container-xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Why Choose Our Solution-Driven Approach?
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Partner with EASE for problem-solving expertise that addresses
-              your most pressing construction challenges through innovative
-              solutions, proven methodologies, and advanced technology that
-              resolves complex structural issues across East Africa.
-            </p>
-          </div>
+          <FadeIn>
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
+                Why Choose Our Solution-Driven Approach?
+              </h2>
+              <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
+                Partner with EASE for problem-solving expertise that addresses
+                your most pressing construction challenges through innovative
+                solutions, proven methodologies, and advanced technology that
+                resolves complex structural issues across East Africa.
+              </p>
+            </div>
+          </FadeIn>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {/* Card 1: Free Cost Benefit Analysis */}
-            <div className="card group transition-all duration-300 hover:shadow-lg">
-              <div className="card-body space-y-6 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <Calculator size={32} className="text-primary" />
+            <FadeIn delay={0.1}>
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-6 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <Calculator size={32} className="text-primary" />
+                    </div>
                   </div>
+                  <h3 className="text-xl font-bold text-secondary">
+                    Complimentary Project Analysis
+                  </h3>
+                  <p className="leading-relaxed text-muted">
+                    Resolve budget uncertainties and financial challenges with
+                    comprehensive project evaluations that provide clear
+                    solutions. Our detailed cost-benefit analysis helps you
+                    overcome financial obstacles and make informed decisions at
+                    no charge.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-secondary">
-                  Complimentary Project Analysis
-                </h3>
-                <p className="leading-relaxed text-muted">
-                  Resolve budget uncertainties and financial challenges with
-                  comprehensive project evaluations that provide clear
-                  solutions. Our detailed cost-benefit analysis helps you
-                  overcome financial obstacles and make informed decisions at no
-                  charge.
-                </p>
               </div>
-            </div>
+            </FadeIn>
 
             {/* Card 2: Free Design Services */}
-            <div className="card group transition-all duration-300 hover:shadow-lg">
-              <div className="card-body space-y-6 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <PenTool size={32} className="text-primary" />
+            <FadeIn delay={0.2}>
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-6 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <PenTool size={32} className="text-primary" />
+                    </div>
                   </div>
+                  <h3 className="text-xl font-bold text-secondary">
+                    Complimentary Design Solutions
+                  </h3>
+                  <p className="leading-relaxed text-muted">
+                    Solve design challenges through professional consultation
+                    and innovative planning solutions provided at no cost. Our
+                    expert team addresses both aesthetic and structural
+                    requirements, ensuring your project overcomes design
+                    obstacles with optimal results.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-secondary">
-                  Complimentary Design Solutions
-                </h3>
-                <p className="leading-relaxed text-muted">
-                  Solve design challenges through professional consultation and
-                  innovative planning solutions provided at no cost. Our expert
-                  team addresses both aesthetic and structural requirements,
-                  ensuring your project overcomes design obstacles with optimal
-                  results.
-                </p>
               </div>
-            </div>
+            </FadeIn>
 
             {/* Card 3: Nationwide Experience */}
-            <div className="card group transition-all duration-300 hover:shadow-lg">
-              <div className="card-body space-y-6 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <MapPin size={32} className="text-primary" />
+            <FadeIn delay={0.3}>
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-6 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <MapPin size={32} className="text-primary" />
+                    </div>
                   </div>
+                  <h3 className="text-xl font-bold text-secondary">
+                    Regional Problem-Solving Expertise
+                  </h3>
+                  <p className="leading-relaxed text-muted">
+                    Address regional construction challenges with extensive
+                    experience across multiple countries. Our proven
+                    problem-solving methodologies combined with local knowledge
+                    help overcome site-specific obstacles and deliver successful
+                    outcomes for projects of any scale and complexity.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-secondary">
-                  Regional Problem-Solving Expertise
-                </h3>
-                <p className="leading-relaxed text-muted">
-                  Address regional construction challenges with extensive
-                  experience across multiple countries. Our proven
-                  problem-solving methodologies combined with local knowledge
-                  help overcome site-specific obstacles and deliver successful
-                  outcomes for projects of any scale and complexity.
-                </p>
               </div>
-            </div>
+            </FadeIn>
           </div>
 
           {/* Meet Our Team Button */}
@@ -295,365 +307,373 @@ export default function Home() {
       {/* EPC Engineering Solutions Section */}
       <section className="section bg-neutral">
         <div className="container-xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Comprehensive EPC Solutions for Complex Challenges
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              EASE operates as a next-generation EPC (Engineering, Procurement,
-              and Construction) company, solving East Africa&apos;s most
-              complex, high-stakes infrastructure challenges through innovative
-              problem-solving expertise and precision engineering solutions.
-            </p>
-          </div>
-
-          {/* Core Services Grid */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {/* Bridge Construction & Infrastructure */}
-            <div className="card group transition-all duration-300 hover:shadow-lg">
-              <div className="card-body space-y-6 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <Anchor size={32} className="text-primary" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-secondary">
-                  Bridge & Infrastructure Solutions
-                </h3>
-                <p className="text-sm leading-relaxed text-muted">
-                  Solve major infrastructure challenges through advanced bridge
-                  construction and heavy civil engineering that addresses
-                  complex logistics and extreme technical requirements.
-                </p>
-              </div>
-            </div>
-
-            {/* High-rise Commercial Buildings */}
-            <div className="card group transition-all duration-300 hover:shadow-lg">
-              <div className="card-body space-y-6 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <Building size={32} className="text-primary" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-secondary">
-                  High-Rise Commercial Solutions
-                </h3>
-                <p className="text-sm leading-relaxed text-muted">
-                  Address vertical construction challenges through sophisticated
-                  high-rise engineering that overcomes complex architectural
-                  requirements and structural limitations.
-                </p>
-              </div>
-            </div>
-
-            {/* Industrial Manufacturing Facilities */}
-            <div className="card group transition-all duration-300 hover:shadow-lg">
-              <div className="card-body space-y-6 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <Settings size={32} className="text-primary" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-secondary">
-                  Industrial Facility Solutions
-                </h3>
-                <p className="text-sm leading-relaxed text-muted">
-                  Resolve complex industrial construction needs through
-                  specialized manufacturing facility engineering that addresses
-                  precision requirements and operational challenges.
-                </p>
-              </div>
-            </div>
-
-            {/* Multi-story Residential */}
-            <div className="card group transition-all duration-300 hover:shadow-lg">
-              <div className="card-body space-y-6 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <Building2 size={32} className="text-primary" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-secondary">
-                  Multi-Story Residential Solutions
-                </h3>
-                <p className="text-sm leading-relaxed text-muted">
-                  Solve housing development challenges through innovative
-                  multi-story construction that addresses urban density
-                  requirements and residential complexity.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Key Differentiators Section */}
-          <div className="mt-16">
-            <h3 className="mb-12 text-center text-3xl font-black text-secondary">
-              Taking On Projects Others Won&apos;t Attempt
-            </h3>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              <div className="bg-primary/5 p-8">
-                <h4 className="mb-4 text-xl font-bold text-secondary">
-                  Heavy Lifting Capabilities
-                </h4>
-                <p className="leading-relaxed text-muted">
-                  Solved unprecedented challenges by successfully recovering a
-                  550-tonne collapsed bridge, demonstrating our capacity to
-                  handle extreme technical situations that others cannot
-                  attempt.
-                </p>
-              </div>
-              <div className="bg-primary/5 p-8">
-                <h4 className="mb-4 text-xl font-bold text-secondary">
-                  Sky-High Engineering
-                </h4>
-                <p className="leading-relaxed text-muted">
-                  Address vertical construction challenges through precision
-                  engineering of 70-meter elevated skybridges, solving complex
-                  height and accessibility problems with innovative solutions.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Project Scale Statistics */}
-          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div className="text-center">
-              <AnimatedNumber
-                value={400}
-                prefix="$"
-                suffix="M+"
-                decimalPlaces={0}
-                className="mb-4 text-5xl font-black text-primary"
-              />
-              <h3 className="mb-2 text-xl font-bold text-secondary">
-                Landmark Projects Delivered
-              </h3>
-              <p className="text-muted">
-                Successfully completed major infrastructure and commercial
-                projects across challenging environments
+          <FadeIn>
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
+                Comprehensive EPC Solutions for Complex Challenges
+              </h2>
+              <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
+                EASE operates as a next-generation EPC (Engineering,
+                Procurement, and Construction) company, solving East
+                Africa&apos;s most complex, high-stakes infrastructure
+                challenges through innovative problem-solving expertise and
+                precision engineering solutions.
               </p>
             </div>
-            <div className="text-center">
-              <AnimatedNumber
-                value={150}
-                prefix="$"
-                suffix="M+"
-                decimalPlaces={0}
-                className="mb-4 text-5xl font-black text-primary"
-              />
-              <h3 className="mb-2 text-xl font-bold text-secondary">
-                Active Project Portfolio
-              </h3>
-              <p className="text-muted">
-                Current high-stakes projects in progress, operating in
-                high-risk, unconventional environments
-              </p>
+
+            {/* Core Services Grid */}
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+              {/* Bridge Construction & Infrastructure */}
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-6 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <Anchor size={32} className="text-primary" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary">
+                    Bridge & Infrastructure Solutions
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted">
+                    Solve major infrastructure challenges through advanced
+                    bridge construction and heavy civil engineering that
+                    addresses complex logistics and extreme technical
+                    requirements.
+                  </p>
+                </div>
+              </div>
+
+              {/* High-rise Commercial Buildings */}
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-6 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <Building size={32} className="text-primary" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary">
+                    High-Rise Commercial Solutions
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted">
+                    Address vertical construction challenges through
+                    sophisticated high-rise engineering that overcomes complex
+                    architectural requirements and structural limitations.
+                  </p>
+                </div>
+              </div>
+
+              {/* Industrial Manufacturing Facilities */}
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-6 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <Settings size={32} className="text-primary" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary">
+                    Industrial Facility Solutions
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted">
+                    Resolve complex industrial construction needs through
+                    specialized manufacturing facility engineering that
+                    addresses precision requirements and operational challenges.
+                  </p>
+                </div>
+              </div>
+
+              {/* Multi-story Residential */}
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-6 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <Building2 size={32} className="text-primary" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary">
+                    Multi-Story Residential Solutions
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted">
+                    Solve housing development challenges through innovative
+                    multi-story construction that addresses urban density
+                    requirements and residential complexity.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
+
+            {/* Key Differentiators Section */}
+            <div className="mt-16">
+              <h3 className="mb-12 text-center text-3xl font-black text-secondary">
+                Taking On Projects Others Won&apos;t Attempt
+              </h3>
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div className="bg-primary/5 p-8">
+                  <h4 className="mb-4 text-xl font-bold text-secondary">
+                    Heavy Lifting Capabilities
+                  </h4>
+                  <p className="leading-relaxed text-muted">
+                    Solved unprecedented challenges by successfully recovering a
+                    550-tonne collapsed bridge, demonstrating our capacity to
+                    handle extreme technical situations that others cannot
+                    attempt.
+                  </p>
+                </div>
+                <div className="bg-primary/5 p-8">
+                  <h4 className="mb-4 text-xl font-bold text-secondary">
+                    Sky-High Engineering
+                  </h4>
+                  <p className="leading-relaxed text-muted">
+                    Address vertical construction challenges through precision
+                    engineering of 70-meter elevated skybridges, solving complex
+                    height and accessibility problems with innovative solutions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Project Scale Statistics */}
+            <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="text-center">
+                <AnimatedNumber
+                  value={400}
+                  prefix="$"
+                  suffix="M+"
+                  decimalPlaces={0}
+                  className="mb-4 text-5xl font-black text-primary"
+                />
+                <h3 className="mb-2 text-xl font-bold text-secondary">
+                  Landmark Projects Delivered
+                </h3>
+                <p className="text-muted">
+                  Successfully completed major infrastructure and commercial
+                  projects across challenging environments
+                </p>
+              </div>
+              <div className="text-center">
+                <AnimatedNumber
+                  value={150}
+                  prefix="$"
+                  suffix="M+"
+                  decimalPlaces={0}
+                  className="mb-4 text-5xl font-black text-primary"
+                />
+                <h3 className="mb-2 text-xl font-bold text-secondary">
+                  Active Project Portfolio
+                </h3>
+                <p className="text-muted">
+                  Current high-stakes projects in progress, operating in
+                  high-risk, unconventional environments
+                </p>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Why Choose Post-Tensioning Section */}
       <section className="section bg-white">
         <div className="container-xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              How Post-Tensioning Solves Your Challenges
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Post-tensioning technology addresses East Africa&apos;s most
-              pressing construction challenges—from seismic concerns to rapid
-              urban development demands. Our solutions overcome structural
-              limitations, resolve material efficiency problems, and tackle
-              Ethiopia&apos;s diverse climate and challenging soil conditions
-              with proven results.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {/* Card 1: Reduced Costs */}
-            <div className="group bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
-              <div className="mb-6 flex justify-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 transition-colors duration-300 group-hover:bg-primary/30">
-                  <DollarSign size={32} className="text-primary" />
-                </div>
-              </div>
-              <h3 className="mb-4 text-xl font-bold text-white">
-                Cost Challenge Solutions
-              </h3>
-              <p className="text-sm leading-relaxed text-neutral">
-                Overcome budget constraints with significant cost reductions
-                through innovative material optimization and accelerated
-                construction methods that solve financial pressures.
+          <FadeIn>
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
+                How Post-Tensioning Solves Your Challenges
+              </h2>
+              <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
+                Post-tensioning technology addresses East Africa&apos;s most
+                pressing construction challenges—from seismic concerns to rapid
+                urban development demands. Our solutions overcome structural
+                limitations, resolve material efficiency problems, and tackle
+                Ethiopia&apos;s diverse climate and challenging soil conditions
+                with proven results.
               </p>
             </div>
 
-            {/* Card 2: Increased Span */}
-            <div className="group bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
-              <div className="mb-6 flex justify-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 transition-colors duration-300 group-hover:bg-primary/30">
-                  <Maximize2 size={32} className="text-primary" />
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+              {/* Card 1: Reduced Costs */}
+              <div className="group bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
+                <div className="mb-6 flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 transition-colors duration-300 group-hover:bg-primary/30">
+                    <DollarSign size={32} className="text-primary" />
+                  </div>
                 </div>
+                <h3 className="mb-4 text-xl font-bold text-white">
+                  Cost Challenge Solutions
+                </h3>
+                <p className="text-sm leading-relaxed text-neutral">
+                  Overcome budget constraints with significant cost reductions
+                  through innovative material optimization and accelerated
+                  construction methods that solve financial pressures.
+                </p>
               </div>
-              <h3 className="mb-4 text-xl font-bold text-white">
-                Space Limitation Solutions
-              </h3>
-              <p className="text-sm leading-relaxed text-neutral">
-                Solve spatial constraints with longer spans and fewer columns,
-                delivering flexible design solutions that overcome traditional
-                structural limitations for innovative open layouts.
-              </p>
+
+              {/* Card 2: Increased Span */}
+              <div className="group bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
+                <div className="mb-6 flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 transition-colors duration-300 group-hover:bg-primary/30">
+                    <Maximize2 size={32} className="text-primary" />
+                  </div>
+                </div>
+                <h3 className="mb-4 text-xl font-bold text-white">
+                  Space Limitation Solutions
+                </h3>
+                <p className="text-sm leading-relaxed text-neutral">
+                  Solve spatial constraints with longer spans and fewer columns,
+                  delivering flexible design solutions that overcome traditional
+                  structural limitations for innovative open layouts.
+                </p>
+              </div>
+
+              {/* Card 3: More Floors */}
+              <div className="group bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
+                <div className="mb-6 flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 transition-colors duration-300 group-hover:bg-primary/30">
+                    <Building2 size={32} className="text-primary" />
+                  </div>
+                </div>
+                <h3 className="mb-4 text-xl font-bold text-white">
+                  Height Restriction Solutions
+                </h3>
+                <p className="text-sm leading-relaxed text-neutral">
+                  Address height limitations through thinner slab technology
+                  that enables additional floors within existing building
+                  envelopes, solving space maximization challenges effectively.
+                </p>
+              </div>
+
+              {/* Card 4: Faster Construction */}
+              <div className="group bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
+                <div className="mb-6 flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 transition-colors duration-300 group-hover:bg-primary/30">
+                    <Zap size={32} className="text-primary" />
+                  </div>
+                </div>
+                <h3 className="mb-4 text-xl font-bold text-white">
+                  Timeline Challenge Solutions
+                </h3>
+                <p className="text-sm leading-relaxed text-neutral">
+                  Resolve schedule pressures through efficient installation
+                  techniques and streamlined construction methodologies that
+                  overcome time constraints and delivery challenges.
+                </p>
+              </div>
             </div>
 
-            {/* Card 3: More Floors */}
-            <div className="group bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
-              <div className="mb-6 flex justify-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 transition-colors duration-300 group-hover:bg-primary/30">
-                  <Building2 size={32} className="text-primary" />
-                </div>
-              </div>
-              <h3 className="mb-4 text-xl font-bold text-white">
-                Height Restriction Solutions
-              </h3>
-              <p className="text-sm leading-relaxed text-neutral">
-                Address height limitations through thinner slab technology that
-                enables additional floors within existing building envelopes,
-                solving space maximization challenges effectively.
-              </p>
+            {/* Learn More About Post-Tensioning Button */}
+            <div className="mt-12 text-center">
+              <Link href="/post-tensioning" className="btn btn-primary btn-lg">
+                Learn More About Post-Tensioning
+              </Link>
             </div>
-
-            {/* Card 4: Faster Construction */}
-            <div className="group bg-secondary p-8 text-center text-white transition-colors duration-300 hover:bg-secondary-light">
-              <div className="mb-6 flex justify-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 transition-colors duration-300 group-hover:bg-primary/30">
-                  <Zap size={32} className="text-primary" />
-                </div>
-              </div>
-              <h3 className="mb-4 text-xl font-bold text-white">
-                Timeline Challenge Solutions
-              </h3>
-              <p className="text-sm leading-relaxed text-neutral">
-                Resolve schedule pressures through efficient installation
-                techniques and streamlined construction methodologies that
-                overcome time constraints and delivery challenges.
-              </p>
-            </div>
-          </div>
-
-          {/* Learn More About Post-Tensioning Button */}
-          <div className="mt-12 text-center">
-            <Link href="/post-tensioning" className="btn btn-primary btn-lg">
-              Learn More About Post-Tensioning
-            </Link>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Our Comprehensive Services Section */}
       <section className="section bg-white">
         <div className="container-xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Complete Problem-Solving Solutions
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              From specialized post-tensioning solutions to complete project
-              management, EASE addresses construction challenges through
-              comprehensive engineering services. Our decades of proven
-              problem-solving expertise and innovative methodologies tackle
-              complex issues across all construction disciplines.
-            </p>
-          </div>
+          <FadeIn>
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
+                Complete Problem-Solving Solutions
+              </h2>
+              <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
+                From specialized post-tensioning solutions to complete project
+                management, EASE addresses construction challenges through
+                comprehensive engineering services. Our decades of proven
+                problem-solving expertise and innovative methodologies tackle
+                complex issues across all construction disciplines.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {/* Card 1: Post-tensioning */}
-            <div className="card group transition-all duration-300 hover:shadow-lg">
-              <div className="card-body space-y-6 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <Anchor size={32} className="text-primary" />
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+              {/* Card 1: Post-tensioning */}
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-6 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <Anchor size={32} className="text-primary" />
+                    </div>
                   </div>
+                  <h3 className="text-xl font-bold text-secondary">
+                    Post-Tensioning Solutions
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted">
+                    Address structural challenges with advanced concrete
+                    strengthening technology that resolves performance issues
+                    and overcomes cost constraints through innovative
+                    engineering approaches.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-secondary">
-                  Post-Tensioning Solutions
-                </h3>
-                <p className="text-sm leading-relaxed text-muted">
-                  Address structural challenges with advanced concrete
-                  strengthening technology that resolves performance issues and
-                  overcomes cost constraints through innovative engineering
-                  approaches.
-                </p>
+              </div>
+
+              {/* Card 2: Design Services */}
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-6 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <PenTool size={32} className="text-primary" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary">
+                    Design Problem-Solving
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted">
+                    Resolve design challenges through comprehensive structural
+                    engineering consultation that addresses complex
+                    requirements. Our solution-focused approach is provided
+                    complimentary with construction projects.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3: Repair & Strengthening */}
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-6 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <Shield size={32} className="text-primary" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary">
+                    Structural Rehabilitation Solutions
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted">
+                    Solve structural deterioration problems with specialized
+                    rehabilitation techniques that overcome aging infrastructure
+                    challenges, extend building lifespan, and enhance capacity
+                    through proven methodologies.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 4: Project Management */}
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-6 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <Settings size={32} className="text-primary" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary">
+                    Project Complexity Solutions
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted">
+                    Address project management challenges through professional
+                    end-to-end coordination that resolves complexity issues,
+                    ensuring on-time, on-budget delivery with superior quality
+                    standards.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Card 2: Design Services */}
-            <div className="card group transition-all duration-300 hover:shadow-lg">
-              <div className="card-body space-y-6 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <PenTool size={32} className="text-primary" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-secondary">
-                  Design Problem-Solving
-                </h3>
-                <p className="text-sm leading-relaxed text-muted">
-                  Resolve design challenges through comprehensive structural
-                  engineering consultation that addresses complex requirements.
-                  Our solution-focused approach is provided complimentary with
-                  construction projects.
-                </p>
-              </div>
+            {/* Learn More About Our Services Button */}
+            <div className="mt-12 text-center">
+              <Link href="/services" className="btn btn-primary btn-lg">
+                Learn More About Our Services
+              </Link>
             </div>
-
-            {/* Card 3: Repair & Strengthening */}
-            <div className="card group transition-all duration-300 hover:shadow-lg">
-              <div className="card-body space-y-6 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <Shield size={32} className="text-primary" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-secondary">
-                  Structural Rehabilitation Solutions
-                </h3>
-                <p className="text-sm leading-relaxed text-muted">
-                  Solve structural deterioration problems with specialized
-                  rehabilitation techniques that overcome aging infrastructure
-                  challenges, extend building lifespan, and enhance capacity
-                  through proven methodologies.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 4: Project Management */}
-            <div className="card group transition-all duration-300 hover:shadow-lg">
-              <div className="card-body space-y-6 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <Settings size={32} className="text-primary" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-secondary">
-                  Project Complexity Solutions
-                </h3>
-                <p className="text-sm leading-relaxed text-muted">
-                  Address project management challenges through professional
-                  end-to-end coordination that resolves complexity issues,
-                  ensuring on-time, on-budget delivery with superior quality
-                  standards.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Learn More About Our Services Button */}
-          <div className="mt-12 text-center">
-            <Link href="/services" className="btn btn-primary btn-lg">
-              Learn More About Our Services
-            </Link>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -663,352 +683,365 @@ export default function Home() {
       {/* Insurance Backed Section */}
       <section className="section bg-primary">
         <div className="container-xl">
-          <div className="mx-auto max-w-4xl text-center text-white">
-            <div className="mb-8 flex justify-center">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/20">
-                <Shield size={40} className="text-white" />
-              </div>
-            </div>
-
-            <h2 className="mb-6 text-4xl font-black text-white md:text-5xl">
-              Solving Risk Challenges:{" "}
-              <span className="text-white/90">
-                Ethiopia&apos;s Only Insurance-Backed
-              </span>{" "}
-              Construction Company
-            </h2>
-
-            <p className="mb-12 text-xl leading-relaxed text-white/90">
-              EASE addresses project risk concerns as Ethiopia&apos;s only
-              construction company with comprehensive insurance coverage,
-              solving security challenges and providing unmatched protection and
-              peace of mind for our clients.
-            </p>
-
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              <div className="bg-white/10 p-8 backdrop-blur-sm">
-                <AnimatedNumber
-                  value={10}
-                  prefix="$"
-                  suffix="M"
-                  className="mb-4 text-4xl font-black text-white"
-                />
-                <h3 className="mb-2 text-xl font-bold text-white">
-                  Product Liability Coverage
-                </h3>
-                <p className="mb-4 text-white/80">
-                  Comprehensive protection for all construction materials and
-                  workmanship
-                </p>
-                <Link
-                  href="/insurance/Product Liability.pdf"
-                  target="_blank"
-                  className="btn btn-secondary text-sm"
-                >
-                  View Coverage Details
-                </Link>
+          <FadeIn>
+            <div className="mx-auto max-w-4xl text-center text-white">
+              <div className="mb-8 flex justify-center">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/20">
+                  <Shield size={40} className="text-white" />
+                </div>
               </div>
 
-              <div className="bg-white/10 p-8 backdrop-blur-sm">
-                <AnimatedNumber
-                  value={5.5}
-                  prefix="$"
-                  suffix="M"
-                  className="mb-4 text-4xl font-black text-white"
-                />
-                <h3 className="mb-2 text-xl font-bold text-white">
-                  Professional Liability Coverage
-                </h3>
-                <p className="mb-4 text-white/80">
-                  Complete coverage for engineering design and professional
-                  services
-                </p>
-                <Link
-                  href="/insurance/Professional Liability.pdf"
-                  target="_blank"
-                  className="btn btn-secondary text-sm"
-                >
-                  View Coverage Details
-                </Link>
-              </div>
-            </div>
+              <h2 className="mb-6 text-4xl font-black text-white md:text-5xl">
+                Solving Risk Challenges:{" "}
+                <span className="text-white/90">
+                  Ethiopia&apos;s Only Insurance-Backed
+                </span>{" "}
+                Construction Company
+              </h2>
 
-            <div className="mt-12 bg-white/5 p-6 backdrop-blur-sm">
-              <p className="text-lg font-medium text-white">
-                <Lightbulb size={20} className="mr-2 inline text-white" />{" "}
-                <strong>Risk Solution:</strong> Our insurance backing solves
-                project protection concerns by eliminating risks from unforeseen
-                circumstances, addressing security challenges and giving you
-                complete confidence in our commitment to quality and
-                accountability.
+              <p className="mb-12 text-xl leading-relaxed text-white/90">
+                EASE addresses project risk concerns as Ethiopia&apos;s only
+                construction company with comprehensive insurance coverage,
+                solving security challenges and providing unmatched protection
+                and peace of mind for our clients.
               </p>
+
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div className="bg-white/10 p-8 backdrop-blur-sm">
+                  <AnimatedNumber
+                    value={10}
+                    prefix="$"
+                    suffix="M"
+                    className="mb-4 text-4xl font-black text-white"
+                  />
+                  <h3 className="mb-2 text-xl font-bold text-white">
+                    Product Liability Coverage
+                  </h3>
+                  <p className="mb-4 text-white/80">
+                    Comprehensive protection for all construction materials and
+                    workmanship
+                  </p>
+                  <Link
+                    href="/insurance/Product Liability.pdf"
+                    target="_blank"
+                    className="btn btn-secondary text-sm"
+                  >
+                    View Coverage Details
+                  </Link>
+                </div>
+
+                <div className="bg-white/10 p-8 backdrop-blur-sm">
+                  <AnimatedNumber
+                    value={5.5}
+                    prefix="$"
+                    suffix="M"
+                    className="mb-4 text-4xl font-black text-white"
+                  />
+                  <h3 className="mb-2 text-xl font-bold text-white">
+                    Professional Liability Coverage
+                  </h3>
+                  <p className="mb-4 text-white/80">
+                    Complete coverage for engineering design and professional
+                    services
+                  </p>
+                  <Link
+                    href="/insurance/Professional Liability.pdf"
+                    target="_blank"
+                    className="btn btn-secondary text-sm"
+                  >
+                    View Coverage Details
+                  </Link>
+                </div>
+              </div>
+
+              <div className="mt-12 bg-white/5 p-6 backdrop-blur-sm">
+                <p className="text-lg font-medium text-white">
+                  <Lightbulb size={20} className="mr-2 inline text-white" />{" "}
+                  <strong>Risk Solution:</strong> Our insurance backing solves
+                  project protection concerns by eliminating risks from
+                  unforeseen circumstances, addressing security challenges and
+                  giving you complete confidence in our commitment to quality
+                  and accountability.
+                </p>
+              </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Our Global Partner Section */}
       <section className="section bg-white">
         <div className="container-xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Our Global Partner
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Strengthening our commitment to excellence through strategic
-              partnerships with industry-leading specialists in post-tensioning
-              technology and manufacturing.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            {/* Left Side - Rudloff Content */}
-            <div className="space-y-8">
-              <div className="flex justify-center lg:justify-start">
-                <Image
-                  src="/partnership.png"
-                  alt="Rudloff StrongForce International - EASE's strategic partner specializing in post-tensioning systems and prestressed concrete solutions"
-                  width={500}
-                  height={200}
-                  className="shadow-lg"
-                />
-              </div>
-
-              <div className="space-y-6 text-center lg:text-left">
-                <p className="text-lg leading-relaxed text-foreground">
-                  Our strategic partnership with Rudloff StrongForce
-                  International brings together over 60 years of specialized
-                  expertise in post-tensioning and manufacturing. Founded in
-                  1960, Rudloff Industrial has established itself as a leading
-                  specialist in prestressed concrete systems, providing
-                  innovative solutions that have shaped construction projects
-                  across five continents.
-                </p>
-
-                <p className="text-lg leading-relaxed text-foreground">
-                  This collaboration brings Rudloff&apos;s proven international
-                  expertise directly to Ethiopia&apos;s construction industry,
-                  offering EOTA-certified post-tension kits and products that
-                  comply with all major international codes and standards.
-                  Together, we deliver comprehensive structural solutions that
-                  advance building and civil infrastructure projects throughout
-                  Ethiopia and the broader East African region.
-                </p>
-              </div>
+          <FadeIn>
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
+                Our Global Partner
+              </h2>
+              <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
+                Strengthening our commitment to excellence through strategic
+                partnerships with industry-leading specialists in
+                post-tensioning technology and manufacturing.
+              </p>
             </div>
 
-            {/* Right Side - Image Carousel */}
-            <ImageCarousel images={carouselImages} />
-          </div>
+            <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+              {/* Left Side - Rudloff Content */}
+              <div className="space-y-8">
+                <div className="flex justify-center lg:justify-start">
+                  <Image
+                    src="/partnership.png"
+                    alt="Rudloff StrongForce International - EASE's strategic partner specializing in post-tensioning systems and prestressed concrete solutions"
+                    width={500}
+                    height={200}
+                    className="shadow-lg"
+                  />
+                </div>
+
+                <div className="space-y-6 text-center lg:text-left">
+                  <p className="text-lg leading-relaxed text-foreground">
+                    Our strategic partnership with Rudloff StrongForce
+                    International brings together over 60 years of specialized
+                    expertise in post-tensioning and manufacturing. Founded in
+                    1960, Rudloff Industrial has established itself as a leading
+                    specialist in prestressed concrete systems, providing
+                    innovative solutions that have shaped construction projects
+                    across five continents.
+                  </p>
+
+                  <p className="text-lg leading-relaxed text-foreground">
+                    This collaboration brings Rudloff&apos;s proven
+                    international expertise directly to Ethiopia&apos;s
+                    construction industry, offering EOTA-certified post-tension
+                    kits and products that comply with all major international
+                    codes and standards. Together, we deliver comprehensive
+                    structural solutions that advance building and civil
+                    infrastructure projects throughout Ethiopia and the broader
+                    East African region.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Side - Image Carousel */}
+              <ImageCarousel images={carouselImages} />
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Trusted by Leading Companies Section */}
       <section className="section bg-neutral">
         <div className="container-xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Trusted by Leading Companies
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              We are proud to have partnered with some of Ethiopia&apos;s most
-              respected organizations, delivering excellence across diverse
-              industries and sectors throughout our decade of service.
-            </p>
-          </div>
+          <FadeIn>
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
+                Trusted by Leading Companies
+              </h2>
+              <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
+                We are proud to have partnered with some of Ethiopia&apos;s most
+                respected organizations, delivering excellence across diverse
+                industries and sectors throughout our decade of service.
+              </p>
+            </div>
 
-          {/* Company Marquee */}
-          <CompanyMarquee logos={trustedCompanyLogos} />
+            {/* Company Marquee */}
+            <CompanyMarquee logos={trustedCompanyLogos} />
+          </FadeIn>
         </div>
       </section>
 
       {/* Nationwide Coverage Section */}
       <section className="section bg-secondary">
         <div className="container-xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-black text-white md:text-5xl">
-              Solving Regional Construction Challenges
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-neutral">
-              From bustling urban centers to remote rural communities, EASE
-              addresses diverse construction challenges and delivers
-              comprehensive engineering solutions across all regions of
-              Ethiopia.
-            </p>
-          </div>
-
-          {/* Coverage Cards */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
-            {/* Addis Ababa Card */}
-            <div className="card group overflow-hidden transition-all duration-300 hover:shadow-lg">
-              <div className="relative aspect-video w-full">
-                <Image
-                  src="/addis.png"
-                  alt="Addis Ababa cityscape - EASE's primary operational base featuring modern urban development and construction projects throughout Ethiopia's capital"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-              <div className="card-body space-y-3 py-4 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <Building size={32} className="text-primary" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-secondary">
-                  Addis Ababa
-                </h3>
-                <p className="text-sm leading-relaxed text-muted">
-                  Addressing urban construction challenges in Ethiopia&apos;s
-                  capital through cutting-edge solutions for commercial,
-                  residential, and infrastructure projects.
-                </p>
-              </div>
+          <FadeIn>
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 text-4xl font-black text-white md:text-5xl">
+                Solving Regional Construction Challenges
+              </h2>
+              <p className="mx-auto max-w-3xl text-xl leading-relaxed text-neutral">
+                From bustling urban centers to remote rural communities, EASE
+                addresses diverse construction challenges and delivers
+                comprehensive engineering solutions across all regions of
+                Ethiopia.
+              </p>
             </div>
 
-            {/* Rural Areas Card */}
-            <div className="card group overflow-hidden transition-all duration-300 hover:shadow-lg">
-              <div className="relative aspect-video w-full">
-                <Image
-                  src="/ethiopia.png"
-                  alt="Ethiopian rural landscape - EASE extends modern construction and infrastructure development to remote communities across all regions of Ethiopia"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-              <div className="card-body space-y-3 py-4 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <TreePine size={32} className="text-primary" />
-                  </div>
+            {/* Coverage Cards */}
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
+              {/* Addis Ababa Card */}
+              <div className="card group overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <div className="relative aspect-video w-full">
+                  <Image
+                    src="/addis.png"
+                    alt="Addis Ababa cityscape - EASE's primary operational base featuring modern urban development and construction projects throughout Ethiopia's capital"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
-                <h3 className="text-xl font-bold text-secondary">
-                  Rural Areas
-                </h3>
-                <p className="text-sm leading-relaxed text-muted">
-                  Solving rural construction challenges by bringing modern
-                  techniques and infrastructure solutions to remote communities
-                  across all regions.
-                </p>
+                <div className="card-body space-y-3 py-4 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <Building size={32} className="text-primary" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary">
+                    Addis Ababa
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted">
+                    Addressing urban construction challenges in Ethiopia&apos;s
+                    capital through cutting-edge solutions for commercial,
+                    residential, and infrastructure projects.
+                  </p>
+                </div>
+              </div>
+
+              {/* Rural Areas Card */}
+              <div className="card group overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <div className="relative aspect-video w-full">
+                  <Image
+                    src="/ethiopia.png"
+                    alt="Ethiopian rural landscape - EASE extends modern construction and infrastructure development to remote communities across all regions of Ethiopia"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="card-body space-y-3 py-4 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <TreePine size={32} className="text-primary" />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-secondary">
+                    Rural Areas
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted">
+                    Solving rural construction challenges by bringing modern
+                    techniques and infrastructure solutions to remote
+                    communities across all regions.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Featured Projects Section */}
       <section className="section bg-neutral">
         <div className="container-xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Featured Projects
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Discover some of our most notable construction achievements that
-              showcase our expertise in delivering innovative solutions across
-              diverse project types and scales.
-            </p>
-          </div>
+          <FadeIn>
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
+                Featured Projects
+              </h2>
+              <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
+                Discover some of our most notable construction achievements that
+                showcase our expertise in delivering innovative solutions across
+                diverse project types and scales.
+              </p>
+            </div>
 
-          {/* Project Cards */}
-          <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-            {/* Yeka Parking Project */}
-            <div className="card group overflow-hidden transition-all duration-300 hover:shadow-lg">
-              <div className="relative h-64 w-full overflow-hidden">
-                <Image
-                  src="/projects/elilta.png"
-                  alt="Elilta RE Building - Modern multi-level apartement featuring 35 meter spans, with advanced infrastructure design and efficient space optimization for urban solutions."
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
+            {/* Project Cards */}
+            <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+              {/* Yeka Parking Project */}
+              <div className="card group overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <div className="relative h-64 w-full overflow-hidden">
+                  <Image
+                    src="/projects/elilta.png"
+                    alt="Elilta RE Building - Modern multi-level apartement featuring 35 meter spans, with advanced infrastructure design and efficient space optimization for urban solutions."
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="card-body space-y-4">
+                  <h3 className="text-xl font-bold text-secondary">
+                    Elilta RE Building
+                  </h3>
+                  <p className="leading-relaxed text-muted">
+                    Modern multi-level apartement featuring 35 meter spans, with
+                    advanced infrastructure design and efficient space
+                    optimization for urban solutions.
+                  </p>
+                </div>
               </div>
-              <div className="card-body space-y-4">
-                <h3 className="text-xl font-bold text-secondary">
-                  Elilta RE Building
-                </h3>
-                <p className="leading-relaxed text-muted">
-                  Modern multi-level apartement featuring 35 meter spans, with
-                  advanced infrastructure design and efficient space
-                  optimization for urban solutions.
-                </p>
+
+              {/* Foreign Affairs Building Project */}
+              <div className="card group overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <div className="relative h-64 w-full overflow-hidden">
+                  <Image
+                    src="/projects/ppq.png"
+                    alt="Prosperity Party HQ - Sophisticated government building construction showcasing architectural excellence and precision engineering for critical institutional infrastructure."
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="card-body space-y-4">
+                  <h3 className="text-xl font-bold text-secondary">
+                    Prosperity Party HQ
+                  </h3>
+                  <p className="leading-relaxed text-muted">
+                    Sophisticated government building construction showcasing
+                    architectural excellence and precision engineering for
+                    critical institutional infrastructure.
+                  </p>
+                </div>
+              </div>
+
+              {/* Private Residence Project */}
+              <div className="card group overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <div className="relative h-64 w-full overflow-hidden">
+                  <Image
+                    src="/projects/omo.png"
+                    alt="Omo River Bridge - Lifting and repairing a collapsed bridge, and proceeding to enhance the bridge's capacity via external post-tensioning. In collaboration with VSL."
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="card-body space-y-4">
+                  <h3 className="text-xl font-bold text-secondary">
+                    Omo River Bridge
+                  </h3>
+                  <p className="leading-relaxed text-muted">
+                    Lifting and repairing a collapsed bridge, and proceeding to
+                    enhance the bridge&apos;s capacity via external
+                    post-tensioning. In collaboration with VSL.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Foreign Affairs Building Project */}
-            <div className="card group overflow-hidden transition-all duration-300 hover:shadow-lg">
-              <div className="relative h-64 w-full overflow-hidden">
-                <Image
-                  src="/projects/ppq.png"
-                  alt="Prosperity Party HQ - Sophisticated government building construction showcasing architectural excellence and precision engineering for critical institutional infrastructure."
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-              <div className="card-body space-y-4">
-                <h3 className="text-xl font-bold text-secondary">
-                  Prosperity Party HQ
-                </h3>
-                <p className="leading-relaxed text-muted">
-                  Sophisticated government building construction showcasing
-                  architectural excellence and precision engineering for
-                  critical institutional infrastructure.
-                </p>
-              </div>
+            {/* View All Projects Button */}
+            <div className="text-center">
+              <Link href="/projects" className="btn btn-primary btn-lg">
+                View All Projects
+              </Link>
             </div>
-
-            {/* Private Residence Project */}
-            <div className="card group overflow-hidden transition-all duration-300 hover:shadow-lg">
-              <div className="relative h-64 w-full overflow-hidden">
-                <Image
-                  src="/projects/omo.png"
-                  alt="Omo River Bridge - Lifting and repairing a collapsed bridge, and proceeding to enhance the bridge's capacity via external post-tensioning. In collaboration with VSL."
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-              <div className="card-body space-y-4">
-                <h3 className="text-xl font-bold text-secondary">
-                  Omo River Bridge
-                </h3>
-                <p className="leading-relaxed text-muted">
-                  Lifting and repairing a collapsed bridge, and proceeding to
-                  enhance the bridge&apos;s capacity via external
-                  post-tensioning. In collaboration with VSL.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* View All Projects Button */}
-          <div className="text-center">
-            <Link href="/projects" className="btn btn-primary btn-lg">
-              View All Projects
-            </Link>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Client Testimonials Section */}
       <section className="section bg-white">
         <div className="container-xl">
-          <div className="mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Client Testimonials
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Hear from our valued clients who have experienced the quality,
-              reliability, and innovation that EASE brings to every construction
-              and engineering project.
-            </p>
-          </div>
+          <FadeIn>
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
+                Client Testimonials
+              </h2>
+              <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
+                Hear from our valued clients who have experienced the quality,
+                reliability, and innovation that EASE brings to every
+                construction and engineering project.
+              </p>
+            </div>
 
-          {/* Testimonial Carousel */}
-          <TestimonialCarousel testimonials={testimonials} />
+            {/* Testimonial Carousel */}
+            <TestimonialCarousel testimonials={testimonials} />
+          </FadeIn>
         </div>
       </section>
     </>

@@ -20,7 +20,7 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-white/20 bg-white/70 backdrop-blur-md">
       <div className="container-xl">
         <div className="flex h-16 items-center justify-between">
           {/* EASE Brand */}
@@ -103,7 +103,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         <div
-          className={`${isMobileMenuOpen ? "block" : "hidden"} border-t border-border bg-white md:hidden`}
+          className={`${isMobileMenuOpen ? "block" : "hidden"} border-t border-white/20 bg-white/90 backdrop-blur-md md:hidden`}
         >
           <nav className="flex flex-col space-y-4 py-4">
             <Link

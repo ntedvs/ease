@@ -1,5 +1,6 @@
 "use client"
 
+import FadeIn from "@/components/FadeIn"
 import projectsData from "@/../projects.json"
 import {
   RailSymbol as Bridge,
@@ -183,7 +184,8 @@ export default function Projects() {
       {/* Statistics Section */}
       <section className="section bg-white">
         <div className="container-xl">
-          <div className="mb-16 text-center">
+          <FadeIn>
+            <div className="mb-16 text-center">
             <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
               Project Portfolio
             </h2>
@@ -248,6 +250,7 @@ export default function Projects() {
               </div>
             </div>
           </div>
+          </FadeIn>
         </div>
       </section>
 

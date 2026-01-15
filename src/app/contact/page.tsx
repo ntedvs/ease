@@ -1,3 +1,4 @@
+import FadeIn from "@/components/FadeIn"
 import { Clock, Mail, MapPin, Phone, Users } from "lucide-react"
 import { Metadata } from "next"
 import Image from "next/image"
@@ -13,9 +14,14 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="section-sm bg-secondary">
-        <div className="container-xl">
-          <div className="text-center text-white">
+      <section
+        className="relative flex min-h-[70vh] items-center justify-center bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/7.png')" }}
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        <div className="container-xl relative z-10">
+          <div className="mx-auto max-w-4xl text-center text-white">
             <h1 className="mb-6 text-4xl font-black text-white md:text-5xl">
               Contact EASE
             </h1>
@@ -31,167 +37,80 @@ export default function ContactPage() {
       {/* Contact Content Section */}
       <section className="section bg-white">
         <div className="container-xl">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-            {/* <div className="space-y-8">
-              <div>
-                <h2 className="mb-6 text-3xl font-bold text-secondary">
-                  Send us a Message
-                </h2>
-                <p className="text-lg leading-relaxed text-muted">
-                  Fill out the form below and we&apos;ll get back to you as soon
-                  as possible. Our team is ready to discuss your project
-                  requirements and provide expert guidance.
-                </p>
+          <FadeIn>
+            <div className="mb-12 text-center">
+            <h2 className="mb-6 text-3xl font-bold text-secondary">
+              Get in Touch
+            </h2>
+            <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted">
+              Reach out to us through any of the following channels. Our team is
+              available to assist you with your construction and engineering
+              needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div className="card card-body flex h-full flex-col text-center">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                <Phone size={32} className="text-primary" />
               </div>
+              <h3 className="mb-3 text-xl font-semibold text-secondary">
+                Phone Numbers
+              </h3>
+              <Link
+                href="tel:+251116671615"
+                className="block text-muted transition-colors duration-200 hover:text-primary"
+              >
+                +251 116 671 615
+              </Link>
+              <Link
+                href="tel:+251968601177"
+                className="block text-muted transition-colors duration-200 hover:text-primary"
+              >
+                +251 968 601 177
+              </Link>
+            </div>
 
-              <form className="space-y-6">
-                <div>
-                  <label htmlFor="fullName" className="form-label">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="fullName"
-                    name="fullName"
-                    required
-                    className="form-input"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="form-label">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="form-input"
-                    placeholder="Enter your email address"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="form-label">
-                    Subject *
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    required
-                    className="form-input"
-                    placeholder="Enter the subject of your inquiry"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="form-label">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    className="form-textarea"
-                    placeholder="Tell us about your project or inquiry..."
-                  ></textarea>
-                </div>
-
-                <button type="submit" className="btn btn-primary btn-lg w-full">
-                  Send Message
-                </button>
-              </form>
-            </div> */}
-
-            <div className="space-y-8">
-              <div>
-                <h2 className="mb-6 text-3xl font-bold text-secondary">
-                  Get in Touch
-                </h2>
-                <p className="text-lg leading-relaxed text-muted">
-                  Reach out to us through any of the following channels. Our
-                  team is available to assist you with your construction and
-                  engineering needs.
-                </p>
+            <div className="card card-body flex h-full flex-col text-center">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                <Mail size={32} className="text-primary" />
               </div>
+              <h3 className="mb-3 text-xl font-semibold text-secondary">
+                Email Address
+              </h3>
+              <Link
+                href="mailto:info@ease-int.com"
+                className="text-muted transition-colors duration-200 hover:text-primary"
+              >
+                info@ease-int.com
+              </Link>
+            </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                    <Phone size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-secondary">
-                      Phone Numbers
-                    </h3>
-                    <Link
-                      href="tel:+251116671615"
-                      className="block text-muted transition-colors duration-200 hover:text-primary"
-                    >
-                      +251 116 671 615
-                    </Link>
-                    <Link
-                      href="tel:+251968601177"
-                      className="block text-muted transition-colors duration-200 hover:text-primary"
-                    >
-                      +251 968 601 177
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                    <Mail size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-secondary">
-                      Email Address
-                    </h3>
-                    <Link
-                      href="mailto:info@ease-int.com"
-                      className="text-muted transition-colors duration-200 hover:text-primary"
-                    >
-                      info@ease-int.com
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                    <MapPin size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-secondary">
-                      Office Location
-                    </h3>
-                    <p className="text-muted">Bole Sub-City, Woreda 06</p>
-                    <p className="text-muted">Jacros-Salitemehret RD</p>
-                    <p className="text-muted">Addis Ababa, Ethiopia</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                    <Clock size={24} className="text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-secondary">
-                      Business Hours
-                    </h3>
-                    <p className="text-muted">
-                      Monday - Friday: 8:00 AM - 6:00 PM
-                    </p>
-                    <p className="text-muted">Saturday: 9:00 AM - 2:00 PM</p>
-                    <p className="text-muted">Sunday: Closed</p>
-                  </div>
-                </div>
+            <div className="card card-body flex h-full flex-col text-center">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                <MapPin size={32} className="text-primary" />
               </div>
+              <h3 className="mb-3 text-xl font-semibold text-secondary">
+                Office Location
+              </h3>
+              <p className="text-muted">Bole Sub-City, Woreda 06</p>
+              <p className="text-muted">Jacros-Salitemehret RD</p>
+              <p className="text-muted">Addis Ababa, Ethiopia</p>
+            </div>
+
+            <div className="card card-body flex h-full flex-col text-center">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                <Clock size={32} className="text-primary" />
+              </div>
+              <h3 className="mb-3 text-xl font-semibold text-secondary">
+                Business Hours
+              </h3>
+              <p className="text-muted">Monday - Friday: 8:00 AM - 6:00 PM</p>
+              <p className="text-muted">Saturday: 9:00 AM - 2:00 PM</p>
+              <p className="text-muted">Sunday: Closed</p>
             </div>
           </div>
+          </FadeIn>
         </div>
       </section>
 
