@@ -1,19 +1,19 @@
-"use client";
+"use client"
 
-import { AlertTriangle, RefreshCw, Home } from "lucide-react";
-import Link from "next/link";
-import { useEffect } from "react";
+import { AlertTriangle, RefreshCw, Home } from "lucide-react"
+import Link from "next/link"
+import { useEffect } from "react"
 
 interface ErrorProps {
-  error: Error & { digest?: string };
-  reset: () => void;
+  error: Error & { digest?: string }
+  reset: () => void
 }
 
 export default function Error({ error, reset }: ErrorProps) {
   useEffect(() => {
     // Log the error to an error reporting service
-    console.error("Application error:", error);
-  }, [error]);
+    console.error("Application error:", error)
+  }, [error])
 
   return (
     <div className="section bg-neutral">
@@ -120,5 +120,5 @@ export default function Error({ error, reset }: ErrorProps) {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
-import Image from "next/image";
+import Image from "next/image"
 
 interface CompanyLogo {
-  src: string;
-  alt: string;
-  name: string;
+  src: string
+  alt: string
+  name: string
 }
 
 export default function CompanyMarquee({ logos }: { logos: CompanyLogo[] }) {
@@ -25,5 +25,5 @@ export default function CompanyMarquee({ logos }: { logos: CompanyLogo[] }) {
         </div>
       </div>
     </>
-  );
+  )
 }

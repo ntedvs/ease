@@ -1,10 +1,10 @@
-import AnimatedNumber from "@/components/AnimatedNumber";
-import CompanyMarquee from "@/components/CompanyMarquee";
-import DownloadableResources from "@/components/DownloadableResources";
-import FadeIn from "@/components/FadeIn";
-import HeroSlideshow from "@/components/HeroSlideshow";
-import ImageCarousel from "@/components/ImageCarousel";
-import TestimonialCarousel from "@/components/TestimonialCarousel";
+import AnimatedNumber from "@/components/AnimatedNumber"
+import CompanyMarquee from "@/components/CompanyMarquee"
+import DownloadableResources from "@/components/DownloadableResources"
+import FadeIn from "@/components/FadeIn"
+import HeroSlideshow from "@/components/HeroSlideshow"
+import ImageCarousel from "@/components/ImageCarousel"
+import TestimonialCarousel from "@/components/TestimonialCarousel"
 import {
   Anchor,
   Building,
@@ -19,15 +19,15 @@ import {
   Shield,
   TreePine,
   Zap,
-} from "lucide-react";
-import { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+} from "lucide-react"
+import { Metadata } from "next"
+import Image from "next/image"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   description:
     "EASE - East Africa Specialized Engineering. Ethiopia's insurance-backed construction company specializing in post-tensioning solutions and structural engineering for East Africa's infrastructure needs.",
-};
+}
 
 export default function Home() {
   const carouselImages = [
@@ -51,7 +51,7 @@ export default function Home() {
       src: "/rudloff/windmill.jpg",
       alt: "",
     },
-  ];
+  ]
 
   const trustedCompanyLogos = [
     {
@@ -104,7 +104,7 @@ export default function Home() {
       alt: "Rudloff StrongForce International - Global technology partner",
       name: "Rudloff StrongForce International",
     },
-  ];
+  ]
 
   const testimonials = [
     {
@@ -156,7 +156,7 @@ export default function Home() {
       title: "Representative",
       company: "Akoya Group",
     },
-  ];
+  ]
 
   return (
     <>
@@ -982,5 +982,5 @@ export default function Home() {
         </div>
       </section>
     </>
-  );
+  )
 }

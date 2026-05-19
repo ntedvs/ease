@@ -1,23 +1,23 @@
-"use client";
+"use client"
 
-import { Menu, X } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { Menu, X } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { useState } from "react"
 
 export default function Header() {
-  const [hov, setHov] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const [hov, setHov] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
 
   const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
+    setIsMobileMenuOpen(false)
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/20 bg-white/70 backdrop-blur-md">
@@ -136,5 +136,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  );
+  )
 }

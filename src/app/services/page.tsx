@@ -1,5 +1,5 @@
-import DownloadableResources from "@/components/DownloadableResources";
-import FadeIn from "@/components/FadeIn";
+import DownloadableResources from "@/components/DownloadableResources"
+import FadeIn from "@/components/FadeIn"
 import {
   Anchor,
   Building,
@@ -12,16 +12,16 @@ import {
   Shield,
   TrendingUp,
   Wrench,
-} from "lucide-react";
-import { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+} from "lucide-react"
+import { Metadata } from "next"
+import Image from "next/image"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Our Services",
   description:
     "Comprehensive construction and engineering services by EASE. From post-tensioning and precast solutions to structural design and project management across Ethiopia.",
-};
+}
 
 export default function ServicesPage() {
   const services = [
@@ -168,7 +168,7 @@ export default function ServicesPage() {
         "Maintenance and repair services",
       ],
     },
-  ];
+  ]
 
   return (
     <>
@@ -274,5 +274,5 @@ export default function ServicesPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

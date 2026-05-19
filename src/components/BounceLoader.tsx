@@ -141,6 +141,6 @@ const BounceLoader = () => (
       `}
     </style>
   </div>
-);
+)
 
-export default BounceLoader;
+export default BounceLoader

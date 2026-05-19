@@ -1,14 +1,14 @@
-"use client";
+"use client"
 
-import { Download, Users, Wrench, Building2 } from "lucide-react";
+import { Download, Users, Wrench, Building2 } from "lucide-react"
 
 interface DownloadItem {
-  title: string;
-  description: string;
-  fileSize: string;
-  icon: React.ReactNode;
-  href: string;
-  available: boolean;
+  title: string
+  description: string
+  fileSize: string
+  icon: React.ReactNode
+  href: string
+  available: boolean
 }
 
 export default function DownloadableResources() {
@@ -37,7 +37,7 @@ export default function DownloadableResources() {
       href: "/EaseProjectPortfolio.pdf",
       available: true,
     },
-  ];
+  ]
 
   return (
     <section className="section bg-neutral/20">
@@ -52,11 +52,11 @@ export default function DownloadableResources() {
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {downloadItems.map((item, index) => {
-            const Component = item.available ? "a" : "div";
-            const baseClasses = "card card-body transition-all duration-200";
+            const Component = item.available ? "a" : "div"
+            const baseClasses = "card card-body transition-all duration-200"
             const availableClasses =
-              "group hover-lift hover-shadow hover:border-primary cursor-pointer";
-            const disabledClasses = "opacity-50 cursor-not-allowed bg-neutral/50";
+              "group hover-lift hover-shadow hover:border-primary cursor-pointer"
+            const disabledClasses = "opacity-50 cursor-not-allowed bg-neutral/50"
 
             return (
               <Component
@@ -103,7 +103,7 @@ export default function DownloadableResources() {
                   </div>
                 </div>
               </Component>
-            );
+            )
           })}
         </div>
 
@@ -121,5 +121,5 @@ export default function DownloadableResources() {
         </div>
       </div>
     </section>
-  );
+  )
 }

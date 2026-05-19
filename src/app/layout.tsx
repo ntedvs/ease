@@ -1,13 +1,13 @@
-import Header from "@/components/Header";
-import "@/styles/base.css";
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
-import { Metadata } from "next";
-import local from "next/font/local";
-import Image from "next/image";
-import Link from "next/link";
-import { ReactNode } from "react";
+import Header from "@/components/Header"
+import "@/styles/base.css"
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import { Metadata } from "next"
+import local from "next/font/local"
+import Image from "next/image"
+import Link from "next/link"
+import { ReactNode } from "react"
 
-const inter = local({ src: "../../public/hel.woff2" });
+const inter = local({ src: "../../public/hel.woff2" })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ease-int.com"),
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   verification: {
     google: "your-google-verification-code",
   },
-};
+}
 
 function Footer() {
   return (
@@ -236,7 +236,7 @@ function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -324,7 +324,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         },
       ],
     },
-  };
+  }
 
   return (
     <html lang="en">
@@ -344,5 +344,5 @@ export default function Layout({ children }: { children: ReactNode }) {
         <Footer />
       </body>
     </html>
-  );
+  )
 }

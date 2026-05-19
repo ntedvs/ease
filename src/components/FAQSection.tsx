@@ -1,10 +1,10 @@
-"use client";
+"use client"
 
-import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { ChevronDown } from "lucide-react"
+import { useState } from "react"
 
 export default function FAQSection() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
 
   const faqs = [
     {
@@ -37,7 +37,7 @@ export default function FAQSection() {
       answer:
         "Post-tensioning is suitable for most concrete structures including residential buildings, commercial complexes, parking structures, and infrastructure projects. EASE evaluates each project to optimize the post-tensioning solution.",
     },
-  ];
+  ]
 
   return (
     <section className="section bg-neutral">
@@ -81,5 +81,5 @@ export default function FAQSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

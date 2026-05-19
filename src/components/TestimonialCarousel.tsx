@@ -1,111 +1,111 @@
-"use client";
+"use client"
 
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useCallback, useEffect, useRef, useState } from "react"
 
 interface Testimonial {
-  quote: string;
-  name: string;
-  title: string;
-  company: string;
+  quote: string
+  name: string
+  title: string
+  company: string
 }
 
 interface TestimonialCarouselProps {
-  testimonials: Testimonial[];
+  testimonials: Testimonial[]
 }
 
 export default function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
   const nextTestimonial = () => {
-    pauseAutoPlay();
-    setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
+    pauseAutoPlay()
+    setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1))
     // Resume auto-play after 3 seconds
     setTimeout(() => {
-      resumeAutoPlay();
-    }, 3000);
-  };
+      resumeAutoPlay()
+    }, 3000)
+  }
 
   const prevTestimonial = () => {
-    pauseAutoPlay();
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
+    pauseAutoPlay()
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1))
     // Resume auto-play after 3 seconds
     setTimeout(() => {
-      resumeAutoPlay();
-    }, 3000);
-  };
+      resumeAutoPlay()
+    }, 3000)
+  }
 
   const goToTestimonial = (index: number) => {
-    pauseAutoPlay();
-    setCurrentIndex(index);
+    pauseAutoPlay()
+    setCurrentIndex(index)
     // Resume auto-play after 3 seconds
     setTimeout(() => {
-      resumeAutoPlay();
-    }, 3000);
-  };
+      resumeAutoPlay()
+    }, 3000)
+  }
 
   // Auto-play functions
   const startAutoPlay = useCallback(() => {
-    if (intervalRef.current) clearInterval(intervalRef.current);
+    if (intervalRef.current) clearInterval(intervalRef.current)
     intervalRef.current = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
-    }, 5000); // 5 seconds per testimonial
-  }, [testimonials.length]);
+      setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1))
+    }, 5000) // 5 seconds per testimonial
+  }, [testimonials.length])
 
   const stopAutoPlay = () => {
     if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = null;
+      clearInterval(intervalRef.current)
+      intervalRef.current = null
     }
-  };
+  }
 
   const pauseAutoPlay = () => {
-    setIsAutoPlaying(false);
-    stopAutoPlay();
-  };
+    setIsAutoPlaying(false)
+    stopAutoPlay()
+  }
 
   const resumeAutoPlay = () => {
-    setIsAutoPlaying(true);
-    startAutoPlay();
-  };
+    setIsAutoPlaying(true)
+    startAutoPlay()
+  }
 
   // Handle keyboard navigation
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === "ArrowLeft") {
-      event.preventDefault();
-      prevTestimonial();
+      event.preventDefault()
+      prevTestimonial()
     } else if (event.key === "ArrowRight") {
-      event.preventDefault();
-      nextTestimonial();
+      event.preventDefault()
+      nextTestimonial()
     } else if (event.key === " " || event.key === "Spacebar") {
-      event.preventDefault();
+      event.preventDefault()
       // Toggle auto-play with spacebar
       if (isAutoPlaying) {
-        pauseAutoPlay();
+        pauseAutoPlay()
       } else {
-        resumeAutoPlay();
+        resumeAutoPlay()
       }
     }
-  };
+  }
 
   // Auto-play management
   useEffect(() => {
     // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
     if (!prefersReducedMotion && isAutoPlaying) {
-      startAutoPlay();
+      startAutoPlay()
     }
 
     // Cleanup on unmount
     return () => {
-      stopAutoPlay();
-    };
-  }, [isAutoPlaying, testimonials.length, startAutoPlay]);
+      stopAutoPlay()
+    }
+  }, [isAutoPlaying, testimonials.length, startAutoPlay])
 
-  const currentTestimonial = testimonials[currentIndex];
+  const currentTestimonial = testimonials[currentIndex]
 
   return (
     <div
@@ -177,5 +177,5 @@ export default function TestimonialCarousel({ testimonials }: TestimonialCarouse
         ))}
       </div>
     </div>
-  );
+  )
 }

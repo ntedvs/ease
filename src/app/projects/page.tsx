@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import FadeIn from "@/components/FadeIn";
-import projectsData from "@/../projects.json";
+import FadeIn from "@/components/FadeIn"
+import projectsData from "@/../projects.json"
 import {
   RailSymbol as Bridge,
   Briefcase,
@@ -19,19 +19,19 @@ import {
   MapPin,
   Maximize2,
   Warehouse,
-} from "lucide-react";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+} from "lucide-react"
+import Image from "next/image"
+import { useEffect, useState } from "react"
 
 // Project type interface
 interface Project {
-  name: string;
-  area?: number;
-  signingDate?: string;
-  category: string;
-  hasImage: boolean;
-  imageUrl?: string | null;
-  year: number;
+  name: string
+  area?: number
+  signingDate?: string
+  category: string
+  hasImage: boolean
+  imageUrl?: string | null
+  year: number
 }
 
 // Category mapping for display names
@@ -52,110 +52,110 @@ const categoryDisplayNames: Record<string, string> = {
   Office: "Office",
   "Mixed Use": "Mixed Use",
   "Personal Residence": "Personal Residence",
-};
+}
 
 // Category icon mapping
 const getCategoryIcon = (category: string) => {
-  const normalizedCategory = category === "Apartement" ? "Apartment" : category;
+  const normalizedCategory = category === "Apartement" ? "Apartment" : category
 
   switch (normalizedCategory) {
     case "Government":
-      return <Landmark size={16} className="text-primary" />;
+      return <Landmark size={16} className="text-primary" />
     case "Apartment":
-      return <Building size={16} className="text-primary" />;
+      return <Building size={16} className="text-primary" />
     case "Mixed Use":
-      return <Building2 size={16} className="text-primary" />;
+      return <Building2 size={16} className="text-primary" />
     case "Hotel":
-      return <Hotel size={16} className="text-primary" />;
+      return <Hotel size={16} className="text-primary" />
     case "Personal Residence":
-      return <Home size={16} className="text-primary" />;
+      return <Home size={16} className="text-primary" />
     case "Hospital":
-      return <Hospital size={16} className="text-primary" />;
+      return <Hospital size={16} className="text-primary" />
     case "Warehouse":
-      return <Warehouse size={16} className="text-primary" />;
+      return <Warehouse size={16} className="text-primary" />
     case "Commercial":
-      return <Briefcase size={16} className="text-primary" />;
+      return <Briefcase size={16} className="text-primary" />
     case "Shoring":
-      return <Construction size={16} className="text-primary" />;
+      return <Construction size={16} className="text-primary" />
     case "Bank":
-      return <CreditCard size={16} className="text-primary" />;
+      return <CreditCard size={16} className="text-primary" />
     case "Educational":
-      return <GraduationCap size={16} className="text-primary" />;
+      return <GraduationCap size={16} className="text-primary" />
     case "Bridge":
-      return <Bridge size={16} className="text-primary" />;
+      return <Bridge size={16} className="text-primary" />
     case "Industrial":
-      return <Factory size={16} className="text-primary" />;
+      return <Factory size={16} className="text-primary" />
     case "Office":
-      return <Building2 size={16} className="text-primary" />;
+      return <Building2 size={16} className="text-primary" />
     default:
-      return <Building size={16} className="text-primary" />;
+      return <Building size={16} className="text-primary" />
   }
-};
+}
 
 export default function Projects() {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
-  const [activeCategory, setActiveCategory] = useState<string>("All");
-  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState<Project[]>([])
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>([])
+  const [activeCategory, setActiveCategory] = useState<string>("All")
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     // Sort projects to show image projects first
     const sortedProjects = projectsData.projects.sort((a, b) => {
-      if (a.hasImage && !b.hasImage) return -1;
-      if (!a.hasImage && b.hasImage) return 1;
-      return 0;
-    });
-    setProjects(sortedProjects);
-    setFilteredProjects(sortedProjects);
-    setLoading(false);
-  }, []);
+      if (a.hasImage && !b.hasImage) return -1
+      if (!a.hasImage && b.hasImage) return 1
+      return 0
+    })
+    setProjects(sortedProjects)
+    setFilteredProjects(sortedProjects)
+    setLoading(false)
+  }, [])
 
   // Filter projects by category
   const filterProjects = (category: string) => {
-    setActiveCategory(category);
+    setActiveCategory(category)
     if (category === "All") {
-      setFilteredProjects(projects);
+      setFilteredProjects(projects)
     } else {
       const filtered = projects.filter((project) => {
         const normalizedCategory =
-          project.category === "Apartement" ? "Apartment" : project.category;
-        return normalizedCategory === category;
-      });
+          project.category === "Apartement" ? "Apartment" : project.category
+        return normalizedCategory === category
+      })
       // Sort filtered projects to show image projects first
       const sortedFiltered = filtered.sort((a, b) => {
-        if (a.hasImage && !b.hasImage) return -1;
-        if (!a.hasImage && b.hasImage) return 1;
-        return 0;
-      });
-      setFilteredProjects(sortedFiltered);
+        if (a.hasImage && !b.hasImage) return -1
+        if (!a.hasImage && b.hasImage) return 1
+        return 0
+      })
+      setFilteredProjects(sortedFiltered)
     }
-  };
+  }
 
   // Get unique categories for filter buttons
   const getCategories = () => {
     const categories = Array.from(
       new Set(
         projects.map((p) => {
-          return p.category === "Apartement" ? "Apartment" : p.category;
+          return p.category === "Apartement" ? "Apartment" : p.category
         }),
       ),
-    );
-    return ["All", ...categories.sort()];
-  };
+    )
+    return ["All", ...categories.sort()]
+  }
 
   // Static statistics as requested
   const stats = {
     government: 14,
     residential: 20,
     commercial: 8,
-  };
+  }
 
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center">
         <div className="text-xl text-muted">Loading projects...</div>
       </div>
-    );
+    )
   }
 
   return (
@@ -650,5 +650,5 @@ export default function Projects() {
         </div>
       </section>
     </>
-  );
+  )
 }

@@ -1,10 +1,10 @@
-"use client";
+"use client"
 
-import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { ChevronDown } from "lucide-react"
+import { useState } from "react"
 
 export default function ProcessStepsDropdown() {
-  const [openStep, setOpenStep] = useState<number | null>(null);
+  const [openStep, setOpenStep] = useState<number | null>(null)
 
   const processSteps = [
     {
@@ -37,7 +37,7 @@ export default function ProcessStepsDropdown() {
       description:
         "Finally, the duct system is filled with high-strength grout to bond the tendons to the concrete and provide corrosion protection. Anchorage points are properly finished, and detailed documentation of the completed post-tensioning system is provided to the client.",
     },
-  ];
+  ]
 
   return (
     <section className="section bg-neutral">
@@ -105,5 +105,5 @@ export default function ProcessStepsDropdown() {
         </div>
       </div>
     </section>
-  );
+  )
 }

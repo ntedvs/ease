@@ -1,18 +1,18 @@
-"use client";
+"use client"
 
-import { Calculator, TrendingDown } from "lucide-react";
-import { useState } from "react";
+import { Calculator, TrendingDown } from "lucide-react"
+import { useState } from "react"
 
 export default function SlabThicknessCalculator() {
-  const [slabThickness, setSlabThickness] = useState(26);
-  const [slabLength, setSlabLength] = useState(7.5);
-  const [totalServiceLoad, setTotalServiceLoad] = useState(6);
+  const [slabThickness, setSlabThickness] = useState(26)
+  const [slabLength, setSlabLength] = useState(7.5)
+  const [totalServiceLoad, setTotalServiceLoad] = useState(6)
 
   const calculateOutput = (thickness: number, length: number, load: number): number => {
-    return 0.8125 * thickness * (1 + 0.01 * (length - 7.5) + 0.005 * (load - 6));
-  };
+    return 0.8125 * thickness * (1 + 0.01 * (length - 7.5) + 0.005 * (load - 6))
+  }
 
-  const calculatedOutput = calculateOutput(slabThickness, slabLength, totalServiceLoad);
+  const calculatedOutput = calculateOutput(slabThickness, slabLength, totalServiceLoad)
 
   return (
     <section className="section bg-neutral">
@@ -207,5 +207,5 @@ export default function SlabThicknessCalculator() {
         }
       `}</style>
     </section>
-  );
+  )
 }

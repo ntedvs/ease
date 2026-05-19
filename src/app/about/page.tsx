@@ -1,6 +1,6 @@
-import AnimatedNumber from "@/components/AnimatedNumber";
-import FadeIn from "@/components/FadeIn";
-import LegacyTimeline from "@/components/LegacyTimeline";
+import AnimatedNumber from "@/components/AnimatedNumber"
+import FadeIn from "@/components/FadeIn"
+import LegacyTimeline from "@/components/LegacyTimeline"
 import {
   Award,
   Building,
@@ -16,15 +16,15 @@ import {
   Shield,
   Target,
   Users,
-} from "lucide-react";
-import { Metadata } from "next";
-import Image from "next/image";
+} from "lucide-react"
+import { Metadata } from "next"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
     "Learn about EASE - East Africa Specialized Engineering. Ethiopia's only insurance-backed construction company with $15M coverage. Discover our trusted expertise in innovative construction solutions.",
-};
+}
 
 export default function About() {
   const coreValues = [
@@ -52,7 +52,7 @@ export default function About() {
       description:
         "We believe in collaborative problem-solving, working closely with clients, communities, and stakeholders to tackle challenges together and achieve shared success.",
     },
-  ];
+  ]
 
   return (
     <>
@@ -685,5 +685,5 @@ export default function About() {
         </div>
       </section>
     </>
-  );
+  )
 }

@@ -1,23 +1,23 @@
-"use client";
+"use client"
 
-import { CheckCircle, Flag, TrendingUp, Users } from "lucide-react";
-import Link from "next/link";
+import { CheckCircle, Flag, TrendingUp, Users } from "lucide-react"
+import Link from "next/link"
 
 interface TimelineEvent {
-  year: string;
-  title: string;
-  description: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
-  side: "left" | "right";
+  year: string
+  title: string
+  description: string
+  icon: React.ComponentType<{ size?: number; className?: string }>
+  side: "left" | "right"
 }
 
 interface LegacyTimelineProps {
-  title?: string;
-  subtitle?: string;
-  showCTA?: boolean;
-  ctaText?: string;
-  ctaLink?: string;
-  variant?: "default" | "compact";
+  title?: string
+  subtitle?: string
+  showCTA?: boolean
+  ctaText?: string
+  ctaLink?: string
+  variant?: "default" | "compact"
 }
 
 const timelineEvents: TimelineEvent[] = [
@@ -53,7 +53,7 @@ const timelineEvents: TimelineEvent[] = [
     icon: CheckCircle,
     side: "right",
   },
-];
+]
 
 export default function LegacyTimeline({
   title = "Legacy Timeline",
@@ -63,8 +63,8 @@ export default function LegacyTimeline({
   ctaLink = "/about",
   variant = "default",
 }: LegacyTimelineProps) {
-  const isCompact = variant === "compact";
-  const sectionPadding = isCompact ? "py-12 md:py-16" : "section";
+  const isCompact = variant === "compact"
+  const sectionPadding = isCompact ? "py-12 md:py-16" : "section"
 
   return (
     <section className={`${sectionPadding} bg-white`}>
@@ -165,5 +165,5 @@ export default function LegacyTimeline({
         )}
       </div>
     </section>
-  );
+  )
 }

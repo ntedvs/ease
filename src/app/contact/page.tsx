@@ -1,14 +1,14 @@
-import FadeIn from "@/components/FadeIn";
-import { Clock, Mail, MapPin, Phone, Users } from "lucide-react";
-import { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import FadeIn from "@/components/FadeIn"
+import { Clock, Mail, MapPin, Phone, Users } from "lucide-react"
+import { Metadata } from "next"
+import Image from "next/image"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
     "Get in touch with EASE for your construction and engineering needs. Professional consultation, project planning, and expert guidance for post-tensioning solutions in Ethiopia.",
-};
+}
 
 export default function ContactPage() {
   return (
@@ -163,5 +163,5 @@ export default function ContactPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

@@ -1,11 +1,11 @@
-import AnimatedNumber from "@/components/AnimatedNumber";
-import DownloadableResources from "@/components/DownloadableResources";
-import FAQSection from "@/components/FAQSection";
-import ProcessStepsDropdown from "@/components/ProcessStepsDropdown";
-import SlabThicknessCalculator from "@/components/SlabThicknessCalculator";
-import { Building2, DollarSign, Leaf, Maximize2, Shield, Timer, TreePine } from "lucide-react";
-import { Metadata } from "next";
-import Link from "next/link";
+import AnimatedNumber from "@/components/AnimatedNumber"
+import DownloadableResources from "@/components/DownloadableResources"
+import FAQSection from "@/components/FAQSection"
+import ProcessStepsDropdown from "@/components/ProcessStepsDropdown"
+import SlabThicknessCalculator from "@/components/SlabThicknessCalculator"
+import { Building2, DollarSign, Leaf, Maximize2, Shield, Timer, TreePine } from "lucide-react"
+import { Metadata } from "next"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Post-Tensioning Solutions",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "insured post-tensioning",
     "reliable construction",
   ],
-};
+}
 
 export default function PostTensioning() {
   const allAdvantages = [
@@ -69,7 +69,7 @@ export default function PostTensioning() {
         "Optimal use of materials through precise engineering, minimizing waste and maximizing performance.",
       category: "Sustainability",
     },
-  ];
+  ]
 
   return (
     <>
@@ -243,5 +243,5 @@ export default function PostTensioning() {
         </div>
       </section>
     </>
-  );
+  )
 }

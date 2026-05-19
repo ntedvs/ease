@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { Upload } from "lucide-react";
+import { Upload } from "lucide-react"
 
 export default function CareersForm() {
   return (
@@ -74,15 +74,15 @@ export default function CareersForm() {
               accept=".pdf,.doc,.docx"
               className="sr-only"
               onChange={(e) => {
-                const file = e.target.files?.[0];
-                const label = document.querySelector("[data-file-label]");
-                const errorMsg = document.querySelector("[data-file-error]");
+                const file = e.target.files?.[0]
+                const label = document.querySelector("[data-file-label]")
+                const errorMsg = document.querySelector("[data-file-error]")
 
                 if (file) {
                   // Validate file size (5MB max)
                   if (file.size > 5 * 1024 * 1024) {
-                    if (errorMsg) errorMsg.textContent = "File size must be less than 5MB";
-                    return;
+                    if (errorMsg) errorMsg.textContent = "File size must be less than 5MB"
+                    return
                   }
 
                   // Validate file type
@@ -90,14 +90,14 @@ export default function CareersForm() {
                     "application/pdf",
                     "application/msword",
                     "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                  ];
+                  ]
                   if (!allowedTypes.includes(file.type)) {
-                    if (errorMsg) errorMsg.textContent = "Please upload a PDF, DOC, or DOCX file";
-                    return;
+                    if (errorMsg) errorMsg.textContent = "Please upload a PDF, DOC, or DOCX file"
+                    return
                   }
 
-                  if (label) label.textContent = file.name;
-                  if (errorMsg) errorMsg.textContent = "";
+                  if (label) label.textContent = file.name
+                  if (errorMsg) errorMsg.textContent = ""
                 }
               }}
             />
@@ -105,28 +105,28 @@ export default function CareersForm() {
               htmlFor="resume"
               className="flex cursor-pointer items-center justify-center border-2 border-dashed border-border bg-neutral/30 px-6 py-8 text-center transition-all duration-200 hover:border-primary hover:bg-primary/5"
               onDragOver={(e) => {
-                e.preventDefault();
-                e.currentTarget.classList.add("border-primary", "bg-primary/10");
+                e.preventDefault()
+                e.currentTarget.classList.add("border-primary", "bg-primary/10")
               }}
               onDragLeave={(e) => {
-                e.preventDefault();
-                e.currentTarget.classList.remove("border-primary", "bg-primary/10");
+                e.preventDefault()
+                e.currentTarget.classList.remove("border-primary", "bg-primary/10")
               }}
               onDrop={(e) => {
-                e.preventDefault();
-                e.currentTarget.classList.remove("border-primary", "bg-primary/10");
+                e.preventDefault()
+                e.currentTarget.classList.remove("border-primary", "bg-primary/10")
 
-                const files = e.dataTransfer.files;
+                const files = e.dataTransfer.files
                 if (files.length > 0) {
-                  const file = files[0];
-                  const input = document.getElementById("resume") as HTMLInputElement;
-                  const label = document.querySelector("[data-file-label]");
-                  const errorMsg = document.querySelector("[data-file-error]");
+                  const file = files[0]
+                  const input = document.getElementById("resume") as HTMLInputElement
+                  const label = document.querySelector("[data-file-label]")
+                  const errorMsg = document.querySelector("[data-file-error]")
 
                   // Validate file size (5MB max)
                   if (file.size > 5 * 1024 * 1024) {
-                    if (errorMsg) errorMsg.textContent = "File size must be less than 5MB";
-                    return;
+                    if (errorMsg) errorMsg.textContent = "File size must be less than 5MB"
+                    return
                   }
 
                   // Validate file type
@@ -134,19 +134,19 @@ export default function CareersForm() {
                     "application/pdf",
                     "application/msword",
                     "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                  ];
+                  ]
                   if (!allowedTypes.includes(file.type)) {
-                    if (errorMsg) errorMsg.textContent = "Please upload a PDF, DOC, or DOCX file";
-                    return;
+                    if (errorMsg) errorMsg.textContent = "Please upload a PDF, DOC, or DOCX file"
+                    return
                   }
 
                   // Create a new FileList and assign to input
-                  const dt = new DataTransfer();
-                  dt.items.add(file);
-                  if (input) input.files = dt.files;
+                  const dt = new DataTransfer()
+                  dt.items.add(file)
+                  if (input) input.files = dt.files
 
-                  if (label) label.textContent = file.name;
-                  if (errorMsg) errorMsg.textContent = "";
+                  if (label) label.textContent = file.name
+                  if (errorMsg) errorMsg.textContent = ""
                 }
               }}
             >
@@ -181,5 +181,5 @@ export default function CareersForm() {
         </p>
       </form>
     </div>
-  );
+  )
 }
