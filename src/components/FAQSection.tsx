@@ -1,15 +1,14 @@
-"use client"
+"use client";
 
-import { ChevronDown } from "lucide-react"
-import { useState } from "react"
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 export default function FAQSection() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const faqs = [
     {
-      question:
-        "Is post-tensioning more complex than traditional reinforcement?",
+      question: "Is post-tensioning more complex than traditional reinforcement?",
       answer:
         "Post-tensioning is a well-established technology we've mastered over 80+ projects. Our certified technicians execute each installation with precision, backed by international standards. The process follows proven methodologies that we've adapted specifically for Ethiopian conditions.",
     },
@@ -38,7 +37,7 @@ export default function FAQSection() {
       answer:
         "Post-tensioning is suitable for most concrete structures including residential buildings, commercial complexes, parking structures, and infrastructure projects. EASE evaluates each project to optimize the post-tensioning solution.",
     },
-  ]
+  ];
 
   return (
     <section className="section bg-neutral">
@@ -48,24 +47,19 @@ export default function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-            Get answers to common technical concerns and myths about
-            post-tensioning technology from our engineering experts.
+            Get answers to common technical concerns and myths about post-tensioning technology from
+            our engineering experts.
           </p>
         </div>
 
         <div className="mx-auto max-w-4xl space-y-4">
           {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="card overflow-hidden transition-all duration-300"
-            >
+            <div key={index} className="card overflow-hidden transition-all duration-300">
               <button
                 className="card-body flex w-full items-center justify-between p-6 text-left transition-colors duration-200 hover:bg-neutral/50"
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
               >
-                <h3 className="pr-4 text-lg font-semibold text-secondary">
-                  {faq.question}
-                </h3>
+                <h3 className="pr-4 text-lg font-semibold text-secondary">{faq.question}</h3>
                 <ChevronDown
                   size={24}
                   className={`flex-shrink-0 text-primary transition-transform duration-200 ${
@@ -87,5 +81,5 @@ export default function FAQSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

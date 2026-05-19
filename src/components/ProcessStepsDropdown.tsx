@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { ChevronDown } from "lucide-react"
-import { useState } from "react"
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 export default function ProcessStepsDropdown() {
-  const [openStep, setOpenStep] = useState<number | null>(null)
+  const [openStep, setOpenStep] = useState<number | null>(null);
 
   const processSteps = [
     {
@@ -37,7 +37,7 @@ export default function ProcessStepsDropdown() {
       description:
         "Finally, the duct system is filled with high-strength grout to bond the tendons to the concrete and provide corrosion protection. Anchorage points are properly finished, and detailed documentation of the completed post-tensioning system is provided to the client.",
     },
-  ]
+  ];
 
   return (
     <section className="section bg-neutral">
@@ -47,8 +47,9 @@ export default function ProcessStepsDropdown() {
             Post-Tensioning Process
           </h2>
           <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-            Our post-tensioning process follows international standards (EN 1992-1-1, ACI 318) 
-            with specific adaptations for Ethiopian conditions. Here&apos;s exactly how we execute each phase:
+            Our post-tensioning process follows international standards (EN 1992-1-1, ACI 318) with
+            specific adaptations for Ethiopian conditions. Here&apos;s exactly how we execute each
+            phase:
           </p>
         </div>
 
@@ -83,12 +84,8 @@ export default function ProcessStepsDropdown() {
                         </div>
                       </div>
                       <div className="flex-1">
-                        <h4 className="mb-2 text-lg font-semibold text-secondary">
-                          {step.step}
-                        </h4>
-                        <p className="mb-4 leading-relaxed text-muted">
-                          {step.description}
-                        </p>
+                        <h4 className="mb-2 text-lg font-semibold text-secondary">{step.step}</h4>
+                        <p className="mb-4 leading-relaxed text-muted">{step.description}</p>
                         <div className="aspect-video overflow-hidden bg-neutral-dark flex items-center justify-center">
                           <div className="text-center">
                             <p className="text-lg font-semibold text-secondary mb-2">Coming Soon</p>
@@ -108,5 +105,5 @@ export default function ProcessStepsDropdown() {
         </div>
       </div>
     </section>
-  )
+  );
 }

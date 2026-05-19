@@ -1,14 +1,14 @@
-import FadeIn from "@/components/FadeIn"
-import { Clock, Mail, MapPin, Phone, Users } from "lucide-react"
-import { Metadata } from "next"
-import Image from "next/image"
-import Link from "next/link"
+import FadeIn from "@/components/FadeIn";
+import { Clock, Mail, MapPin, Phone, Users } from "lucide-react";
+import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
     "Get in touch with EASE for your construction and engineering needs. Professional consultation, project planning, and expert guidance for post-tensioning solutions in Ethiopia.",
-}
+};
 
 export default function ContactPage() {
   return (
@@ -22,13 +22,11 @@ export default function ContactPage() {
 
         <div className="container-xl relative z-10">
           <div className="mx-auto max-w-4xl text-center text-white">
-            <h1 className="mb-6 text-4xl font-black text-white md:text-5xl">
-              Contact EASE
-            </h1>
+            <h1 className="mb-6 text-4xl font-black text-white md:text-5xl">Contact EASE</h1>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-neutral">
-              Ready to start your next construction project? Get in touch with
-              our team of experts for comprehensive engineering solutions and
-              professional consultation tailored to your specific needs.
+              Ready to start your next construction project? Get in touch with our team of experts
+              for comprehensive engineering solutions and professional consultation tailored to your
+              specific needs.
             </p>
           </div>
         </div>
@@ -39,77 +37,66 @@ export default function ContactPage() {
         <div className="container-xl">
           <FadeIn>
             <div className="mb-12 text-center">
-            <h2 className="mb-6 text-3xl font-bold text-secondary">
-              Get in Touch
-            </h2>
-            <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted">
-              Reach out to us through any of the following channels. Our team is
-              available to assist you with your construction and engineering
-              needs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div className="card card-body flex h-full flex-col text-center">
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                <Phone size={32} className="text-primary" />
-              </div>
-              <h3 className="mb-3 text-xl font-semibold text-secondary">
-                Phone Numbers
-              </h3>
-              <Link
-                href="tel:+251116671615"
-                className="block text-muted transition-colors duration-200 hover:text-primary"
-              >
-                +251 116 671 615
-              </Link>
-              <Link
-                href="tel:+251968601177"
-                className="block text-muted transition-colors duration-200 hover:text-primary"
-              >
-                +251 968 601 177
-              </Link>
+              <h2 className="mb-6 text-3xl font-bold text-secondary">Get in Touch</h2>
+              <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted">
+                Reach out to us through any of the following channels. Our team is available to
+                assist you with your construction and engineering needs.
+              </p>
             </div>
 
-            <div className="card card-body flex h-full flex-col text-center">
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                <Mail size={32} className="text-primary" />
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="card card-body flex h-full flex-col text-center">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                  <Phone size={32} className="text-primary" />
+                </div>
+                <h3 className="mb-3 text-xl font-semibold text-secondary">Phone Numbers</h3>
+                <Link
+                  href="tel:+251116671615"
+                  className="block text-muted transition-colors duration-200 hover:text-primary"
+                >
+                  +251 116 671 615
+                </Link>
+                <Link
+                  href="tel:+251968601177"
+                  className="block text-muted transition-colors duration-200 hover:text-primary"
+                >
+                  +251 968 601 177
+                </Link>
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-secondary">
-                Email Address
-              </h3>
-              <Link
-                href="mailto:info@ease-int.com"
-                className="text-muted transition-colors duration-200 hover:text-primary"
-              >
-                info@ease-int.com
-              </Link>
-            </div>
 
-            <div className="card card-body flex h-full flex-col text-center">
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                <MapPin size={32} className="text-primary" />
+              <div className="card card-body flex h-full flex-col text-center">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                  <Mail size={32} className="text-primary" />
+                </div>
+                <h3 className="mb-3 text-xl font-semibold text-secondary">Email Address</h3>
+                <Link
+                  href="mailto:info@ease-int.com"
+                  className="text-muted transition-colors duration-200 hover:text-primary"
+                >
+                  info@ease-int.com
+                </Link>
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-secondary">
-                Office Location
-              </h3>
-              <p className="text-muted">Bole Sub-City, Woreda 06</p>
-              <p className="text-muted">Jacros-Salitemehret RD</p>
-              <p className="text-muted">Addis Ababa, Ethiopia</p>
-            </div>
 
-            <div className="card card-body flex h-full flex-col text-center">
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                <Clock size={32} className="text-primary" />
+              <div className="card card-body flex h-full flex-col text-center">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                  <MapPin size={32} className="text-primary" />
+                </div>
+                <h3 className="mb-3 text-xl font-semibold text-secondary">Office Location</h3>
+                <p className="text-muted">Bole Sub-City, Woreda 06</p>
+                <p className="text-muted">Jacros-Salitemehret RD</p>
+                <p className="text-muted">Addis Ababa, Ethiopia</p>
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-secondary">
-                Business Hours
-              </h3>
-              <p className="text-muted">Monday - Friday: 8:00 AM - 6:00 PM</p>
-              <p className="text-muted">Saturday: 9:00 AM - 2:00 PM</p>
-              <p className="text-muted">Sunday: Closed</p>
+
+              <div className="card card-body flex h-full flex-col text-center">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                  <Clock size={32} className="text-primary" />
+                </div>
+                <h3 className="mb-3 text-xl font-semibold text-secondary">Business Hours</h3>
+                <p className="text-muted">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                <p className="text-muted">Saturday: 9:00 AM - 2:00 PM</p>
+                <p className="text-muted">Sunday: Closed</p>
+              </div>
             </div>
-          </div>
           </FadeIn>
         </div>
       </section>
@@ -118,13 +105,10 @@ export default function ContactPage() {
       <section className="section-sm bg-neutral">
         <div className="container-xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-6 text-3xl font-bold text-secondary">
-              Find Our Office
-            </h2>
+            <h2 className="mb-6 text-3xl font-bold text-secondary">Find Our Office</h2>
             <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted">
-              Visit us at our office location in Addis Ababa. We&apos;re
-              conveniently located and easily accessible for consultations and
-              meetings.
+              Visit us at our office location in Addis Ababa. We&apos;re conveniently located and
+              easily accessible for consultations and meetings.
             </p>
           </div>
 
@@ -164,14 +148,11 @@ export default function ContactPage() {
                 <Users size={32} className="text-primary" />
               </div>
             </div>
-            <h2 className="mb-6 text-3xl font-bold text-secondary">
-              Join Our Team
-            </h2>
+            <h2 className="mb-6 text-3xl font-bold text-secondary">Join Our Team</h2>
             <p className="mx-auto mb-6 max-w-3xl text-lg leading-relaxed text-muted">
-              Are you passionate about construction and engineering? We&apos;re
-              always looking for talented individuals to join our growing team.
-              Send us your resume and tell us why you&apos;d be a great fit for
-              EASE.
+              Are you passionate about construction and engineering? We&apos;re always looking for
+              talented individuals to join our growing team. Send us your resume and tell us why
+              you&apos;d be a great fit for EASE.
             </p>
             <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted">
               Send your resume to info@ease-int.com
@@ -182,5 +163,5 @@ export default function ContactPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

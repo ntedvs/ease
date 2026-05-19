@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import FadeIn from "@/components/FadeIn"
-import projectsData from "@/../projects.json"
+import FadeIn from "@/components/FadeIn";
+import projectsData from "@/../projects.json";
 import {
   RailSymbol as Bridge,
   Briefcase,
@@ -19,19 +19,19 @@ import {
   MapPin,
   Maximize2,
   Warehouse,
-} from "lucide-react"
-import Image from "next/image"
-import { useEffect, useState } from "react"
+} from "lucide-react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 // Project type interface
 interface Project {
-  name: string
-  area?: number
-  signingDate?: string
-  category: string
-  hasImage: boolean
-  imageUrl?: string | null
-  year: number
+  name: string;
+  area?: number;
+  signingDate?: string;
+  category: string;
+  hasImage: boolean;
+  imageUrl?: string | null;
+  year: number;
 }
 
 // Category mapping for display names
@@ -52,110 +52,110 @@ const categoryDisplayNames: Record<string, string> = {
   Office: "Office",
   "Mixed Use": "Mixed Use",
   "Personal Residence": "Personal Residence",
-}
+};
 
 // Category icon mapping
 const getCategoryIcon = (category: string) => {
-  const normalizedCategory = category === "Apartement" ? "Apartment" : category
+  const normalizedCategory = category === "Apartement" ? "Apartment" : category;
 
   switch (normalizedCategory) {
     case "Government":
-      return <Landmark size={16} className="text-primary" />
+      return <Landmark size={16} className="text-primary" />;
     case "Apartment":
-      return <Building size={16} className="text-primary" />
+      return <Building size={16} className="text-primary" />;
     case "Mixed Use":
-      return <Building2 size={16} className="text-primary" />
+      return <Building2 size={16} className="text-primary" />;
     case "Hotel":
-      return <Hotel size={16} className="text-primary" />
+      return <Hotel size={16} className="text-primary" />;
     case "Personal Residence":
-      return <Home size={16} className="text-primary" />
+      return <Home size={16} className="text-primary" />;
     case "Hospital":
-      return <Hospital size={16} className="text-primary" />
+      return <Hospital size={16} className="text-primary" />;
     case "Warehouse":
-      return <Warehouse size={16} className="text-primary" />
+      return <Warehouse size={16} className="text-primary" />;
     case "Commercial":
-      return <Briefcase size={16} className="text-primary" />
+      return <Briefcase size={16} className="text-primary" />;
     case "Shoring":
-      return <Construction size={16} className="text-primary" />
+      return <Construction size={16} className="text-primary" />;
     case "Bank":
-      return <CreditCard size={16} className="text-primary" />
+      return <CreditCard size={16} className="text-primary" />;
     case "Educational":
-      return <GraduationCap size={16} className="text-primary" />
+      return <GraduationCap size={16} className="text-primary" />;
     case "Bridge":
-      return <Bridge size={16} className="text-primary" />
+      return <Bridge size={16} className="text-primary" />;
     case "Industrial":
-      return <Factory size={16} className="text-primary" />
+      return <Factory size={16} className="text-primary" />;
     case "Office":
-      return <Building2 size={16} className="text-primary" />
+      return <Building2 size={16} className="text-primary" />;
     default:
-      return <Building size={16} className="text-primary" />
+      return <Building size={16} className="text-primary" />;
   }
-}
+};
 
 export default function Projects() {
-  const [projects, setProjects] = useState<Project[]>([])
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>([])
-  const [activeCategory, setActiveCategory] = useState<string>("All")
-  const [loading, setLoading] = useState(true)
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
+  const [activeCategory, setActiveCategory] = useState<string>("All");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Sort projects to show image projects first
     const sortedProjects = projectsData.projects.sort((a, b) => {
-      if (a.hasImage && !b.hasImage) return -1
-      if (!a.hasImage && b.hasImage) return 1
-      return 0
-    })
-    setProjects(sortedProjects)
-    setFilteredProjects(sortedProjects)
-    setLoading(false)
-  }, [])
+      if (a.hasImage && !b.hasImage) return -1;
+      if (!a.hasImage && b.hasImage) return 1;
+      return 0;
+    });
+    setProjects(sortedProjects);
+    setFilteredProjects(sortedProjects);
+    setLoading(false);
+  }, []);
 
   // Filter projects by category
   const filterProjects = (category: string) => {
-    setActiveCategory(category)
+    setActiveCategory(category);
     if (category === "All") {
-      setFilteredProjects(projects)
+      setFilteredProjects(projects);
     } else {
       const filtered = projects.filter((project) => {
         const normalizedCategory =
-          project.category === "Apartement" ? "Apartment" : project.category
-        return normalizedCategory === category
-      })
+          project.category === "Apartement" ? "Apartment" : project.category;
+        return normalizedCategory === category;
+      });
       // Sort filtered projects to show image projects first
       const sortedFiltered = filtered.sort((a, b) => {
-        if (a.hasImage && !b.hasImage) return -1
-        if (!a.hasImage && b.hasImage) return 1
-        return 0
-      })
-      setFilteredProjects(sortedFiltered)
+        if (a.hasImage && !b.hasImage) return -1;
+        if (!a.hasImage && b.hasImage) return 1;
+        return 0;
+      });
+      setFilteredProjects(sortedFiltered);
     }
-  }
+  };
 
   // Get unique categories for filter buttons
   const getCategories = () => {
     const categories = Array.from(
       new Set(
         projects.map((p) => {
-          return p.category === "Apartement" ? "Apartment" : p.category
+          return p.category === "Apartement" ? "Apartment" : p.category;
         }),
       ),
-    )
-    return ["All", ...categories.sort()]
-  }
+    );
+    return ["All", ...categories.sort()];
+  };
 
   // Static statistics as requested
   const stats = {
     government: 14,
     residential: 20,
     commercial: 8,
-  }
+  };
 
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center">
         <div className="text-xl text-muted">Loading projects...</div>
       </div>
-    )
+    );
   }
 
   return (
@@ -173,9 +173,9 @@ export default function Projects() {
               Our <span className="text-primary">Projects</span>
             </h1>
             <p className="text-xl leading-relaxed text-white/90 md:text-2xl">
-              Discover our extensive portfolio of construction projects across
-              East Africa. From government buildings to residential complexes, see
-              how EASE delivers excellence in every project.
+              Discover our extensive portfolio of construction projects across East Africa. From
+              government buildings to residential complexes, see how EASE delivers excellence in
+              every project.
             </p>
           </div>
         </div>
@@ -186,70 +186,64 @@ export default function Projects() {
         <div className="container-xl">
           <FadeIn>
             <div className="mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Project Portfolio
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Over a decade of successful project delivery across diverse
-              sectors and challenging environments throughout East Africa.
-            </p>
-          </div>
+              <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
+                Project Portfolio
+              </h2>
+              <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
+                Over a decade of successful project delivery across diverse sectors and challenging
+                environments throughout East Africa.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <div className="card group transition-all duration-300 hover:shadow-lg">
-              <div className="card-body space-y-6 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <Building size={32} className="text-primary" />
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-6 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <Building size={32} className="text-primary" />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="mb-2 text-3xl font-black text-secondary">
+                      {stats.government}
+                    </div>
+                    <h3 className="text-xl font-bold text-secondary">Government Buildings</h3>
                   </div>
                 </div>
-                <div>
-                  <div className="mb-2 text-3xl font-black text-secondary">
-                    {stats.government}
+              </div>
+
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-6 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <Building2 size={32} className="text-primary" />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-secondary">
-                    Government Buildings
-                  </h3>
+                  <div>
+                    <div className="mb-2 text-3xl font-black text-secondary">
+                      {stats.residential}
+                    </div>
+                    <h3 className="text-xl font-bold text-secondary">Residential Projects</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card group transition-all duration-300 hover:shadow-lg">
+                <div className="card-body space-y-6 text-center">
+                  <div className="flex justify-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
+                      <Maximize2 size={32} className="text-primary" />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="mb-2 text-3xl font-black text-secondary">
+                      {stats.commercial}
+                    </div>
+                    <h3 className="text-xl font-bold text-secondary">Commercial Buildings</h3>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <div className="card group transition-all duration-300 hover:shadow-lg">
-              <div className="card-body space-y-6 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <Building2 size={32} className="text-primary" />
-                  </div>
-                </div>
-                <div>
-                  <div className="mb-2 text-3xl font-black text-secondary">
-                    {stats.residential}
-                  </div>
-                  <h3 className="text-xl font-bold text-secondary">
-                    Residential Projects
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="card group transition-all duration-300 hover:shadow-lg">
-              <div className="card-body space-y-6 text-center">
-                <div className="flex justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
-                    <Maximize2 size={32} className="text-primary" />
-                  </div>
-                </div>
-                <div>
-                  <div className="mb-2 text-3xl font-black text-secondary">
-                    {stats.commercial}
-                  </div>
-                  <h3 className="text-xl font-bold text-secondary">
-                    Commercial Buildings
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
           </FadeIn>
         </div>
       </section>
@@ -258,12 +252,10 @@ export default function Projects() {
       <section className="section bg-white">
         <div className="container-xl">
           <div className="mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">
-              Case Studies
-            </h2>
+            <h2 className="mb-6 text-4xl font-black text-secondary md:text-5xl">Case Studies</h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Explore how EASE tackles complex engineering challenges with
-              innovative post-tensioning solutions and structural expertise.
+              Explore how EASE tackles complex engineering challenges with innovative
+              post-tensioning solutions and structural expertise.
             </p>
           </div>
 
@@ -278,42 +270,31 @@ export default function Projects() {
                       Government Complex
                     </span>
                   </div>
-                  <h3 className="text-3xl font-black text-secondary">
-                    Foreign Affairs Building
-                  </h3>
+                  <h3 className="text-3xl font-black text-secondary">Foreign Affairs Building</h3>
                 </div>
 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="mb-3 text-lg font-bold text-secondary">
-                      Challenge
-                    </h4>
+                    <h4 className="mb-3 text-lg font-bold text-secondary">Challenge</h4>
                     <p className="leading-relaxed text-muted">
-                      Constructing a large-scale government facility with
-                      48,850 m² of floor area requiring exceptional structural
-                      integrity, seismic resistance, and long-term durability
-                      while meeting strict governmental security and safety
-                      standards.
+                      Constructing a large-scale government facility with 48,850 m² of floor area
+                      requiring exceptional structural integrity, seismic resistance, and long-term
+                      durability while meeting strict governmental security and safety standards.
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="mb-3 text-lg font-bold text-secondary">
-                      EASE Solution
-                    </h4>
+                    <h4 className="mb-3 text-lg font-bold text-secondary">EASE Solution</h4>
                     <p className="leading-relaxed text-muted">
-                      Implemented advanced post-tensioning systems throughout
-                      the structure, enabling large column-free spaces for
-                      flexible office layouts. Our engineering team designed
-                      custom reinforcement solutions to handle complex loading
+                      Implemented advanced post-tensioning systems throughout the structure,
+                      enabling large column-free spaces for flexible office layouts. Our engineering
+                      team designed custom reinforcement solutions to handle complex loading
                       conditions and ensure optimal structural performance.
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="mb-3 text-lg font-bold text-secondary">
-                      Key Outcomes
-                    </h4>
+                    <h4 className="mb-3 text-lg font-bold text-secondary">Key Outcomes</h4>
                     <ul className="space-y-2 text-muted">
                       <li className="flex items-start space-x-2">
                         <span className="mt-2 h-1.5 w-1.5 bg-primary"></span>
@@ -359,41 +340,31 @@ export default function Projects() {
                       Commercial Complex
                     </span>
                   </div>
-                  <h3 className="text-3xl font-black text-secondary">
-                    Cultural Market Center
-                  </h3>
+                  <h3 className="text-3xl font-black text-secondary">Cultural Market Center</h3>
                 </div>
 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="mb-3 text-lg font-bold text-secondary">
-                      Challenge
-                    </h4>
+                    <h4 className="mb-3 text-lg font-bold text-secondary">Challenge</h4>
                     <p className="leading-relaxed text-muted">
-                      Developing a 38,000 m² mixed-use commercial center that
-                      balances cultural preservation with modern retail
-                      functionality, requiring innovative structural solutions
-                      for large open spaces and varying load requirements.
+                      Developing a 38,000 m² mixed-use commercial center that balances cultural
+                      preservation with modern retail functionality, requiring innovative structural
+                      solutions for large open spaces and varying load requirements.
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="mb-3 text-lg font-bold text-secondary">
-                      EASE Solution
-                    </h4>
+                    <h4 className="mb-3 text-lg font-bold text-secondary">EASE Solution</h4>
                     <p className="leading-relaxed text-muted">
-                      Deployed selective post-tensioning techniques to create
-                      expansive retail spaces while maintaining structural
-                      integrity. Our team integrated traditional architectural
-                      elements with modern engineering principles, ensuring
-                      cultural sensitivity without compromising performance.
+                      Deployed selective post-tensioning techniques to create expansive retail
+                      spaces while maintaining structural integrity. Our team integrated traditional
+                      architectural elements with modern engineering principles, ensuring cultural
+                      sensitivity without compromising performance.
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="mb-3 text-lg font-bold text-secondary">
-                      Key Outcomes
-                    </h4>
+                    <h4 className="mb-3 text-lg font-bold text-secondary">Key Outcomes</h4>
                     <ul className="space-y-2 text-muted">
                       <li className="flex items-start space-x-2">
                         <span className="mt-2 h-1.5 w-1.5 bg-primary"></span>
@@ -439,42 +410,31 @@ export default function Projects() {
                       Infrastructure Project
                     </span>
                   </div>
-                  <h3 className="text-3xl font-black text-secondary">
-                    Omo River Bridge
-                  </h3>
+                  <h3 className="text-3xl font-black text-secondary">Omo River Bridge</h3>
                 </div>
 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="mb-3 text-lg font-bold text-secondary">
-                      Challenge
-                    </h4>
+                    <h4 className="mb-3 text-lg font-bold text-secondary">Challenge</h4>
                     <p className="leading-relaxed text-muted">
-                      Constructing a critical river crossing in challenging
-                      terrain with seasonal flooding, requiring precise
-                      engineering to withstand dynamic water loads while
-                      ensuring long-term structural stability in harsh
-                      environmental conditions.
+                      Constructing a critical river crossing in challenging terrain with seasonal
+                      flooding, requiring precise engineering to withstand dynamic water loads while
+                      ensuring long-term structural stability in harsh environmental conditions.
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="mb-3 text-lg font-bold text-secondary">
-                      EASE Solution
-                    </h4>
+                    <h4 className="mb-3 text-lg font-bold text-secondary">EASE Solution</h4>
                     <p className="leading-relaxed text-muted">
-                      Utilized specialized post-tensioning cable systems
-                      designed for bridge applications, incorporating advanced
-                      foundation techniques and water-resistant materials. Our
-                      engineers conducted extensive hydraulic analysis to ensure
+                      Utilized specialized post-tensioning cable systems designed for bridge
+                      applications, incorporating advanced foundation techniques and water-resistant
+                      materials. Our engineers conducted extensive hydraulic analysis to ensure
                       optimal span configuration and pier placement.
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="mb-3 text-lg font-bold text-secondary">
-                      Key Outcomes
-                    </h4>
+                    <h4 className="mb-3 text-lg font-bold text-secondary">Key Outcomes</h4>
                     <ul className="space-y-2 text-muted">
                       <li className="flex items-start space-x-2">
                         <span className="mt-2 h-1.5 w-1.5 bg-primary"></span>
@@ -520,42 +480,32 @@ export default function Projects() {
                       Mixed Use Development
                     </span>
                   </div>
-                  <h3 className="text-3xl font-black text-secondary">
-                    Fedengua Phase 1
-                  </h3>
+                  <h3 className="text-3xl font-black text-secondary">Fedengua Phase 1</h3>
                 </div>
 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="mb-3 text-lg font-bold text-secondary">
-                      Challenge
-                    </h4>
+                    <h4 className="mb-3 text-lg font-bold text-secondary">Challenge</h4>
                     <p className="leading-relaxed text-muted">
-                      Developing a complex 33,520 m² mixed-use project with
-                      diverse structural requirements, integrating residential,
-                      commercial, and office spaces while optimizing space
-                      efficiency and ensuring consistent structural performance
+                      Developing a complex 33,520 m² mixed-use project with diverse structural
+                      requirements, integrating residential, commercial, and office spaces while
+                      optimizing space efficiency and ensuring consistent structural performance
                       across varying usage patterns.
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="mb-3 text-lg font-bold text-secondary">
-                      EASE Solution
-                    </h4>
+                    <h4 className="mb-3 text-lg font-bold text-secondary">EASE Solution</h4>
                     <p className="leading-relaxed text-muted">
-                      Implemented comprehensive post-tensioning systems
-                      throughout the multi-use structure, enabling flexible
-                      floor plans and optimized load distribution. Our team
-                      coordinated complex mechanical and structural integration
-                      while maintaining cost-effective construction timelines.
+                      Implemented comprehensive post-tensioning systems throughout the multi-use
+                      structure, enabling flexible floor plans and optimized load distribution. Our
+                      team coordinated complex mechanical and structural integration while
+                      maintaining cost-effective construction timelines.
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="mb-3 text-lg font-bold text-secondary">
-                      Key Outcomes
-                    </h4>
+                    <h4 className="mb-3 text-lg font-bold text-secondary">Key Outcomes</h4>
                     <ul className="space-y-2 text-muted">
                       <li className="flex items-start space-x-2">
                         <span className="mt-2 h-1.5 w-1.5 bg-primary"></span>
@@ -602,8 +552,8 @@ export default function Projects() {
               Browse by Category
             </h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Filter our projects by category to explore specific types of
-              construction and engineering solutions.
+              Filter our projects by category to explore specific types of construction and
+              engineering solutions.
             </p>
           </div>
 
@@ -642,9 +592,7 @@ export default function Projects() {
                     </div>
                     <div className="card-body space-y-4">
                       <div className="flex items-start justify-between">
-                        <h3 className="text-lg font-bold text-secondary">
-                          {project.name}
-                        </h3>
+                        <h3 className="text-lg font-bold text-secondary">{project.name}</h3>
                         <span className="ml-2 rounded-full bg-primary/10 px-2 py-1 text-xs font-medium text-primary">
                           {project.year}
                         </span>
@@ -658,10 +606,7 @@ export default function Projects() {
                         )}
                         <div className="flex items-center space-x-2">
                           {getCategoryIcon(project.category)}
-                          <span>
-                            {categoryDisplayNames[project.category] ||
-                              project.category}
-                          </span>
+                          <span>{categoryDisplayNames[project.category] || project.category}</span>
                         </div>
                       </div>
                     </div>
@@ -671,9 +616,7 @@ export default function Projects() {
                   <div className="card transition-all duration-300 hover:shadow-lg">
                     <div className="card-body space-y-4">
                       <div className="flex items-start justify-between">
-                        <h3 className="text-lg font-bold text-secondary">
-                          {project.name}
-                        </h3>
+                        <h3 className="text-lg font-bold text-secondary">{project.name}</h3>
                         <span className="ml-2 rounded-full bg-primary/10 px-2 py-1 text-xs font-medium text-primary">
                           {project.year}
                         </span>
@@ -687,10 +630,7 @@ export default function Projects() {
                         )}
                         <div className="flex items-center space-x-2">
                           {getCategoryIcon(project.category)}
-                          <span>
-                            {categoryDisplayNames[project.category] ||
-                              project.category}
-                          </span>
+                          <span>{categoryDisplayNames[project.category] || project.category}</span>
                         </div>
                       </div>
                     </div>
@@ -703,16 +643,12 @@ export default function Projects() {
           {filteredProjects.length === 0 && (
             <div className="py-12 text-center">
               <Filter size={48} className="mx-auto mb-4 text-muted" />
-              <h3 className="mb-2 text-xl font-bold text-secondary">
-                No projects found
-              </h3>
-              <p className="text-muted">
-                Try selecting a different category to see more projects.
-              </p>
+              <h3 className="mb-2 text-xl font-bold text-secondary">No projects found</h3>
+              <p className="text-muted">Try selecting a different category to see more projects.</p>
             </div>
           )}
         </div>
       </section>
     </>
-  )
+  );
 }

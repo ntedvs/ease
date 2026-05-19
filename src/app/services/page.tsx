@@ -1,5 +1,5 @@
-import DownloadableResources from "@/components/DownloadableResources"
-import FadeIn from "@/components/FadeIn"
+import DownloadableResources from "@/components/DownloadableResources";
+import FadeIn from "@/components/FadeIn";
 import {
   Anchor,
   Building,
@@ -12,16 +12,16 @@ import {
   Shield,
   TrendingUp,
   Wrench,
-} from "lucide-react"
-import { Metadata } from "next"
-import Image from "next/image"
-import Link from "next/link"
+} from "lucide-react";
+import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Our Services",
   description:
     "Comprehensive construction and engineering services by EASE. From post-tensioning and precast solutions to structural design and project management across Ethiopia.",
-}
+};
 
 export default function ServicesPage() {
   const services = [
@@ -168,7 +168,7 @@ export default function ServicesPage() {
         "Maintenance and repair services",
       ],
     },
-  ]
+  ];
 
   return (
     <>
@@ -181,14 +181,11 @@ export default function ServicesPage() {
 
         <div className="container-xl relative z-10">
           <div className="mx-auto max-w-4xl text-center text-white">
-            <h1 className="mb-6 text-4xl font-black text-white md:text-5xl">
-              Our Services
-            </h1>
+            <h1 className="mb-6 text-4xl font-black text-white md:text-5xl">Our Services</h1>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-neutral">
-              EASE solves complex construction challenges through comprehensive
-              engineering services, combining decades of problem-solving
-              expertise with innovative approaches to deliver exceptional
-              solutions across diverse project types and scales.
+              EASE solves complex construction challenges through comprehensive engineering
+              services, combining decades of problem-solving expertise with innovative approaches to
+              deliver exceptional solutions across diverse project types and scales.
             </p>
           </div>
         </div>
@@ -208,29 +205,20 @@ export default function ServicesPage() {
                   >
                     {/* Content Side */}
                     <div
-                      className={`space-y-6 px-12 py-8 ${
-                        index % 2 === 1 ? "lg:col-start-2" : ""
-                      }`}
+                      className={`space-y-6 px-12 py-8 ${index % 2 === 1 ? "lg:col-start-2" : ""}`}
                     >
                       <div className="flex items-center space-x-4">
                         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
                           {service.icon}
                         </div>
-                        <h3 className="text-2xl font-bold text-secondary">
-                          {service.name}
-                        </h3>
+                        <h3 className="text-2xl font-bold text-secondary">{service.name}</h3>
                       </div>
 
-                      <p className="text-lg leading-relaxed text-muted">
-                        {service.description}
-                      </p>
+                      <p className="text-lg leading-relaxed text-muted">{service.description}</p>
 
                       <ul className="space-y-2">
                         {service.details.map((detail, detailIndex) => (
-                          <li
-                            key={detailIndex}
-                            className="flex items-start space-x-3"
-                          >
+                          <li key={detailIndex} className="flex items-start space-x-3">
                             <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-primary"></div>
                             <span className="text-foreground">{detail}</span>
                           </li>
@@ -239,11 +227,7 @@ export default function ServicesPage() {
                     </div>
 
                     {/* Image Side */}
-                    <div
-                      className={`px-12 py-8 ${
-                        index % 2 === 1 ? "lg:col-start-1" : ""
-                      }`}
-                    >
+                    <div className={`px-12 py-8 ${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
                       <div className="relative aspect-video w-full overflow-hidden bg-neutral/50 transition-all duration-300 group-hover:shadow-md">
                         <Image
                           src={service.image}
@@ -273,9 +257,8 @@ export default function ServicesPage() {
               Ready to Start Your Project?
             </h2>
             <p className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-muted">
-              Let&apos;s discuss how EASE can bring your construction vision to
-              life with our comprehensive engineering solutions and decades of
-              proven expertise.
+              Let&apos;s discuss how EASE can bring your construction vision to life with our
+              comprehensive engineering solutions and decades of proven expertise.
             </p>
 
             {/* CTA Buttons */}
@@ -291,5 +274,5 @@ export default function ServicesPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

@@ -1,23 +1,19 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
-const slides = [
-  "/heroslide/1.jpeg",
-  "/heroslide/2.png",
-  "/heroslide/3.jpeg",
-]
+const slides = ["/heroslide/1.jpeg", "/heroslide/2.png", "/heroslide/3.jpeg"];
 
 export default function HeroSlideshow() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000) // Change slide every 5 seconds
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000); // Change slide every 5 seconds
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -44,14 +40,12 @@ export default function HeroSlideshow() {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`h-3 w-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? "w-8 bg-white"
-                : "bg-white/50 hover:bg-white/75"
+              index === currentSlide ? "w-8 bg-white" : "bg-white/50 hover:bg-white/75"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
     </>
-  )
+  );
 }

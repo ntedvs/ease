@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { motion } from "motion/react"
-import { ReactNode } from "react"
+import { motion } from "motion/react";
+import { ReactNode } from "react";
 
 interface FadeInProps {
-  children: ReactNode
-  delay?: number
-  duration?: number
-  className?: string
+  children: ReactNode;
+  delay?: number;
+  duration?: number;
+  className?: string;
 }
 
 export default function FadeIn({
@@ -30,5 +30,5 @@ export default function FadeIn({
     >
       {children}
     </motion.div>
-  )
+  );
 }

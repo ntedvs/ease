@@ -1,119 +1,111 @@
-"use client"
+"use client";
 
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import Image from "next/image"
-import { useEffect, useRef, useState } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 interface CarouselImage {
-  src: string
-  alt: string
+  src: string;
+  alt: string;
 }
 
 interface ImageCarouselProps {
-  images: CarouselImage[]
+  images: CarouselImage[];
 }
 
 export default function ImageCarousel({ images }: ImageCarouselProps) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [isManuallyInteracting, setIsManuallyInteracting] = useState(false)
-  const intervalRef = useRef<NodeJS.Timeout | null>(null)
-  const carouselRef = useRef<HTMLDivElement>(null)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isManuallyInteracting, setIsManuallyInteracting] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   // Centralized timer management - ALWAYS clears existing timers first
   const startTimer = () => {
     // Always clear any existing timer first
     if (intervalRef.current) {
-      clearInterval(intervalRef.current)
-      intervalRef.current = null
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
     }
 
     // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     // Start new timer if motion is allowed
     if (!prefersReducedMotion) {
       intervalRef.current = setInterval(() => {
-        setCurrentImageIndex((prevIndex) =>
-          prevIndex === images.length - 1 ? 0 : prevIndex + 1,
-        )
-      }, 4000) // Increased from 4000ms to 5000ms for better UX
+        setCurrentImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+      }, 4000); // Increased from 4000ms to 5000ms for better UX
     }
-  }
+  };
 
   const stopTimer = () => {
     if (intervalRef.current) {
-      clearInterval(intervalRef.current)
-      intervalRef.current = null
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
     }
-  }
+  };
 
   // Legacy functions for backward compatibility with hover/focus events
-  const pauseAutoPlay = stopTimer
+  const pauseAutoPlay = stopTimer;
   const resumeAutoPlay = () => {
     // Only resume if not manually interacting
     if (!isManuallyInteracting) {
-      startTimer()
+      startTimer();
     }
-  }
+  };
 
   const nextImage = () => {
-    setCurrentImageIndex(
-      currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1,
-    )
-    handleManualInteraction()
-  }
+    setCurrentImageIndex(currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1);
+    handleManualInteraction();
+  };
 
   const prevImage = () => {
-    setCurrentImageIndex(
-      currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1,
-    )
-    handleManualInteraction()
-  }
+    setCurrentImageIndex(currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1);
+    handleManualInteraction();
+  };
 
   const goToImage = (index: number) => {
-    setCurrentImageIndex(index)
-    handleManualInteraction()
-  }
+    setCurrentImageIndex(index);
+    handleManualInteraction();
+  };
 
   // Handle manual user interactions - prevents timer conflicts
   const handleManualInteraction = () => {
     // Set manual interaction flag
-    setIsManuallyInteracting(true)
+    setIsManuallyInteracting(true);
 
     // Stop any existing timer
-    stopTimer()
+    stopTimer();
 
     // Start fresh timer immediately
-    startTimer()
+    startTimer();
 
     // Clear manual interaction flag after delay to allow hover events to work again
     setTimeout(() => {
-      setIsManuallyInteracting(false)
-    }, 1000) // 1 second buffer after manual interaction
-  }
+      setIsManuallyInteracting(false);
+    }, 1000); // 1 second buffer after manual interaction
+  };
 
   // Handle keyboard navigation
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === "ArrowLeft") {
-      event.preventDefault()
-      prevImage()
+      event.preventDefault();
+      prevImage();
     } else if (event.key === "ArrowRight") {
-      event.preventDefault()
-      nextImage()
+      event.preventDefault();
+      nextImage();
     }
-  }
+  };
 
   useEffect(() => {
     // Start initial timer using centralized function
-    startTimer()
+    startTimer();
 
     // Cleanup function
     return () => {
-      stopTimer()
-    }
-  }, [images.length]) // eslint-disable-line react-hooks/exhaustive-deps
+      stopTimer();
+    };
+  }, [images.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="flex justify-center">
@@ -182,5 +174,5 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

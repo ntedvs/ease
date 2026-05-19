@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Upload } from "lucide-react"
+import { Upload } from "lucide-react";
 
 export default function CareersForm() {
   return (
@@ -75,25 +75,29 @@ export default function CareersForm() {
               className="sr-only"
               onChange={(e) => {
                 const file = e.target.files?.[0];
-                const label = document.querySelector('[data-file-label]');
-                const errorMsg = document.querySelector('[data-file-error]');
-                
+                const label = document.querySelector("[data-file-label]");
+                const errorMsg = document.querySelector("[data-file-error]");
+
                 if (file) {
                   // Validate file size (5MB max)
                   if (file.size > 5 * 1024 * 1024) {
-                    if (errorMsg) errorMsg.textContent = 'File size must be less than 5MB';
+                    if (errorMsg) errorMsg.textContent = "File size must be less than 5MB";
                     return;
                   }
-                  
+
                   // Validate file type
-                  const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+                  const allowedTypes = [
+                    "application/pdf",
+                    "application/msword",
+                    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                  ];
                   if (!allowedTypes.includes(file.type)) {
-                    if (errorMsg) errorMsg.textContent = 'Please upload a PDF, DOC, or DOCX file';
+                    if (errorMsg) errorMsg.textContent = "Please upload a PDF, DOC, or DOCX file";
                     return;
                   }
-                  
+
                   if (label) label.textContent = file.name;
-                  if (errorMsg) errorMsg.textContent = '';
+                  if (errorMsg) errorMsg.textContent = "";
                 }
               }}
             />
@@ -102,43 +106,47 @@ export default function CareersForm() {
               className="flex cursor-pointer items-center justify-center border-2 border-dashed border-border bg-neutral/30 px-6 py-8 text-center transition-all duration-200 hover:border-primary hover:bg-primary/5"
               onDragOver={(e) => {
                 e.preventDefault();
-                e.currentTarget.classList.add('border-primary', 'bg-primary/10');
+                e.currentTarget.classList.add("border-primary", "bg-primary/10");
               }}
               onDragLeave={(e) => {
                 e.preventDefault();
-                e.currentTarget.classList.remove('border-primary', 'bg-primary/10');
+                e.currentTarget.classList.remove("border-primary", "bg-primary/10");
               }}
               onDrop={(e) => {
                 e.preventDefault();
-                e.currentTarget.classList.remove('border-primary', 'bg-primary/10');
-                
+                e.currentTarget.classList.remove("border-primary", "bg-primary/10");
+
                 const files = e.dataTransfer.files;
                 if (files.length > 0) {
                   const file = files[0];
-                  const input = document.getElementById('resume') as HTMLInputElement;
-                  const label = document.querySelector('[data-file-label]');
-                  const errorMsg = document.querySelector('[data-file-error]');
-                  
+                  const input = document.getElementById("resume") as HTMLInputElement;
+                  const label = document.querySelector("[data-file-label]");
+                  const errorMsg = document.querySelector("[data-file-error]");
+
                   // Validate file size (5MB max)
                   if (file.size > 5 * 1024 * 1024) {
-                    if (errorMsg) errorMsg.textContent = 'File size must be less than 5MB';
+                    if (errorMsg) errorMsg.textContent = "File size must be less than 5MB";
                     return;
                   }
-                  
+
                   // Validate file type
-                  const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+                  const allowedTypes = [
+                    "application/pdf",
+                    "application/msword",
+                    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                  ];
                   if (!allowedTypes.includes(file.type)) {
-                    if (errorMsg) errorMsg.textContent = 'Please upload a PDF, DOC, or DOCX file';
+                    if (errorMsg) errorMsg.textContent = "Please upload a PDF, DOC, or DOCX file";
                     return;
                   }
-                  
+
                   // Create a new FileList and assign to input
                   const dt = new DataTransfer();
                   dt.items.add(file);
                   if (input) input.files = dt.files;
-                  
+
                   if (label) label.textContent = file.name;
-                  if (errorMsg) errorMsg.textContent = '';
+                  if (errorMsg) errorMsg.textContent = "";
                 }
               }}
             >
@@ -150,9 +158,7 @@ export default function CareersForm() {
                   <p className="text-sm font-medium text-foreground" data-file-label>
                     Click to upload or drag and drop your resume
                   </p>
-                  <p className="text-xs text-muted">
-                    PDF, DOC, or DOCX (max 5MB)
-                  </p>
+                  <p className="text-xs text-muted">PDF, DOC, or DOCX (max 5MB)</p>
                 </div>
               </div>
             </label>
@@ -170,9 +176,10 @@ export default function CareersForm() {
         </button>
 
         <p className="text-center text-xs text-muted">
-          By submitting this form, you agree to our privacy policy and consent to us contacting you regarding career opportunities at EASE.
+          By submitting this form, you agree to our privacy policy and consent to us contacting you
+          regarding career opportunities at EASE.
         </p>
       </form>
     </div>
-  )
+  );
 }

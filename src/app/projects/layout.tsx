@@ -1,5 +1,5 @@
-import { Metadata } from "next"
-import { ReactNode } from "react"
+import { Metadata } from "next";
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Our Projects",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     "construction portfolio",
     "building projects",
   ],
-}
+};
 
 export default function ProjectsLayout({ children }: { children: ReactNode }) {
-  return <>{children}</>
+  return <>{children}</>;
 }

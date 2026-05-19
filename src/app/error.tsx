@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { AlertTriangle, RefreshCw, Home } from "lucide-react"
-import Link from "next/link"
-import { useEffect } from "react"
+import { AlertTriangle, RefreshCw, Home } from "lucide-react";
+import Link from "next/link";
+import { useEffect } from "react";
 
 interface ErrorProps {
-  error: Error & { digest?: string }
-  reset: () => void
+  error: Error & { digest?: string };
+  reset: () => void;
 }
 
 export default function Error({ error, reset }: ErrorProps) {
   useEffect(() => {
     // Log the error to an error reporting service
-    console.error("Application error:", error)
-  }, [error])
+    console.error("Application error:", error);
+  }, [error]);
 
   return (
     <div className="section bg-neutral">
@@ -32,21 +32,17 @@ export default function Error({ error, reset }: ErrorProps) {
               Something went wrong
             </h1>
             <p className="mb-4 text-lg leading-relaxed text-muted">
-              We encountered an unexpected error while processing your request.
-              Our team has been notified and is working to resolve the issue.
+              We encountered an unexpected error while processing your request. Our team has been
+              notified and is working to resolve the issue.
             </p>
             {process.env.NODE_ENV === "development" && (
               <details className="mt-4 bg-error/5 p-4 text-left">
                 <summary className="cursor-pointer font-medium text-error">
                   Error Details (Development Mode)
                 </summary>
-                <pre className="mt-2 text-sm whitespace-pre-wrap text-error">
-                  {error.message}
-                </pre>
+                <pre className="mt-2 text-sm whitespace-pre-wrap text-error">{error.message}</pre>
                 {error.digest && (
-                  <p className="mt-2 text-sm text-muted">
-                    Error ID: {error.digest}
-                  </p>
+                  <p className="mt-2 text-sm text-muted">Error ID: {error.digest}</p>
                 )}
               </details>
             )}
@@ -61,10 +57,7 @@ export default function Error({ error, reset }: ErrorProps) {
               <RefreshCw size={20} />
               <span>Try Again</span>
             </button>
-            <Link
-              href="/"
-              className="btn btn-secondary btn-lg inline-flex items-center space-x-2"
-            >
+            <Link href="/" className="btn btn-secondary btn-lg inline-flex items-center space-x-2">
               <Home size={20} />
               <span>Go Home</span>
             </Link>
@@ -76,8 +69,7 @@ export default function Error({ error, reset }: ErrorProps) {
               Need Immediate Assistance?
             </h3>
             <p className="mb-4 text-muted">
-              If this error persists, please contact our support team with the
-              details above.
+              If this error persists, please contact our support team with the details above.
             </p>
             <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-6">
               <Link
@@ -97,9 +89,7 @@ export default function Error({ error, reset }: ErrorProps) {
 
           {/* Quick Navigation */}
           <div className="mt-8">
-            <h3 className="mb-4 text-lg font-semibold text-secondary">
-              Continue Exploring
-            </h3>
+            <h3 className="mb-4 text-lg font-semibold text-secondary">Continue Exploring</h3>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
               <Link
                 href="/about"
@@ -130,5 +120,5 @@ export default function Error({ error, reset }: ErrorProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

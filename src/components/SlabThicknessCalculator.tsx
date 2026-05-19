@@ -1,26 +1,18 @@
-"use client"
+"use client";
 
-import { Calculator, TrendingDown } from "lucide-react"
-import { useState } from "react"
+import { Calculator, TrendingDown } from "lucide-react";
+import { useState } from "react";
 
 export default function SlabThicknessCalculator() {
-  const [slabThickness, setSlabThickness] = useState(26)
-  const [slabLength, setSlabLength] = useState(7.5)
-  const [totalServiceLoad, setTotalServiceLoad] = useState(6)
+  const [slabThickness, setSlabThickness] = useState(26);
+  const [slabLength, setSlabLength] = useState(7.5);
+  const [totalServiceLoad, setTotalServiceLoad] = useState(6);
 
-  const calculateOutput = (
-    thickness: number,
-    length: number,
-    load: number,
-  ): number => {
-    return 0.8125 * thickness * (1 + 0.01 * (length - 7.5) + 0.005 * (load - 6))
-  }
+  const calculateOutput = (thickness: number, length: number, load: number): number => {
+    return 0.8125 * thickness * (1 + 0.01 * (length - 7.5) + 0.005 * (load - 6));
+  };
 
-  const calculatedOutput = calculateOutput(
-    slabThickness,
-    slabLength,
-    totalServiceLoad,
-  )
+  const calculatedOutput = calculateOutput(slabThickness, slabLength, totalServiceLoad);
 
   return (
     <section className="section bg-neutral">
@@ -30,9 +22,8 @@ export default function SlabThicknessCalculator() {
             Post-Tensioning <span className="text-primary">Calculator</span>
           </h2>
           <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-            Discover how post-tensioning technology can optimize your slab
-            thickness and reduce material costs while maintaining structural
-            integrity.
+            Discover how post-tensioning technology can optimize your slab thickness and reduce
+            material costs while maintaining structural integrity.
           </p>
         </div>
 
@@ -73,16 +64,12 @@ export default function SlabThicknessCalculator() {
                           min="20"
                           max="32"
                           value={slabThickness}
-                          onChange={(e) =>
-                            setSlabThickness(Number(e.target.value))
-                          }
+                          onChange={(e) => setSlabThickness(Number(e.target.value))}
                           className="slider h-3 w-full cursor-pointer appearance-none bg-neutral-dark focus:ring-2 focus:ring-primary focus:outline-none"
                           style={{
                             background: `linear-gradient(to right, #e82d22 0%, #e82d22 ${
                               ((slabThickness - 20) / 12) * 100
-                            }%, #e6e6e6 ${
-                              ((slabThickness - 20) / 12) * 100
-                            }%, #e6e6e6 100%)`,
+                            }%, #e6e6e6 ${((slabThickness - 20) / 12) * 100}%, #e6e6e6 100%)`,
                           }}
                         />
                         <div className="flex justify-between text-sm text-muted">
@@ -94,10 +81,7 @@ export default function SlabThicknessCalculator() {
 
                     {/* Slab Length Input */}
                     <div className="space-y-2">
-                      <label
-                        htmlFor="slab-length"
-                        className="text-lg font-medium text-secondary"
-                      >
+                      <label htmlFor="slab-length" className="text-lg font-medium text-secondary">
                         Slab Length (meters)
                       </label>
                       <input
@@ -114,10 +98,7 @@ export default function SlabThicknessCalculator() {
 
                     {/* Total Service Load Input */}
                     <div className="space-y-2">
-                      <label
-                        htmlFor="service-load"
-                        className="text-lg font-medium text-secondary"
-                      >
+                      <label htmlFor="service-load" className="text-lg font-medium text-secondary">
                         Total Service Load (kN/m²)
                       </label>
                       <input
@@ -127,9 +108,7 @@ export default function SlabThicknessCalculator() {
                         max="20"
                         step="0.1"
                         value={totalServiceLoad}
-                        onChange={(e) =>
-                          setTotalServiceLoad(Number(e.target.value))
-                        }
+                        onChange={(e) => setTotalServiceLoad(Number(e.target.value))}
                         className="w-full border border-border bg-white px-4 py-3 text-lg font-medium text-secondary focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none"
                       />
                     </div>
@@ -142,16 +121,12 @@ export default function SlabThicknessCalculator() {
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                       <TrendingDown size={24} className="text-primary" />
                     </div>
-                    <h3 className="text-2xl font-bold text-secondary">
-                      Estimated Results
-                    </h3>
+                    <h3 className="text-2xl font-bold text-secondary">Estimated Results</h3>
                   </div>
 
                   <div className="space-y-4">
                     <div className="bg-primary/5 p-6">
-                      <div className="mb-2 text-sm font-medium text-muted">
-                        Estimated Output
-                      </div>
+                      <div className="mb-2 text-sm font-medium text-muted">Estimated Output</div>
                       <div className="text-4xl font-black text-primary">
                         {calculatedOutput.toFixed(2)}
                       </div>
@@ -162,15 +137,11 @@ export default function SlabThicknessCalculator() {
 
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
                       <div className="bg-neutral p-4 text-center">
-                        <div className="text-lg font-black text-secondary">
-                          {slabThickness} cm
-                        </div>
+                        <div className="text-lg font-black text-secondary">{slabThickness} cm</div>
                         <div className="text-xs text-muted">Thickness</div>
                       </div>
                       <div className="bg-neutral p-4 text-center">
-                        <div className="text-lg font-black text-secondary">
-                          {slabLength} m
-                        </div>
+                        <div className="text-lg font-black text-secondary">{slabLength} m</div>
                         <div className="text-xs text-muted">Length</div>
                       </div>
                       <div className="bg-neutral p-4 text-center">
@@ -191,12 +162,10 @@ export default function SlabThicknessCalculator() {
                     Post-Tensioning Analysis Calculator
                   </h4>
                   <p className="mx-auto max-w-2xl text-sm text-muted">
-                    This calculator provides estimates using engineering
-                    formulas based on slab thickness, length, and service load
-                    parameters. Results are for preliminary assessment only and
-                    are not a guarantee or promise of actual performance.
-                    Professional engineering consultation is required for final
-                    design decisions.
+                    This calculator provides estimates using engineering formulas based on slab
+                    thickness, length, and service load parameters. Results are for preliminary
+                    assessment only and are not a guarantee or promise of actual performance.
+                    Professional engineering consultation is required for final design decisions.
                   </p>
                 </div>
               </div>
@@ -238,5 +207,5 @@ export default function SlabThicknessCalculator() {
         }
       `}</style>
     </section>
-  )
+  );
 }

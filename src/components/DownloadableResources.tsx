@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { Download, Users, Wrench, Building2 } from "lucide-react"
+import { Download, Users, Wrench, Building2 } from "lucide-react";
 
 interface DownloadItem {
-  title: string
-  description: string
-  fileSize: string
-  icon: React.ReactNode
-  href: string
-  available: boolean
+  title: string;
+  description: string;
+  fileSize: string;
+  icon: React.ReactNode;
+  href: string;
+  available: boolean;
 }
 
 export default function DownloadableResources() {
@@ -37,7 +37,7 @@ export default function DownloadableResources() {
       href: "/EaseProjectPortfolio.pdf",
       available: true,
     },
-  ]
+  ];
 
   return (
     <section className="section bg-neutral/20">
@@ -45,17 +45,19 @@ export default function DownloadableResources() {
         <div className="text-center">
           <h2 className="mb-6">Downloadable Resources</h2>
           <p className="mx-auto max-w-3xl text-lg text-muted">
-            Access our comprehensive library of technical resources, guidelines, and documentation designed to solve your construction and engineering challenges.
+            Access our comprehensive library of technical resources, guidelines, and documentation
+            designed to solve your construction and engineering challenges.
           </p>
         </div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {downloadItems.map((item, index) => {
-            const Component = item.available ? 'a' : 'div'
-            const baseClasses = "card card-body transition-all duration-200"
-            const availableClasses = "group hover-lift hover-shadow hover:border-primary cursor-pointer"
-            const disabledClasses = "opacity-50 cursor-not-allowed bg-neutral/50"
-            
+            const Component = item.available ? "a" : "div";
+            const baseClasses = "card card-body transition-all duration-200";
+            const availableClasses =
+              "group hover-lift hover-shadow hover:border-primary cursor-pointer";
+            const disabledClasses = "opacity-50 cursor-not-allowed bg-neutral/50";
+
             return (
               <Component
                 key={index}
@@ -63,33 +65,35 @@ export default function DownloadableResources() {
                 className={`${baseClasses} ${item.available ? availableClasses : disabledClasses}`}
               >
                 <div className="flex items-start space-x-4">
-                  <div className={`flex h-16 w-16 flex-shrink-0 items-center justify-center transition-colors duration-200 ${
-                    item.available 
-                      ? "bg-primary/10 group-hover:bg-primary/20" 
-                      : "bg-neutral/30"
-                  }`}>
+                  <div
+                    className={`flex h-16 w-16 flex-shrink-0 items-center justify-center transition-colors duration-200 ${
+                      item.available ? "bg-primary/10 group-hover:bg-primary/20" : "bg-neutral/30"
+                    }`}
+                  >
                     {item.available ? item.icon : <div className="opacity-50">{item.icon}</div>}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className={`text-lg font-semibold transition-colors duration-200 ${
-                      item.available 
-                        ? "text-secondary group-hover:text-primary" 
-                        : "text-muted"
-                    }`}>
+                    <h3
+                      className={`text-lg font-semibold transition-colors duration-200 ${
+                        item.available ? "text-secondary group-hover:text-primary" : "text-muted"
+                      }`}
+                    >
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-sm text-muted line-clamp-2">
-                      {item.description}
-                    </p>
+                    <p className="mt-2 text-sm text-muted line-clamp-2">{item.description}</p>
                     <div className="mt-4 flex items-center justify-between">
-                      <span className={`text-xs font-medium ${
-                        item.available ? "text-primary" : "text-muted"
-                      }`}>
+                      <span
+                        className={`text-xs font-medium ${
+                          item.available ? "text-primary" : "text-muted"
+                        }`}
+                      >
                         {item.fileSize}
                       </span>
-                      <div className={`flex items-center space-x-1 ${
-                        item.available ? "text-primary" : "text-muted"
-                      }`}>
+                      <div
+                        className={`flex items-center space-x-1 ${
+                          item.available ? "text-primary" : "text-muted"
+                        }`}
+                      >
                         <Download className="h-4 w-4" />
                         <span className="text-sm font-medium">
                           {item.available ? "Download" : "Coming Soon"}
@@ -99,27 +103,23 @@ export default function DownloadableResources() {
                   </div>
                 </div>
               </Component>
-            )
+            );
           })}
         </div>
 
         <div className="mt-12 text-center">
           <div className="border border-border bg-white p-8">
-            <h3 className="text-xl font-semibold text-secondary">
-              Need Custom Solutions?
-            </h3>
+            <h3 className="text-xl font-semibold text-secondary">Need Custom Solutions?</h3>
             <p className="mt-2 text-muted">
-              Our team can develop tailored technical documentation and resources to solve your specific engineering challenges.
+              Our team can develop tailored technical documentation and resources to solve your
+              specific engineering challenges.
             </p>
-            <a
-              href="/contact"
-              className="btn btn-primary mt-4 hover-scale"
-            >
+            <a href="/contact" className="btn btn-primary mt-4 hover-scale">
               Get Custom Resources
             </a>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,20 +1,13 @@
-import Header from "@/components/Header"
-import "@/styles/base.css"
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react"
-import { Metadata } from "next"
-import local from "next/font/local"
-import Image from "next/image"
-import Link from "next/link"
-import { ReactNode } from "react"
+import Header from "@/components/Header";
+import "@/styles/base.css";
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Metadata } from "next";
+import local from "next/font/local";
+import Image from "next/image";
+import Link from "next/link";
+import { ReactNode } from "react";
 
-const inter = local({ src: "../../public/hel.woff2" })
+const inter = local({ src: "../../public/hel.woff2" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ease-int.com"),
@@ -81,7 +74,7 @@ export const metadata: Metadata = {
   verification: {
     google: "your-google-verification-code",
   },
-}
+};
 
 function Footer() {
   return (
@@ -91,19 +84,12 @@ function Footer() {
           {/* EASE Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Image
-                src="/after.png"
-                alt="EASE Logo"
-                width={128}
-                height={128}
-              />
+              <Image src="/after.png" alt="EASE Logo" width={128} height={128} />
             </div>
-            <p className="text-lg leading-relaxed text-neutral">
-              Landmarks of Tomorrow
-            </p>
+            <p className="text-lg leading-relaxed text-neutral">Landmarks of Tomorrow</p>
             <p className="text-sm leading-relaxed text-neutral/80">
-              Building icons that inspire future generations through innovation,
-              strength, and vision.
+              Building icons that inspire future generations through innovation, strength, and
+              vision.
             </p>
             {/* Social Media Links */}
             <div className="flex items-center space-x-4 pt-2">
@@ -141,12 +127,7 @@ function Footer() {
                 className="text-neutral/80 transition-colors duration-200 hover:text-primary"
                 aria-label="TikTok"
               >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                 </svg>
               </Link>
@@ -221,10 +202,7 @@ function Footer() {
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin
-                  size={18}
-                  className="mt-0.5 flex-shrink-0 text-primary"
-                />
+                <MapPin size={18} className="mt-0.5 flex-shrink-0 text-primary" />
                 <address className="text-neutral not-italic">
                   Bole Sub-City, Woreda 06
                   <br />
@@ -258,7 +236,7 @@ function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -325,8 +303,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           itemOffered: {
             "@type": "Service",
             name: "Post-tensioning Solutions",
-            description:
-              "Advanced post-tensioning solutions for concrete structures",
+            description: "Advanced post-tensioning solutions for concrete structures",
           },
         },
         {
@@ -334,8 +311,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           itemOffered: {
             "@type": "Service",
             name: "Structural Engineering",
-            description:
-              "Comprehensive structural design and engineering services",
+            description: "Comprehensive structural design and engineering services",
           },
         },
         {
@@ -343,13 +319,12 @@ export default function Layout({ children }: { children: ReactNode }) {
           itemOffered: {
             "@type": "Service",
             name: "Construction Management",
-            description:
-              "Professional project management for construction projects",
+            description: "Professional project management for construction projects",
           },
         },
       ],
     },
-  }
+  };
 
   return (
     <html lang="en">
@@ -369,5 +344,5 @@ export default function Layout({ children }: { children: ReactNode }) {
         <Footer />
       </body>
     </html>
-  )
+  );
 }

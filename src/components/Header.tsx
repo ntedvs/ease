@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import { Menu, X } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function Header() {
-  const [hov, setHov] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const pathname = usePathname()
+  const [hov, setHov] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false)
-  }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/20 bg-white/70 backdrop-blur-md">
@@ -25,11 +25,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* EASE Brand */}
           <div className="flex items-center">
-            <Link
-              href={"/"}
-              onMouseOver={() => setHov(true)}
-              onMouseOut={() => setHov(false)}
-            >
+            <Link href={"/"} onMouseOver={() => setHov(true)} onMouseOut={() => setHov(false)}>
               <Image
                 src={hov ? "/after.png" : "/before.png"}
                 alt="EASE Logo"
@@ -41,49 +37,30 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center space-x-8 md:flex">
-            <Link
-              href="/"
-              className={
-                pathname === "/" ? "nav-link nav-link-active" : "nav-link"
-              }
-            >
+            <Link href="/" className={pathname === "/" ? "nav-link nav-link-active" : "nav-link"}>
               Home
             </Link>
             <Link
               href="/about"
-              className={
-                pathname === "/about" ? "nav-link nav-link-active" : "nav-link"
-              }
+              className={pathname === "/about" ? "nav-link nav-link-active" : "nav-link"}
             >
               About
             </Link>
             <Link
               href="/projects"
-              className={
-                pathname === "/projects"
-                  ? "nav-link nav-link-active"
-                  : "nav-link"
-              }
+              className={pathname === "/projects" ? "nav-link nav-link-active" : "nav-link"}
             >
               Projects
             </Link>
             <Link
               href="/services"
-              className={
-                pathname === "/services"
-                  ? "nav-link nav-link-active"
-                  : "nav-link"
-              }
+              className={pathname === "/services" ? "nav-link nav-link-active" : "nav-link"}
             >
               Services
             </Link>
             <Link
               href="/contact"
-              className={
-                pathname === "/contact"
-                  ? "nav-link nav-link-active"
-                  : "nav-link"
-              }
+              className={pathname === "/contact" ? "nav-link nav-link-active" : "nav-link"}
             >
               Contact
             </Link>
@@ -93,9 +70,7 @@ export default function Header() {
           <button
             onClick={toggleMobileMenu}
             className="p-2 text-foreground transition-colors duration-200 hover:text-primary md:hidden"
-            aria-label={
-              isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"
-            }
+            aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -109,9 +84,7 @@ export default function Header() {
             <Link
               href="/"
               className={
-                pathname === "/"
-                  ? "nav-link nav-link-active px-4 py-2"
-                  : "nav-link px-4 py-2"
+                pathname === "/" ? "nav-link nav-link-active px-4 py-2" : "nav-link px-4 py-2"
               }
               onClick={closeMobileMenu}
             >
@@ -120,9 +93,7 @@ export default function Header() {
             <Link
               href="/about"
               className={
-                pathname === "/about"
-                  ? "nav-link nav-link-active px-4 py-2"
-                  : "nav-link px-4 py-2"
+                pathname === "/about" ? "nav-link nav-link-active px-4 py-2" : "nav-link px-4 py-2"
               }
               onClick={closeMobileMenu}
             >
@@ -165,5 +136,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

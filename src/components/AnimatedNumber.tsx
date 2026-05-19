@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react";
 
 interface AnimatedNumberProps {
-  value: number
-  suffix?: string
-  prefix?: string
-  className?: string
-  duration?: number
-  decimalPlaces?: number
-  preserveTrailingZeros?: boolean
+  value: number;
+  suffix?: string;
+  prefix?: string;
+  className?: string;
+  duration?: number;
+  decimalPlaces?: number;
+  preserveTrailingZeros?: boolean;
 }
 
 export default function AnimatedNumber({
@@ -21,75 +21,74 @@ export default function AnimatedNumber({
   decimalPlaces = 1,
   preserveTrailingZeros = false,
 }: AnimatedNumberProps) {
-  const [isVisible, setIsVisible] = useState(false)
-  const [animatedValues, setAnimatedValues] = useState<number[]>([])
-  const numberRef = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const [animatedValues, setAnimatedValues] = useState<number[]>([]);
+  const numberRef = useRef<HTMLDivElement>(null);
 
   // Convert single value to array for consistency with AnimatedStats pattern
-  const targetValues = useMemo(() => [value], [value])
+  const targetValues = useMemo(() => [value], [value]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
       { threshold: 0.3 },
-    )
+    );
 
     if (numberRef.current) {
-      observer.observe(numberRef.current)
+      observer.observe(numberRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [isVisible])
+    return () => observer.disconnect();
+  }, [isVisible]);
 
   useEffect(() => {
     if (isVisible && animatedValues.length === 0) {
       // Initialize with zeros - exact pattern from AnimatedStats
-      setAnimatedValues(new Array(targetValues.length).fill(0))
+      setAnimatedValues(new Array(targetValues.length).fill(0));
 
       // Animate each value - exact pattern from AnimatedStats
       targetValues.forEach((target, index) => {
-        const steps = 60
-        const increment = target / steps
-        let current = 0
-        let step = 0
+        const steps = 60;
+        const increment = target / steps;
+        let current = 0;
+        let step = 0;
 
         const timer = setInterval(() => {
-          step++
-          current = Math.min(increment * step, target)
+          step++;
+          current = Math.min(increment * step, target);
 
           setAnimatedValues((prev) => {
-            const newValues = [...prev]
+            const newValues = [...prev];
             // Use proper decimal precision instead of Math.floor
             newValues[index] =
               decimalPlaces > 0
-                ? Math.round(current * Math.pow(10, decimalPlaces)) /
-                  Math.pow(10, decimalPlaces)
-                : Math.floor(current)
-            return newValues
-          })
+                ? Math.round(current * Math.pow(10, decimalPlaces)) / Math.pow(10, decimalPlaces)
+                : Math.floor(current);
+            return newValues;
+          });
 
           if (step >= steps) {
-            clearInterval(timer)
+            clearInterval(timer);
           }
-        }, duration / steps)
-      })
+        }, duration / steps);
+      });
     }
-  }, [isVisible, targetValues, animatedValues.length, duration, decimalPlaces])
+  }, [isVisible, targetValues, animatedValues.length, duration, decimalPlaces]);
 
   const formatValue = (value: number): string => {
     if (decimalPlaces === 0) {
-      return value.toLocaleString()
+      return value.toLocaleString();
     }
 
     return value.toLocaleString(undefined, {
       minimumFractionDigits: preserveTrailingZeros ? decimalPlaces : 0,
       maximumFractionDigits: decimalPlaces,
-    })
-  }
+    });
+  };
 
   return (
     <div ref={numberRef} className={className}>
@@ -97,5 +96,5 @@ export default function AnimatedNumber({
       {isVisible ? formatValue(animatedValues[0] || 0) : "0"}
       {suffix}
     </div>
-  )
+  );
 }

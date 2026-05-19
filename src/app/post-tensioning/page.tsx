@@ -1,19 +1,11 @@
-import AnimatedNumber from "@/components/AnimatedNumber"
-import DownloadableResources from "@/components/DownloadableResources"
-import FAQSection from "@/components/FAQSection"
-import ProcessStepsDropdown from "@/components/ProcessStepsDropdown"
-import SlabThicknessCalculator from "@/components/SlabThicknessCalculator"
-import {
-  Building2,
-  DollarSign,
-  Leaf,
-  Maximize2,
-  Shield,
-  Timer,
-  TreePine,
-} from "lucide-react"
-import { Metadata } from "next"
-import Link from "next/link"
+import AnimatedNumber from "@/components/AnimatedNumber";
+import DownloadableResources from "@/components/DownloadableResources";
+import FAQSection from "@/components/FAQSection";
+import ProcessStepsDropdown from "@/components/ProcessStepsDropdown";
+import SlabThicknessCalculator from "@/components/SlabThicknessCalculator";
+import { Building2, DollarSign, Leaf, Maximize2, Shield, Timer, TreePine } from "lucide-react";
+import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Post-Tensioning Solutions",
@@ -31,7 +23,7 @@ export const metadata: Metadata = {
     "insured post-tensioning",
     "reliable construction",
   ],
-}
+};
 
 export default function PostTensioning() {
   const allAdvantages = [
@@ -77,7 +69,7 @@ export default function PostTensioning() {
         "Optimal use of materials through precise engineering, minimizing waste and maximizing performance.",
       category: "Sustainability",
     },
-  ]
+  ];
 
   return (
     <>
@@ -91,9 +83,8 @@ export default function PostTensioning() {
               Post-Tensioning <span className="text-primary">Advantages</span>
             </h1>
             <p className="text-xl leading-relaxed text-white/90 md:text-2xl">
-              Discover why post-tensioning technology delivers superior
-              performance, economic benefits, and sustainability over
-              traditional concrete construction.
+              Discover why post-tensioning technology delivers superior performance, economic
+              benefits, and sustainability over traditional concrete construction.
             </p>
           </div>
         </div>
@@ -107,17 +98,14 @@ export default function PostTensioning() {
               Post-Tensioning Advantages
             </h2>
             <p className="mx-auto max-w-3xl text-xl leading-relaxed text-muted">
-              Discover the comprehensive benefits of post-tensioning technology
-              across structural performance, economics, and sustainability.
+              Discover the comprehensive benefits of post-tensioning technology across structural
+              performance, economics, and sustainability.
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {allAdvantages.map((advantage, index) => (
-              <div
-                key={index}
-                className="card group transition-all duration-300 hover:shadow-lg"
-              >
+              <div key={index} className="card group transition-all duration-300 hover:shadow-lg">
                 <div className="card-body space-y-4 text-center">
                   <div className="flex justify-center">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary/20">
@@ -129,12 +117,8 @@ export default function PostTensioning() {
                       {advantage.category}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-secondary">
-                    {advantage.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-muted">
-                    {advantage.description}
-                  </p>
+                  <h3 className="text-lg font-bold text-secondary">{advantage.title}</h3>
+                  <p className="text-sm leading-relaxed text-muted">{advantage.description}</p>
                 </div>
               </div>
             ))}
@@ -142,9 +126,7 @@ export default function PostTensioning() {
 
           <div className="mt-16 bg-primary p-8 text-white">
             <div className="mx-auto max-w-3xl text-center">
-              <h3 className="mb-4 text-2xl font-bold text-white">
-                Key Performance Metrics
-              </h3>
+              <h3 className="mb-4 text-2xl font-bold text-white">Key Performance Metrics</h3>
               <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
                 <div className="text-center">
                   <div className="mb-2 text-3xl font-black text-white">35</div>
@@ -188,9 +170,9 @@ export default function PostTensioning() {
             </h2>
 
             <p className="mb-8 text-xl leading-relaxed text-neutral">
-              As Ethiopia&apos;s only insurance-backed construction company,
-              EASE provides comprehensive coverage for all post-tensioning
-              projects, ensuring complete protection and peace of mind.
+              As Ethiopia&apos;s only insurance-backed construction company, EASE provides
+              comprehensive coverage for all post-tensioning projects, ensuring complete protection
+              and peace of mind.
             </p>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -201,12 +183,9 @@ export default function PostTensioning() {
                   suffix=" Million"
                   className="mb-3 text-3xl font-black text-primary"
                 />
-                <h3 className="mb-2 text-lg font-bold text-white">
-                  Product Liability
-                </h3>
+                <h3 className="mb-2 text-lg font-bold text-white">Product Liability</h3>
                 <p className="text-sm text-neutral">
-                  Full coverage for post-tensioning materials and installation
-                  quality
+                  Full coverage for post-tensioning materials and installation quality
                 </p>
               </div>
 
@@ -217,22 +196,18 @@ export default function PostTensioning() {
                   suffix=" Million"
                   className="mb-3 text-3xl font-black text-primary"
                 />
-                <h3 className="mb-2 text-lg font-bold text-white">
-                  Professional Liability
-                </h3>
+                <h3 className="mb-2 text-lg font-bold text-white">Professional Liability</h3>
                 <p className="text-sm text-neutral">
-                  Complete protection for engineering design and technical
-                  services
+                  Complete protection for engineering design and technical services
                 </p>
               </div>
             </div>
 
             <div className="mt-8 bg-primary/5 p-4">
               <p className="text-white">
-                <strong>Risk-Free Post-Tensioning:</strong> Our comprehensive
-                insurance coverage eliminates project risks, ensuring your
-                investment is protected throughout the entire construction
-                process.
+                <strong>Risk-Free Post-Tensioning:</strong> Our comprehensive insurance coverage
+                eliminates project risks, ensuring your investment is protected throughout the
+                entire construction process.
               </p>
             </div>
           </div>
@@ -250,15 +225,11 @@ export default function PostTensioning() {
               Let&apos;s Discuss Your Post-Tensioning Needs
             </h2>
             <p className="mb-8 text-xl leading-relaxed text-white/90">
-              Whether you&apos;re facing spanning challenges or seeking construction
-              efficiencies, we&apos;ll evaluate how post-tensioning can work for your
-              specific project.
+              Whether you&apos;re facing spanning challenges or seeking construction efficiencies,
+              we&apos;ll evaluate how post-tensioning can work for your specific project.
             </p>
             <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-              <Link
-                href="/contact"
-                className="btn btn-secondary btn-lg w-full sm:w-auto"
-              >
+              <Link href="/contact" className="btn btn-secondary btn-lg w-full sm:w-auto">
                 Get Free Consultation
               </Link>
               <Link
@@ -272,5 +243,5 @@ export default function PostTensioning() {
         </div>
       </section>
     </>
-  )
+  );
 }
