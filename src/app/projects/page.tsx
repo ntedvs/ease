@@ -1,7 +1,7 @@
 "use client"
 
-import FadeIn from "@/components/FadeIn"
 import projectsData from "@/../projects.json"
+import FadeIn from "@/components/FadeIn"
 import {
   RailSymbol as Bridge,
   Briefcase,
